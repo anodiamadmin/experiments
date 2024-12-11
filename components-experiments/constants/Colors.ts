@@ -1,0 +1,52 @@
+/**
+ * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
+ */
+
+const tintColorLight = '#0a7ea4';
+const tintColorDark = '#fff';
+
+export const Colors = {
+  WHITE: '#FFF',
+  LIGHT_GRAY: '#BBB',
+  GRAY: '#777',
+  DARK_GRAY: '#444',
+  BLACK: '#000',
+  ANODIAM: '#FF8C53',
+  TIFFANY: '#22A7A4',
+  light: {
+    ANODIAM_JETDARK:'#360C0C',
+    ANODIAM_DARKEST: '#771B1B',
+    ANODIAM_DARKER: '#BA4428',
+    ANODIAM_DARK: '#D76B3B',
+    ANODIAM_LIGHT: '#FFAC73',
+    ANODIAM_LIGHTER: '#FFCC93',
+    ANODIAM_LIGHTEST: '#FFE1C1',
+    ANODIAM_PALE: '#FFF3ED',
+    TIFFANY_JETDARK: '#00282A',
+    TIFFANY_DARKEST: '#00585C',
+    TIFFANY_DARKER: '#007076',
+    TIFFANY_DARK: '#008986',
+    TIFFANY_LIGHT: '#2CD4D0',
+    TIFFANY_LIGHTER: '#72EBEE',
+    TIFFANY_LIGHTEST: '#B7F7E8',
+    TIFFANY_PALE: '#F1FDFA'
+  },
+  dark: {
+    ANODIAM_JETDARK: '#FFF3ED',
+    ANODIAM_DARKEST: '#FFE1C1',
+    ANODIAM_DARKER: '#FFCC93',
+    ANODIAM_DARK: '#FFAC73',
+    ANODIAM_LIGHT: '#D76B3B',
+    ANODIAM_LIGHTER: '#BA4428',
+    ANODIAM_LIGHTEST: '#771B1B',
+    ANODIAM_PALE: '#360C0C',
+    TIFFANY_JETDARK: '#F1FDFA',
+    TIFFANY_DARKEST: '#B7F7E8',
+    TIFFANY_DARKER: '#72EBEE',
+    TIFFANY_DARK: '#2CD4D0',
+    TIFFANY_LIGHT: '#008986',
+    TIFFANY_LIGHTER: '#007076',
+    TIFFANY_LIGHTEST: '#00585C',
+    TIFFANY_PALE: '#00282A',
+  },
+};
