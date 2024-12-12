@@ -7,7 +7,7 @@ const ScreenZero = () => {
     const colorScheme = useColorScheme();
     const padding = 20
     const paddingTop = 50
-    const backgroundColor = colorScheme === 'dark' ? Colors.dark.TIFFANY_PALE : Colors.light.ANODIAM_PALE
+    const backgroundColor = colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE
     const height = '100%'
     const styles = screenStyles(padding, paddingTop, backgroundColor, height)
     return (

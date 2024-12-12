@@ -14,7 +14,7 @@ const ButtonAnodiam = (props) => {
     const marginTop = props.marginTop || 20
     const padding = props.padding || 20
     const backgroundColor = props.backgroundColor || 
-                            (colorScheme === 'dark' ? Colors.dark.TIFFANY_PALE : Colors.light.ANODIAM_PALE)
+                            (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE)
     const borderRadius = props.borderRadius || 15
     const borderColor = props.borderColor || Colors.ANODIAM
     const borderWidth = props.borderWidth || 1
