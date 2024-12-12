@@ -12,7 +12,7 @@ const screenStyles = (padding, paddingTop, backgroundColor, height) => {
 };
 
 const labelStyles = (color, backgroundColor, fontFamily, fontSize, padding, margin, 
-                        textAlign, justifyContent, alignItems) => {
+                        textAlign, justifyContent, alignItems, fontWeight, fontStyle, textDecorationLine) => {
     return StyleSheet.create({
         textContainer: {
             backgroundColor: backgroundColor,
@@ -26,6 +26,9 @@ const labelStyles = (color, backgroundColor, fontFamily, fontSize, padding, marg
             fontFamily: fontFamily,
             textAlign: textAlign,
             margin: margin,
+            fontWeight: fontWeight,
+            fontStyle: fontStyle,
+            textDecorationLine: textDecorationLine
         },
     });
 };

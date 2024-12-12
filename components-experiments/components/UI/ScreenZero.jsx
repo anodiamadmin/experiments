@@ -13,9 +13,10 @@ const ScreenZero = () => {
     return (
         <View style={styles.anodiamScreen}>
             <StatusBar style={colorScheme} backgroundColor={backgroundColor} />
-            <LabelAnodiam textLabel='AB CD ef #$%^' color={'#46fd5a'} backgroundColor={'#edf021'}
-                            fontFamily={'Arial'} fontSize={40} padding={10} margin={10} textAlign={'right'}
-                            justifyContent={'flex-end'} alignItems={'stretch'}/>
+            <LabelAnodiam labelText={'AB CD ef #$%^'} color={'#46fd5a'} backgroundColor={'#edf021'}
+                            fontFamily={'Anodiam-Bold'} fontSize={40}
+                            textAlign={'right'} justifyContent={'flex-end'} alignItems={'stretch'} 
+                            fontWeight={'bold'} fontStyle={'italic'} textDecorationLine={'underline'}/>
         </View>
     )
 }
