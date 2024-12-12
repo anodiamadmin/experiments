@@ -2,11 +2,11 @@ import { View, Text, useColorScheme } from 'react-native'
 import { labelStyles } from "./styles"
 import { Colors } from '@/constants/Colors'
 
-const LabelAnodiam = (props) => {
+const LabelTiffany = (props) => {
     const colorScheme = useColorScheme();
-    const labelText = props.labelText || 'Anodiam colored label'
+    const labelText = props.labelText || 'Tiffany colored label'
     const color = props.color ||
-                            (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARK : Colors.light.ANODIAM_DARK)
+                            (colorScheme === 'dark' ? Colors.dark.TIFFANY_DARK : Colors.light.TIFFANY_DARK)
     const backgroundColor = props.backgroundColor || 
                             (colorScheme === 'dark' ? Colors.dark.TIFFANY_PALE : Colors.light.ANODIAM_PALE)
     const fontFamily = props.fontFamily || 'Anodiam-Regular'
@@ -25,4 +25,4 @@ const LabelAnodiam = (props) => {
     )
 }
 
-export default LabelAnodiam
+export default LabelTiffany

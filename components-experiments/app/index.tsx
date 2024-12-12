@@ -1,16 +1,10 @@
-import { Text, View } from "react-native";
-import LabelAnodiam from "../components/UI/LabelAnodiam"
+import { View } from "react-native";
+import ScreenZero from "../components/UI/ScreenZero"
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <LabelAnodiam labelText="Random String here!!" padding={50} paddingBottom={100}/>
+    <View>
+      <ScreenZero/>
     </View>
   );
 }
