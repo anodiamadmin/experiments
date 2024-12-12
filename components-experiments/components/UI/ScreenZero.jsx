@@ -13,10 +13,7 @@ const ScreenZero = () => {
     return (
         <View style={styles.anodiamScreen}>
             <StatusBar style={colorScheme} backgroundColor={backgroundColor} />
-            <LabelAnodiam labelText={'AB CD ef #$%^'} color={'#46fd5a'} backgroundColor={'#edf021'}
-                            fontFamily={'Anodiam-Bold'} fontSize={40}
-                            textAlign={'right'} justifyContent={'flex-end'} alignItems={'stretch'} 
-                            fontWeight={'bold'} fontStyle={'italic'} textDecorationLine={'underline'}/>
+            <LabelAnodiam labelText={'This is a basic text experiment!'}/>
         </View>
     )
 }
