@@ -4,7 +4,7 @@ import { Colors } from '@/constants/Colors'
 
 const LabelAnodiam = (props) => {
     const colorScheme = useColorScheme();
-    const labelText = props.labelText || 'Anodiam colored label'
+    const labelText = props.labelText || 'Label-Anodiam'
     const color = props.color ||
                             (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARK : Colors.light.ANODIAM_DARK)
     const backgroundColor = props.backgroundColor || 
@@ -15,17 +15,13 @@ const LabelAnodiam = (props) => {
     const fontStyle = props.fontStyle || 'normal'
     const textDecorationLine = props.textDecorationLine || 'none'
     const padding = props.padding || 0
-    const marginTop = props.marginTop || 0
-    const marginRight = props.marginRight || 0
-    const marginBottom = props.marginBottom || 0
-    const marginLeft = props.marginLeft || 0
+    const margin = props.margin || 0
     const textAlign = props.textAlign || 'auto'
     const justifyContent = props.justifyContent || 'flex-start'
     const alignItems = props.alignItems || 'stretch'
     const styles = labelStyles(color, backgroundColor, 
                                 fontFamily, fontSize, fontWeight, fontStyle, textDecorationLine,
-                                padding, marginTop, marginRight, marginBottom, marginLeft, 
-                                textAlign, justifyContent, alignItems)
+                                padding, margin, textAlign, justifyContent, alignItems)
     return (
         <View style={styles.textContainer}>
             <Text style={styles.text}>{labelText}</Text>

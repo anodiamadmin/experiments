@@ -1,29 +1,59 @@
-import { View, useColorScheme } from 'react-native'
+import { TouchableOpacity, useColorScheme } from 'react-native'
 import { buttonStyles } from "./styles"
 import { Colors } from '@/constants/Colors'
 import LabelAnodiam from "./LabelAnodiam"
 
 const ButtonAnodiam = (props) => {
     const colorScheme = useColorScheme();
-    const buttonText = props.buttonText || 'Anodiam'
-    const buttonType = props.buttonType || 'Primary'
+    const buttonType = props.buttonType || 'primary'
+    const buttonText = props.buttonText || 'Button-Anodiam'
     const color = props.color ||
-                            (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARK : Colors.light.ANODIAM_DARK)
-    const fontFamily = props.fontFamily || 'Anodiam-Regular'
-    const fontSize = props.fontSize || 14
-    const marginTop = props.marginTop || 20
-    const padding = props.padding || 20
-    const backgroundColor = props.backgroundColor || 
+                    (buttonType === 'primary' ?
+                        (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.WHITE) :
+                        Colors.ANODIAM
+                    )
+    const backgroundColor = props.backgroundColor ||
+                    (buttonType === 'primary' ? Colors.ANODIAM :
+                        (buttonType === 'secondary' ?
+                            (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE) :
                             (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE)
-    const borderRadius = props.borderRadius || 15
+                        )
+                    )
+    const padding = props.padding || 12
+    const margin = props.margin || 0
+    const borderRadius = props.borderRadius || 12
     const borderColor = props.borderColor || Colors.ANODIAM
-    const borderWidth = props.borderWidth || 1
-    const styles = buttonStyles(marginTop, padding, backgroundColor, borderRadius, borderColor, borderWidth)
-    return (
-        <View style={styles.button}>
-            <LabelAnodiam/>
-        </View>
-    )
+    const borderWidth = props.borderWidth || 1.5
+    const fontFamily = props.fontFamily || 'Anodiam-Bold'
+    const fontSize = props.fontSize || 18
+    const textDecorationLine = props.textDecorationLine || 'underline'
+    const textAlign = props.textAlign || 'center'
+    const justifyContent = props.justifyContent || 'center'
+    const alignItems = props.alignItems || 'center'
+    const styles = buttonStyles(backgroundColor, padding, margin, borderRadius, borderColor, borderWidth)
+    switch (buttonType) {
+        case 'hyperlink':
+            return (
+                <TouchableOpacity style={styles.hyperLink} onPress={props.onPrsBtnAnodiam}>
+                    <LabelAnodiam labelText={buttonText} color={color} fontFamily={fontFamily}
+                                    fontSize={fontSize} textDecorationLine={textDecorationLine}
+                                    textAlign={textAlign} justifyContent={justifyContent} alignItems={alignItems}/>
+                </TouchableOpacity> )
+        case 'secondary':
+            return (
+                <TouchableOpacity style={styles.buttonSecondary} onPress={props.onPrsBtnAnodiam}>
+                    <LabelAnodiam labelText={buttonText} color={color} fontFamily={fontFamily}
+                                    fontSize={fontSize} textAlign={textAlign}
+                                    justifyContent={justifyContent} alignItems={alignItems}/>
+                </TouchableOpacity> )
+        default:
+            return (
+                <TouchableOpacity style={styles.buttonPrimary} onPress={props.onPrsBtnAnodiam}>
+                    <LabelAnodiam labelText={buttonText} color={color} backgroundColor={'transparent'} 
+                                    fontFamily={fontFamily} fontSize={fontSize} textAlign={textAlign}
+                                    justifyContent={justifyContent} alignItems={alignItems}/>
+                </TouchableOpacity> )
+    }
 }
 
 export default ButtonAnodiam

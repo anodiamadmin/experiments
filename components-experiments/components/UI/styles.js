@@ -13,8 +13,7 @@ const screenStyles = (padding, paddingTop, backgroundColor, height) => {
 
 const labelStyles = (color, backgroundColor, 
                         fontFamily, fontSize, fontWeight, fontStyle, textDecorationLine,
-                        padding, marginTop, marginRight, marginBottom, marginLeft, 
-                        textAlign, justifyContent, alignItems) => {
+                        padding, margin, textAlign, justifyContent, alignItems) => {
     return StyleSheet.create({
         textContainer: {
             backgroundColor: backgroundColor,
@@ -27,10 +26,7 @@ const labelStyles = (color, backgroundColor,
             fontSize: fontSize,
             fontFamily: fontFamily,
             textAlign: textAlign,
-            marginTop: marginTop,
-            marginRight: marginRight,
-            marginBottom: marginBottom,
-            marginLeft: marginLeft,
+            margin: margin,
             fontWeight: fontWeight,
             fontStyle: fontStyle,
             textDecorationLine: textDecorationLine
@@ -38,15 +34,25 @@ const labelStyles = (color, backgroundColor,
     });
 };
 
-const buttonStyles = (marginTop, padding, backgroundColor, borderRadius, borderColor, borderWidth) => {
+const buttonStyles = (backgroundColor, padding, margin, borderRadius, borderColor, borderWidth) => {
     return StyleSheet.create({
-        button: {
-            marginTop: marginTop,
-            padding: padding,
+        buttonPrimary: {
             backgroundColor: backgroundColor,
+            padding: padding,
+            margin: margin,
+            borderRadius: borderRadius,
+        },
+        buttonSecondary: {
+            backgroundColor: backgroundColor,
+            padding: padding,
+            margin: margin,
             borderRadius: borderRadius,
             borderColor: borderColor,
             borderWidth: borderWidth
+        },
+        hyperLink: {
+            padding: padding,
+            margin: margin,
         },
     });
 };
