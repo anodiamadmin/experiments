@@ -1,37 +1,29 @@
-import { useColorScheme, View, Text } from 'react-native'
-import { buttonStyles } from "./styles"
+import { useColorScheme, View, Text, TextInput } from 'react-native'
 import { Colors } from '@/constants/Colors'
 import LabelAnodiam from "./LabelAnodiam"
+import { textInputStyles } from "./styles"
 
 const TextInputAnodiam = (props) => {
     const colorScheme = useColorScheme();
-    const inputType = props.inputType || 'text'
-    const inputLabel = props.inputLabel || 'Button-Anodiam'
-    const color = props.color ||
-                    (buttonType === 'Primary' ?
-                        (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.WHITE) :
-                        Colors.ANODIAM
-                    )
-    const backgroundColor = props.backgroundColor ||
-                    (buttonType === 'Primary' ? Colors.ANODIAM :
-                        (buttonType === 'Secondary' ?
-                            (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE) :
-                            (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE)
-                        )
-                    )
-    const padding = props.padding || 12
-    const margin = props.margin || 0
+    const textInputType = props.textInputType || 'text'
+    const labelTextInput = props.labelTextInput || 'TextInput-Anodiam'
+    const labelFontFamily = props.labelFontFamily || 'Anodiam-Regular'
+    const labelColor = props.labelColor ||
+                            (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARK : Colors.light.ANODIAM_DARK)
+    const labelFontSize = props.labelFontSize || 20
+    const validationText = props.validationText || '* - Mandatory'
+    const validationTextColor = props.validationTextColor || Colors.RED
+    const inputPlaceholder = props.inputPlaceholder || 'Enter ' + labelTextInput
+    const inputPadding = props.inputPadding || 12
+    const inputFontFamily = props.inputFontFamily || 'Anodiam-Regular'
+    const inputFontSize = props.inputFontSize || 18
     const borderRadius = props.borderRadius || 12
     const borderColor = props.borderColor || Colors.ANODIAM
-    const borderWidth = props.borderWidth || 1.5
-    const fontFamily = props.fontFamily || 'Anodiam-Bold'
-    const fontSize = props.fontSize || 18
-    const textDecorationLine = props.textDecorationLine || 'underline'
-    const textAlign = props.textAlign || 'center'
-    const justifyContent = props.justifyContent || 'center'
-    const alignItems = props.alignItems || 'center'
-    const styles = buttonStyles(backgroundColor, padding, margin, borderRadius, borderColor, borderWidth)
-    switch (buttonType) {
+    const borderWidth = props.borderWidth || 1
+    const styles = textInputStyles(labelFontFamily, labelColor, labelFontSize, validationText,
+                                    validationTextColor, inputPlaceholder, inputPadding, inputFontFamily,
+                                    inputFontSize, borderRadius, borderColor, borderWidth)
+    switch (textInputType) {
         case 'email':
             return (
                 <View>
@@ -55,7 +47,11 @@ const TextInputAnodiam = (props) => {
         default:
             return (
                 <View>
-                    <Text>Default Text Input</Text>
+                    <View style={styles.flexRow}>
+                        <LabelAnodiam labelText={labelTextInput} style={styles.textInputLabel}/>
+                        <LabelAnodiam labelText={validationText} style={styles.textInputValidation}/>
+                    </View>
+                    <TextInput placeholder={inputPlaceholder} style={styles.textInput}/>
                 </View> )
         }
 }

@@ -57,4 +57,34 @@ const buttonStyles = (backgroundColor, padding, margin, borderRadius, borderColo
     });
 };
 
-export { screenStyles, labelStyles, buttonStyles };
+const textInputStyles = (labelFontFamily, labelColor, labelFontSize, validationTextColor, inputPadding,
+                            inputFontFamily, inputFontSize, borderRadius, borderColor, borderWidth) => {
+    return StyleSheet.create({
+        textInputLabel: {
+            fontFamily: labelFontFamily,
+            color: labelColor,
+            fontSize: labelFontSize
+        },
+        textInputValidation: {
+            fontFamily: labelFontFamily,
+            color: validationTextColor,
+            fontSize: labelFontSize
+        },
+        textInput: {
+            padding: inputPadding,
+            fontFamily: inputFontFamily,
+            fontSize: inputFontSize,
+            // borderRadius: borderRadius,
+            borderColor: borderColor,
+            borderWidth: borderWidth
+        },
+        flexRow: {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+        }
+    });
+};
+
+export { screenStyles, labelStyles, buttonStyles, textInputStyles };

@@ -1,6 +1,7 @@
 import { StatusBar, View, useColorScheme, ToastAndroid } from 'react-native'
 import LabelAnodiam from "./LabelAnodiam"
 import ButtonAnodiam from "./ButtonAnodiam"
+import TextInputAnodiam  from "./TextInputAnodiam"
 import { Colors } from '@/constants/Colors'
 import { screenStyles } from './styles'
 
@@ -26,6 +27,7 @@ const ScreenZero = () => {
             <ButtonAnodiam buttonText={'My Button'} onPrsBtnAnodiam={handleOnPressPrimary}/>
             <ButtonAnodiam buttonType={'hyperlink'} buttonText={'hyper-link'} onPrsBtnAnodiam={handleOnPress}/>
             <ButtonAnodiam buttonType={'secondary'} onPrsBtnAnodiam={handleOnPress}/>
+            <TextInputAnodiam labelTextInput={'Name'}/>
         </View>
     )
 }
