@@ -23,7 +23,7 @@ const ScreenZero = () => {
         <View style={styles.anodiamScreen}>
             <StatusBar style={colorScheme} backgroundColor={backgroundColor} />
             <LabelAnodiam/>
-            <ButtonAnodiam buttonText={'Primary'} onPrsBtnAnodiam={handleOnPressPrimary}/>
+            <ButtonAnodiam buttonText={'My Button'} onPrsBtnAnodiam={handleOnPressPrimary}/>
             <ButtonAnodiam buttonType={'hyperlink'} buttonText={'hyper-link'} onPrsBtnAnodiam={handleOnPress}/>
             <ButtonAnodiam buttonType={'secondary'} onPrsBtnAnodiam={handleOnPress}/>
         </View>
