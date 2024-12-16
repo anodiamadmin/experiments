@@ -30,7 +30,12 @@ const TextInputAnodiam = (props) => {
         case 'email':
             content = (
                 <TextInput placeholder={placeholder} style={styles.textInput} cursorColor={color}
-                                placeholderTextColor={Colors.GRAY}
+                                placeholderTextColor={Colors.GRAY}   
+                                keyboardType="email-address" // Email-specific keyboard
+                                autoCapitalize="none" // Prevent capitalization
+                                autoCorrect={false} // Disable autocorrect
+                                textContentType="emailAddress" // Enable autofill for email (ios specific)
+                                autoComplete="email"//cross platform
                                 onChangeText={props.onChngTxtIpAnodiam}/>
             )
             break;

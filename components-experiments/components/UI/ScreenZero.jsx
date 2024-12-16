@@ -47,6 +47,10 @@ const ScreenZero = () => {
         setTxtIpOne(txtIpInt)
         console.log("Content 6: ", {txtIpInt});
     }
+    const handleEmail = (txtIpEmail) => {
+        setTxtIpOne(txtIpEmail)
+        console.log("Content 7: ", {txtIpEmail});
+    }
     return (
         <View style={styles.anodiamScreen}>
             <StatusBar style={colorScheme} backgroundColor={backgroundColor} />
@@ -59,6 +63,7 @@ const ScreenZero = () => {
             <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPass}/>
             <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} onChngTxtIpAnodiam={handleKeyPressConfPass}/>
             <TextInputAnodiam labelText={'Float Numeric'} textInputType={'numeric'} onChngTxtIpAnodiam={handleKeyPressFloat}/>
+            <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleEmail}/>
         </View>
     )
 }
