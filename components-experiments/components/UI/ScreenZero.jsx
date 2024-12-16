@@ -34,13 +34,12 @@ const ScreenZero = () => {
     return (
         <View style={styles.anodiamScreen}>
             <StatusBar style={colorScheme} backgroundColor={backgroundColor} />
-            <LabelAnodiam/>
+            <LabelAnodiam labelText={'My name is Soubhanik'} color={Colors.RED} fontSize={30}/>
             <ButtonAnodiam buttonText={'My Button'} onPrsBtnAnodiam={handleOnPressPrimary}/>
-            <ButtonAnodiam buttonType={'hyperlink'} buttonText={'hyper-link'} padding={2}
-                                onPrsBtnAnodiam={handleOnPress}/>
+            <ButtonAnodiam buttonText={'hyper-link'} buttonType={'hyperlink'} onPrsBtnAnodiam={handleOnPress}/>
             <ButtonAnodiam buttonType={'secondary'} onPrsBtnAnodiam={handleOnPress}/>
-            <TextInputAnodiam labelText={''} validationText={'* (Mandatory)'} onChngTxtIpAnodiam={handleKeyPressOne}/>
             <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressTwo}/>
+            <TextInputAnodiam labelText={'Surname'} validationText={'Invalid surnane'} onChngTxtIpAnodiam={handleKeyPressOne}/>
         </View>
     )
 }
