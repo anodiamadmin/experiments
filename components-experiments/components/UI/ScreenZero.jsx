@@ -28,18 +28,37 @@ const ScreenZero = () => {
         console.log("Content 1: ", {txtIpOne});
     }
     const handleKeyPressTwo = (txtIpTwo) => {
-        setTxtIpTwo(txtIpTwo)
+        setTxtIpOne(txtIpTwo)
         console.log("Content 2: ", {txtIpTwo});
+    }
+    const handleKeyPressPass = (txtIpPass) => {
+        setTxtIpOne(txtIpPass)
+        console.log("Content 3: ", {txtIpPass});
+    }
+    const handleKeyPressConfPass = (txtIpConfPass) => {
+        setTxtIpOne(txtIpConfPass)
+        console.log("Content 4: ", {txtIpConfPass});
+    }
+    const handleKeyPressFloat = (txtIpFloat) => {
+        setTxtIpOne(txtIpFloat)
+        console.log("Content 5: ", {txtIpFloat});
+    }
+    const handleKeyPressInt = (txtIpInt) => {
+        setTxtIpOne(txtIpInt)
+        console.log("Content 6: ", {txtIpInt});
     }
     return (
         <View style={styles.anodiamScreen}>
             <StatusBar style={colorScheme} backgroundColor={backgroundColor} />
-            <LabelAnodiam labelText={'My name is Soubhanik'} color={Colors.RED} fontSize={30}/>
+            {/* <LabelAnodiam labelText={'My name is Soubhanik'} color={Colors.RED} fontSize={30}/>
             <ButtonAnodiam buttonText={'My Button'} onPrsBtnAnodiam={handleOnPressPrimary}/>
             <ButtonAnodiam buttonText={'hyper-link'} buttonType={'hyperlink'} onPrsBtnAnodiam={handleOnPress}/>
             <ButtonAnodiam buttonType={'secondary'} onPrsBtnAnodiam={handleOnPress}/>
-            <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressTwo}/>
-            <TextInputAnodiam labelText={'Surname'} validationText={'Invalid surnane'} onChngTxtIpAnodiam={handleKeyPressOne}/>
+            <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressOne}/> */}
+            {/* <TextInputAnodiam labelText={'Surname'} validationText={'Invalid surnane'} onChngTxtIpAnodiam={handleKeyPressTwo}/> */}
+            <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPass}/>
+            <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} onChngTxtIpAnodiam={handleKeyPressConfPass}/>
+            <TextInputAnodiam labelText={'Float Numeric'} textInputType={'numeric'} onChngTxtIpAnodiam={handleKeyPressFloat}/>
         </View>
     )
 }

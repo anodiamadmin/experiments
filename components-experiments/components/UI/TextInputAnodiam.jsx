@@ -1,20 +1,23 @@
-import { View, Text, TextInput, useColorScheme } from 'react-native'
+import { View, TextInput, useColorScheme, ToastAndroid } from 'react-native'
 import { Colors } from '@/constants/Colors'
-import LabelAnodiam from "./LabelAnodiam"
 import TextInputDescAnodiam from "./TextInputDescAnodiam"
 import { textInputStyles } from "./styles"
 
 const TextInputAnodiam = (props) => {
     const colorScheme = useColorScheme();
     const textInputType = props.textInputType || 'text'
-
     const labelText = props.labelText
     const validationText = props.validationText
     const fontFamily = props.fontFamily || 'Anodiam-Regular'
     const fontSize = props.fontSize || 16
     const color = props.color || Colors.ANODIAM
-    const placeholder = props.placeholder || 'Enter: ' + (labelText.length > 30 ?
-        labelText.substring(0, 30) + "..." : labelText)
+    let placeholder
+    if(textInputType==='confirm-password'){
+        placeholder = props.placeholder || 'Confirm Password'
+    } else {
+        placeholder = props.placeholder || 'Enter: ' + (labelText.length > 30 ?
+            labelText.substring(0, 30) + "..." : labelText)
+    }
     const inputColor = props.inputColor || (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARKER : Colors.light.ANODIAM_DARKER)
     const validationTextColor = props.validationTextColor
     const validationFontSize = props.validationFontSize
@@ -31,46 +34,38 @@ const TextInputAnodiam = (props) => {
                                 onChangeText={props.onChngTxtIpAnodiam}/>
             )
             break;
-        case 'password':
+        case 'create-password':
             content = (
                 <TextInput placeholder={placeholder} style={styles.textInput} cursorColor={color}
-                                placeholderTextColor={Colors.GRAY}
-                                onChangeText={props.onChngTxtIpAnodiam}/>
+                                secureTextEntry={true}
+                                placeholderTextColor={Colors.GRAY} onChangeText={props.onChngTxtIpAnodiam}/>
             )
             break;
-        case 'email':
+        case 'confirm-password':
             content = (
                 <TextInput placeholder={placeholder} style={styles.textInput} cursorColor={color}
-                                placeholderTextColor={Colors.GRAY}
-                                onChangeText={props.onChngTxtIpAnodiam}/>
-            )
-            break;
-        case 'password':
-            content = (
-                <TextInput placeholder={placeholder} style={styles.textInput} cursorColor={color}
-                                placeholderTextColor={Colors.GRAY}
-                                onChangeText={props.onChngTxtIpAnodiam}/>
-            )
-            break;
-        case 'email':
-            content = (
-                <TextInput placeholder={placeholder} style={styles.textInput} cursorColor={color}
-                                placeholderTextColor={Colors.GRAY}
-                                onChangeText={props.onChngTxtIpAnodiam}/>
+                                secureTextEntry={true}
+                                placeholderTextColor={Colors.GRAY} onChangeText={props.onChngTxtIpAnodiam}/>
             )
             break;
         case 'password':
             content = (
                 <TextInput placeholder={placeholder} style={styles.textInput} cursorColor={color}
-                                placeholderTextColor={Colors.GRAY}
-                                onChangeText={props.onChngTxtIpAnodiam}/>
+                                secureTextEntry={true}
+                                placeholderTextColor={Colors.GRAY} onChangeText={props.onChngTxtIpAnodiam}/>
+            )
+            break;
+        case 'numeric':
+            content = (
+                <TextInput placeholder={placeholder} style={[styles.textInput, {textAlign: 'right'}]} 
+                                cursorColor={color} keyboardType={"numeric"} inputMode="numeric"
+                                placeholderTextColor={Colors.GRAY} onChangeText={props.onChngTxtIpAnodiam}/>
             )
             break;
         default:
-        content = (
-            <TextInput placeholder={placeholder} style={styles.textInput} cursorColor={color}
-                            placeholderTextColor={Colors.GRAY}
-                            onChangeText={props.onChngTxtIpAnodiam}/>
+            content = (
+                <TextInput placeholder={placeholder} style={styles.textInput} cursorColor={color}
+                                placeholderTextColor={Colors.GRAY} onChangeText={props.onChngTxtIpAnodiam}/>
             )
         }
     return (
