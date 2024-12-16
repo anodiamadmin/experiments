@@ -15,14 +15,14 @@ const ButtonAnodiam = (props) => {
     const backgroundColor = props.backgroundColor ||
                     (buttonType === 'primary' ? Colors.ANODIAM :
                         (buttonType === 'secondary' ?
-                            (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE) :
+                            (colorScheme === 'dark' ? Colors.dark.ANODIAM_PALE : Colors.light.ANODIAM_LIGHTEST) :
                             (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE)
                         )
                     )
     const padding = props.padding || 12
     const margin = props.margin || 0
     const borderRadius = props.borderRadius || 12
-    const borderColor = props.borderColor || Colors.ANODIAM
+    const borderColor = color
     const borderWidth = props.borderWidth || 1.5
     const fontFamily = props.fontFamily || 'Anodiam-Bold'
     const fontSize = props.fontSize || 18
@@ -37,13 +37,14 @@ const ButtonAnodiam = (props) => {
                 <TouchableOpacity style={styles.hyperLink} onPress={props.onPrsBtnAnodiam}>
                     <LabelAnodiam labelText={buttonText} color={color} fontFamily={fontFamily}
                                     fontSize={fontSize} textDecorationLine={textDecorationLine}
-                                    textAlign={textAlign} justifyContent={justifyContent} alignItems={alignItems}/>
+                                    textAlign={textAlign} justifyContent={justifyContent}
+                                    alignItems={alignItems}/>
                 </TouchableOpacity> )
         case 'secondary':
             return (
                 <TouchableOpacity style={styles.buttonSecondary} onPress={props.onPrsBtnAnodiam}>
-                    <LabelAnodiam labelText={buttonText} color={color} fontFamily={fontFamily}
-                                    fontSize={fontSize} textAlign={textAlign}
+                    <LabelAnodiam labelText={buttonText} color={color} backgroundColor={'transparent'} 
+                                    fontFamily={fontFamily} fontSize={fontSize} textAlign={textAlign}
                                     justifyContent={justifyContent} alignItems={alignItems}/>
                 </TouchableOpacity> )
         default:

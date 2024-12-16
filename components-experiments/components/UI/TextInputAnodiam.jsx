@@ -1,4 +1,4 @@
-import { useColorScheme, View, Text, TextInput } from 'react-native'
+import { View, Text, TextInput, useColorScheme } from 'react-native'
 import { Colors } from '@/constants/Colors'
 import LabelAnodiam from "./LabelAnodiam"
 import { textInputStyles } from "./styles"
@@ -6,28 +6,41 @@ import { textInputStyles } from "./styles"
 const TextInputAnodiam = (props) => {
     const colorScheme = useColorScheme();
     const textInputType = props.textInputType || 'text'
-    const labelTextInput = props.labelTextInput || 'TextInput-Anodiam'
-    const labelFontFamily = props.labelFontFamily || 'Anodiam-Regular'
-    const labelColor = props.labelColor ||
-                            (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARK : Colors.light.ANODIAM_DARK)
-    const labelFontSize = props.labelFontSize || 20
-    const validationText = props.validationText || '* - Mandatory'
+    const labelText = props.labelText || 'TextInput-Anodiam'
+    if (textInputType==='email') {
+        labelText = props.labelText || 'Email'
+    }
+    const placeholder = props.placeholder || 'Enter: ' + (labelText.length > 30 ?
+                                                            labelText.substring(0, 30) + "..." : labelText)
+    const validationText = props.validationText || ' '
+    const fontFamily = props.fontFamily || 'Anodiam-Regular'
+    const fontSize = props.inputFontSize || 16
+    const color = props.color || Colors.ANODIAM
+    const inputColor = props.inputColor || (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARKER : Colors.light.ANODIAM_DARKER)
     const validationTextColor = props.validationTextColor || Colors.RED
-    const inputPlaceholder = props.inputPlaceholder || 'Enter ' + labelTextInput
-    const inputPadding = props.inputPadding || 12
-    const inputFontFamily = props.inputFontFamily || 'Anodiam-Regular'
-    const inputFontSize = props.inputFontSize || 18
+    const validationFontSize = props.validationFontSize || 14
     const borderRadius = props.borderRadius || 12
-    const borderColor = props.borderColor || Colors.ANODIAM
     const borderWidth = props.borderWidth || 1
-    const styles = textInputStyles(labelFontFamily, labelColor, labelFontSize, validationText,
-                                    validationTextColor, inputPlaceholder, inputPadding, inputFontFamily,
-                                    inputFontSize, borderRadius, borderColor, borderWidth)
+    const padding = props.padding || 13
+    const styles = textInputStyles(borderRadius, borderWidth, padding, color, inputColor)
     switch (textInputType) {
         case 'email':
             return (
                 <View>
-                    <Text>Email</Text>
+                    <View style={styles.inputLabelRow}>
+                        <View style={styles.leftName}>
+                            <LabelAnodiam labelText={labelText} fontSize={fontSize} fontFamily={fontFamily}
+                                            color={color}/>
+                        </View>
+                        <View style={styles.rightMessage}>
+                            <LabelAnodiam labelText={validationText} fontSize={validationFontSize}
+                                            fontFamily={fontFamily} color={validationTextColor}
+                                            textAlign={'right'}/>
+                        </View>
+                    </View>
+                    <TextInput placeholder={placeholder} style={styles.textInput} cursorColor={color}
+                                    placeholderTextColor={Colors.GRAY}
+                                    onChangeText={props.onChngTxtIpAnodiam}/>
                 </View> )
         case 'password':
             return (
@@ -47,11 +60,20 @@ const TextInputAnodiam = (props) => {
         default:
             return (
                 <View>
-                    <View style={styles.flexRow}>
-                        <LabelAnodiam labelText={labelTextInput} style={styles.textInputLabel}/>
-                        <LabelAnodiam labelText={validationText} style={styles.textInputValidation}/>
+                    <View style={styles.inputLabelRow}>
+                        <View style={styles.leftName}>
+                            <LabelAnodiam labelText={labelText} fontSize={fontSize} fontFamily={fontFamily}
+                                            color={color}/>
+                        </View>
+                        <View style={styles.rightMessage}>
+                            <LabelAnodiam labelText={validationText} fontSize={validationFontSize}
+                                            fontFamily={fontFamily} color={validationTextColor}
+                                            textAlign={'right'}/>
+                        </View>
                     </View>
-                    <TextInput placeholder={inputPlaceholder} style={styles.textInput}/>
+                    <TextInput placeholder={placeholder} style={styles.textInput} cursorColor={color}
+                                    placeholderTextColor={Colors.GRAY} 
+                                    onChangeText={props.onChngTxtIpAnodiam}/>
                 </View> )
         }
 }
