@@ -1,7 +1,6 @@
-import { View , TouchableOpacity } from 'react-native'
+import { View } from 'react-native'
 import { useState } from 'react'
 import { Colors } from "../constants/Colors"
-import { Ionicons } from '@expo/vector-icons';
 import LabelAnodiam from "../components/UI/LabelAnodiam"
 import TextInputAnodiam  from "../components/UI/TextInputAnodiam"
 import ButtonAnodiam from "../components/UI/ButtonAnodiam"
@@ -46,9 +45,7 @@ export default function SignIn() {
       backgroundColor: Colors.light.ANODIAM_PALE,
       height: '100%'
       }}>
-      <TouchableOpacity>
-        <Ionicons name='arrow-back' size={24} color={Colors.BLACK}/>
-      </TouchableOpacity>
+      <ButtonAnodiam buttonType='arrowback' fontSize={24} color={Colors.BLACK}/>
       <View style={{marginTop: 30}}>
         <LabelAnodiam labelText={'Sign-in to Gypsee'} color={Colors.dark.ANODIAM_TIFFANY} fontSize={24} fontFamily='Anodiam-Bold'/>
       </View>

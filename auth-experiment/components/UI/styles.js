@@ -54,6 +54,11 @@ const buttonStyles = (backgroundColor, padding, margin, borderRadius, borderColo
             padding: padding,
             margin: margin,
         },
+        arrowback:{
+            backgroundColor: backgroundColor,
+            padding: padding,
+            margin: margin,
+        }
     });
 };
 
