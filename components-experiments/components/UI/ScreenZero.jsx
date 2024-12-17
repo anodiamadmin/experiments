@@ -8,13 +8,21 @@ import { screenStyles } from './styles'
 
 const ScreenZero = () => {
     const colorScheme = useColorScheme();
-    const [txtIpOne, setTxtIpOne] = useState("")
-    const [txtIpTwo, setTxtIpTwo] = useState("")
+    const [name, setName] = useState("")
+    const [surname, setSurname] = useState("")
+    const [pswd, setPswd] = useState("")
+    const [confPswd, setConfPswd] = useState("")
+    const [pswdConfirmed, setPswdConfirmed] = useState(false)
+    const [createPswd, setCreatePswd] = useState("")
+    const [numeric, setNumeric] = useState("")
+    const [email, setEmail] = useState("")
+    
     const padding = 20
     const paddingTop = 50
     const backgroundColor = colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE
     const height = '100%'
     const styles = screenStyles(padding, paddingTop, backgroundColor, height)
+
     const handleOnPressPrimary = () => {
         ToastAndroid.show('Primary Button Pressed', ToastAndroid.LONG)
         return
@@ -23,33 +31,35 @@ const ScreenZero = () => {
         ToastAndroid.show('Secondary Button or Hyperlink Pressed', ToastAndroid.LONG)
         return
     };
-    const handleKeyPressOne = (txtIpOne) => {
-        setTxtIpOne(txtIpOne)
-        console.log("Content 1: ", {txtIpOne});
+    const handleKeyPressName = (name) => {
+        setName(name)
+        console.log("Name: ", {name});
     }
-    const handleKeyPressTwo = (txtIpTwo) => {
-        setTxtIpOne(txtIpTwo)
-        console.log("Content 2: ", {txtIpTwo});
+    const handleKeyPressSurname = (surname) => {
+        setSurname(surname)
+        console.log("Surname: ", {surname});
     }
-    const handleKeyPressPass = (txtIpPass) => {
-        setTxtIpOne(txtIpPass)
-        console.log("Content 3: ", {txtIpPass});
+    const handleKeyPressPswd = (pswd) => {
+        setPswd(pswd)
+        pswd.length>3 && pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false)
+        console.log("Password: ", {pswd});
     }
-    const handleKeyPressConfPass = (txtIpConfPass) => {
-        setTxtIpOne(txtIpConfPass)
-        console.log("Content 4: ", {txtIpConfPass});
+    const handleKeyPressConfPswd = (confPswd) => {
+        setConfPswd(confPswd)
+        pswd.length>3 && pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false)
+        console.log("Confirm Password: ", {confPswd});
     }
-    const handleKeyPressFloat = (txtIpFloat) => {
-        setTxtIpOne(txtIpFloat)
-        console.log("Content 5: ", {txtIpFloat});
+    const handleKeyPressCreatePass = (createPswd) => {
+        setCreatePswd(createPswd)
+        console.log("Create Password: ", {createPswd});
     }
-    const handleKeyPressInt = (txtIpInt) => {
-        setTxtIpOne(txtIpInt)
-        console.log("Content 6: ", {txtIpInt});
+    const handleKeyPressNumeric = (numeric) => {
+        setNumeric(numeric)
+        console.log("Numeric Input: ", {numeric});
     }
-    const handleEmail = (txtIpEmail) => {
-        setTxtIpOne(txtIpEmail)
-        console.log("Content 7: ", {txtIpEmail});
+    const handleKeyPressEmail = (email) => {
+        setEmail(email)
+        console.log("Email: ", {email});
     }
     return (
         <View style={styles.anodiamScreen}>
@@ -57,13 +67,14 @@ const ScreenZero = () => {
             {/* <LabelAnodiam labelText={'My name is Soubhanik'} color={Colors.RED} fontSize={30}/>
             <ButtonAnodiam buttonText={'My Button'} onPrsBtnAnodiam={handleOnPressPrimary}/>
             <ButtonAnodiam buttonText={'hyper-link'} buttonType={'hyperlink'} onPrsBtnAnodiam={handleOnPress}/>
-            <ButtonAnodiam buttonType={'secondary'} onPrsBtnAnodiam={handleOnPress}/>
-            <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressOne}/> */}
-            {/* <TextInputAnodiam labelText={'Surname'} validationText={'Invalid surnane'} onChngTxtIpAnodiam={handleKeyPressTwo}/> */}
-            <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPass}/>
-            <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} onChngTxtIpAnodiam={handleKeyPressConfPass}/>
-            <TextInputAnodiam labelText={'Float Numeric'} textInputType={'numeric'} onChngTxtIpAnodiam={handleKeyPressFloat}/>
-            <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleEmail}/>
+            <ButtonAnodiam buttonType={'secondary'} onPrsBtnAnodiam={handleOnPress}/> */}
+            <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressName}/>
+            <TextInputAnodiam labelText={'Surname'} validationText={'Invalid surnane'} onChngTxtIpAnodiam={handleKeyPressSurname}/>
+            <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPswd}/>
+            <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} pswdConfirmed={pswdConfirmed} onChngTxtIpAnodiam={handleKeyPressConfPswd}/>
+            <TextInputAnodiam labelText={'Creat Password'} textInputType={'create-password'} onChngTxtIpAnodiam={handleKeyPressCreatePass}/>
+            <TextInputAnodiam labelText={'Numeric'} textInputType={'numeric'} onChngTxtIpAnodiam={handleKeyPressNumeric}/>
+            <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleKeyPressEmail}/>
         </View>
     )
 }

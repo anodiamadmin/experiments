@@ -74,11 +74,19 @@ const textInputStyles = (borderRadius, borderWidth, padding, color, inputColor) 
             alignItems: 'flex-end', // Align text to the right-bottom
         },
         textInput: {
+            width: '100%',
             padding: padding,
             borderWidth: borderWidth,
             borderRadius: borderRadius,
             color: inputColor,
             borderColor: color,
+        },
+        inputContainer: {
+            flexDirection: 'row',
+            alignItems: 'center',
+        },
+        iconContainer: {
+            marginLeft: -40
         }
     });
 };
