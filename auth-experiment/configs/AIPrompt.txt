@@ -1,0 +1,49 @@
+Generate a travel plan for destination: London, UK for 7 days and 6 nights starting from starting point: 71 Wolseley St, Bexley NSW 2207, Australia on Fri Nov 15 2024 12:00:00 GMT+1100 for Family with Moderate budget.
+We need the following details in a properly formatted nested JSON:
+1> Destination
+  * DestinationName (up to 32 characters)
+  * GeoCoordinates
+    - latitude
+    - longitude
+  * GooglePhotoRef
+  * DestinationDescriptionURL
+  * DestinationDescription (up to 256 characters)
+2> Flights (Collection of all available filghts from starting point to destination, fitting the budjet and travel dates, presented in a nested JSON format. Each flight must contain the following information)(Provide at least 4 flight options or as many possible)
+  * FlightIndex# (serially as 1, 2, 3, 4, 5...)
+  * AirlineName (up to 32 characters)
+  * GooglePhotoRef
+  * DepartureDate (DD MMM YYYY format)
+  * DepartureTime (HH:mm format)
+  * ArrivalDate (DD MMM YYYY format)
+  * ArrivalTime (HH:mm format)
+  * FlightDuration (H[h] m[m] format)
+  * OneWayTicketPriceEstimate (for one adult passenger. Numeric value only, in string format, enclosed within quotes)
+  * PriceCurrency
+  * BookingURL
+3> Hotels: (Collection of all available hotels at the destination, fitting the budjet, presented in a nested JSON format. Each hotel must contain the following information)(Provide at least 4 hotel options or as many possible)
+  * HotelIndex# (serially as 1, 2, 3, 4, 5...)
+  * HotelName (up to 32 characters)
+  * HotelAddress (up to 64 characters)
+  * HotelAddressGooglePhotoRef (google places api photo reference of the hotel's address)
+  * PricePerNight (Numeric value only, in a string format, enclosed within quotes)
+  * PriceCurrency
+  * BookingURL
+  * HotelGeoCoordinates
+  * HotelRating (Out of 5. One numeric character only, enclosed within quotes)
+  * HotelDistance (from nearest airport in Kms. Numeric value only, in string format, enclosed within quotes)
+  * HotelDescriptions (up to 256 characters)
+4> DayWiseItinerary: (Collection of itinerary for all the dates during the stay, presented in a nested JSON format)
+  * Date: (DD MMM YYYY format)
+  * PlacesToVisit: (Collection of 1 to 3 most appropriate places nearby the destination to visit during that particular date, fitting the budget and the traveller information, presented in a nested JSON format)
+    - PlaceIndex# (serially as 1, 2, 3, 4, 5...)
+    - PlaceName (up to 32 characters)
+    - PlaceGooglePhotoRef (google places api photo reference of the place)
+    - PlaceDetails (up to 256 characters)
+    - VisitStartTime (HH:mm format; MUST NOT CONFLICT with any other place to visit on that perticular day; Place MUST remain OPEN during the visit start time and duration; MUST consider adequate travel time between places to visit in a particular day)
+    - PrescribedVisitDuration (H[h] m[m] format)
+    - PlaceDescription (up to 2048 characters)
+    - GeoCoordinates
+    - EntryTicketPrice (If free or zero cost, write free; if numeric, provide only the value in a string format; if non-numeric, enclose the value within quotes)
+    - PriceCurrency (If available)
+    - TimeToTravel (H[h] m[m] format; for the first place on a particular day, provide the time to trave from the base destination; for the rest of the places provide the time to trave from the last place visited)
+    - BestTimeOfTheDayToVisit (write Morning, Afternoon, Night, Dawn, Dusk etc.)
