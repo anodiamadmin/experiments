@@ -1,4 +1,4 @@
-import { View } from 'react-native'
+import { View,ToastAndroid } from 'react-native'
 import { useState } from 'react'
 import { Colors } from "../constants/Colors"
 import LabelAnodiam from "../components/UI/LabelAnodiam"
@@ -9,16 +9,20 @@ import { auth } from '../configs/FirebaseConfig'
 
 export default function SignIn() {
     const [email, setEmail] = useState("")
-    const [pswd, setPswd] = useState("")
+    const [password, setPassword] = useState("")
 
     const handleKeyPressEmail = (email) => {
         setEmail(email)
     }
-    const handleKeyPressPswd = (pswd) => {
-        setPswd(pswd)
+    const handleKeyPressPassword = (password) => {
+      setPassword(password)
     }
     const handleLogin = () => {
-      signInWithEmailAndPassword(auth, email, pswd)
+      if(!email&&!password){
+        ToastAndroid.show('Please enter Email and password', ToastAndroid.LONG)
+        return
+      }
+      signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Sign in 
         const user = userCredential.user;
@@ -57,7 +61,7 @@ export default function SignIn() {
         <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleKeyPressEmail}/>
       </View>
       <View style={{marginTop: 25}}>
-        <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPswd}/>
+        <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPassword}/>
       </View>
       <View style={{marginTop: 40}}>
         <ButtonAnodiam buttonText={'Sign In'} onPrsBtnAnodiam={handleLogin}/>
