@@ -6,6 +6,7 @@ import TextInputAnodiam  from "../components/UI/TextInputAnodiam"
 import ButtonAnodiam from "../components/UI/ButtonAnodiam"
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../configs/FirebaseConfig'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function SignIn() {
     const [email, setEmail] = useState("")
@@ -26,17 +27,16 @@ export default function SignIn() {
       .then((userCredential) => {
         // Sign in 
         const user = userCredential.user;
-        //AsyncStorage.setItem('userdetails',  JSON.stringify(user));
-        // console.log("User details after logging : " + JSON.stringify(user));
+        AsyncStorage.setItem('userdetails',  JSON.stringify(user));
+        console.log("User details after logging : " + JSON.stringify(user));
         //setIsBusy(false)
         //router.replace('/mytrip')
-        console.log('SIGN-IN USER:: ', user);
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(error.message, error.code);
-        //ToastAndroid.show(errorCode, ToastAndroid.LONG)
+        ToastAndroid.show(errorCode, ToastAndroid.LONG)
         //setIsBusy(false)
       });
       }
