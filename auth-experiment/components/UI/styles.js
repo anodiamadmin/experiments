@@ -55,7 +55,6 @@ const buttonStyles = (backgroundColor, padding, margin, borderRadius, borderColo
             margin: margin,
         },
         arrowback:{
-            backgroundColor: backgroundColor,
             padding: padding,
             margin: margin,
         }
