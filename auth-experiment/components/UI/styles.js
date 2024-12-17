@@ -34,7 +34,7 @@ const labelStyles = (color, backgroundColor,
     });
 };
 
-const buttonStyles = (backgroundColor, padding, margin, borderRadius, borderColor, borderWidth) => {
+const buttonStyles = (backgroundColor, padding, margin, borderRadius, borderColor, borderWidth,fontSize) => {
     return StyleSheet.create({
         buttonPrimary: {
             backgroundColor: backgroundColor,
@@ -54,6 +54,9 @@ const buttonStyles = (backgroundColor, padding, margin, borderRadius, borderColo
             padding: padding,
             margin: margin,
         },
+        arrowback:{
+            fontSize:fontSize,
+        }
     });
 };
 

@@ -2,6 +2,7 @@ import { TouchableOpacity, useColorScheme } from 'react-native'
 import { buttonStyles } from "./styles"
 import { Colors } from '@/constants/Colors'
 import LabelAnodiam from "./LabelAnodiam"
+import { Ionicons } from '@expo/vector-icons';
 
 const ButtonAnodiam = (props) => {
     const colorScheme = useColorScheme();
@@ -30,8 +31,14 @@ const ButtonAnodiam = (props) => {
     const textAlign = props.textAlign || 'center'
     const justifyContent = props.justifyContent || 'center'
     const alignItems = props.alignItems || 'center'
-    const styles = buttonStyles(backgroundColor, padding, margin, borderRadius, borderColor, borderWidth)
+    const styles = buttonStyles(backgroundColor, padding, margin, borderRadius, borderColor, borderWidth,fontSize)
     switch (buttonType) {
+        case 'arrowback':
+            return(
+                <TouchableOpacity onPress={props.onPrsBtnAnodiam}>
+                    <Ionicons name='arrow-back' style={styles.arrowback} fontSize={fontSize} color={color}/>
+                </TouchableOpacity>
+              )
         case 'hyperlink':
             return (
                 <TouchableOpacity style={styles.hyperLink} onPress={props.onPrsBtnAnodiam}>
