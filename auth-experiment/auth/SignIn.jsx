@@ -13,11 +13,9 @@ export default function SignIn() {
 
     const handleKeyPressEmail = (email) => {
         setEmail(email)
-        console.log("Email: ", {email});
     }
     const handleKeyPressPswd = (pswd) => {
         setPswd(pswd)
-        console.log("Password: ", {pswd});
     }
     const handleLogin = () => {
       signInWithEmailAndPassword(auth, email, pswd)
