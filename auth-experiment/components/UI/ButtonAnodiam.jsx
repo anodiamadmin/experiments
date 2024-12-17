@@ -31,12 +31,12 @@ const ButtonAnodiam = (props) => {
     const textAlign = props.textAlign || 'center'
     const justifyContent = props.justifyContent || 'center'
     const alignItems = props.alignItems || 'center'
-    const styles = buttonStyles(backgroundColor, padding, margin, borderRadius, borderColor, borderWidth)
+    const styles = buttonStyles(backgroundColor, padding, margin, borderRadius, borderColor, borderWidth,fontSize)
     switch (buttonType) {
         case 'arrowback':
             return(
-                <TouchableOpacity style={styles.arrowback} onPress={props.onPrsBtnAnodiam}>
-                    <Ionicons name='arrow-back' fontSize={fontSize} color={color}/>
+                <TouchableOpacity onPress={props.onPrsBtnAnodiam}>
+                    <Ionicons name='arrow-back' style={styles.arrowback} fontSize={fontSize} color={color}/>
                 </TouchableOpacity>
               )
         case 'hyperlink':
