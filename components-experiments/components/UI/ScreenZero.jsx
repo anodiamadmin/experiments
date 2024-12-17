@@ -41,12 +41,12 @@ const ScreenZero = () => {
     }
     const handleKeyPressPswd = (pswd) => {
         setPswd(pswd)
-        pswd.length>3 && pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false)
+        pswd.length>=6 && pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false)
         console.log("Password: ", {pswd});
     }
     const handleKeyPressConfPswd = (confPswd) => {
         setConfPswd(confPswd)
-        pswd.length>3 && pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false)
+        pswd.length>=6 && pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false)
         console.log("Confirm Password: ", {confPswd});
     }
     const handleKeyPressCreatePass = (createPswd) => {
