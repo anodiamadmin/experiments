@@ -17,7 +17,7 @@ export const Colors = {
   CONTRAST: '#22A7A4',
   RED: '#FF0000',
   GREEN: '#00B050',
-  AMBER: '#F0F513',
+  AMBER: '#F6BC04',
   light: {
     ANODIAM_JETDARK:'#240808',
     ANODIAM_DARKEST: '#771B1B',
