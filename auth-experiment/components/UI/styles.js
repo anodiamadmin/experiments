@@ -94,4 +94,15 @@ const textInputStyles = (borderRadius, borderWidth, padding, color, inputColor) 
     });
 };
 
-export { screenStyles, labelStyles, buttonStyles, textInputStyles };
+const backGroundStyles = (backgroundColor) => {
+    return StyleSheet.create({
+        gypseeBackground: {
+            padding: 20,
+            paddingTop: 60,
+            backgroundColor: backgroundColor,
+            height: '100%'
+        },
+    });
+};
+
+export { screenStyles, labelStyles, buttonStyles, textInputStyles, backGroundStyles };

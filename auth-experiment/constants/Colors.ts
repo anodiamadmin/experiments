@@ -17,7 +17,7 @@ export const Colors = {
   CONTRAST: '#22A7A4',
   RED: '#FF0000',
   GREEN: '#00B050',
-  AMBER: '#F0F513',
+  AMBER: '#F6BC04',
   light: {
     ANODIAM_JETDARK:'#240808',
     ANODIAM_DARKEST: '#771B1B',
@@ -34,7 +34,7 @@ export const Colors = {
     CONTRAST_LIGHT: '#2CD4D0',
     CONTRAST_LIGHTER: '#72EBEE',
     CONTRAST_LIGHTEST: '#B7F7E8',
-    CONTRAST_PALE: '#F1FDFA',
+    CONTRAST_PALE: '#F1FDFA'
   },
   dark: {
     ANODIAM_JETDARK: '#FFF3ED',
@@ -45,7 +45,6 @@ export const Colors = {
     ANODIAM_LIGHTER: '#BA4428',
     ANODIAM_LIGHTEST: '#771B1B',
     ANODIAM_PALE: '#240808',
-    ANODIAM_TIFFANY: '#00848C',
     CONTRAST_JETDARK: '#F1FDFA',
     CONTRAST_DARKEST: '#B7F7E8',
     CONTRAST_DARKER: '#72EBEE',
@@ -54,6 +53,5 @@ export const Colors = {
     CONTRAST_LIGHTER: '#007076',
     CONTRAST_LIGHTEST: '#00585C',
     CONTRAST_PALE: '#001415',
-    CONTRAST_TIFFANY: '#0097A7',
   },
 };
