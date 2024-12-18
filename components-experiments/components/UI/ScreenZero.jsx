@@ -1,13 +1,17 @@
 import { StatusBar, View, useColorScheme, ToastAndroid } from 'react-native'
 import { useState } from 'react'
-import LabelAnodiam from "./LabelAnodiam"
-import ButtonAnodiam from "./ButtonAnodiam"
 import TextInputAnodiam  from "./TextInputAnodiam"
 import { Colors } from '@/constants/Colors'
 import { screenStyles } from './styles'
 
 const ScreenZero = () => {
     const colorScheme = useColorScheme();
+    const padding = 20
+    const paddingTop = 50
+    const backgroundColor = colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE
+    const height = '100%'
+    const styles = screenStyles(padding, paddingTop, backgroundColor, height)
+
     const [name, setName] = useState("")
     const [surname, setSurname] = useState("")
     const [pswd, setPswd] = useState("")
@@ -17,12 +21,6 @@ const ScreenZero = () => {
     const [numeric, setNumeric] = useState("")
     const [email, setEmail] = useState("")
     
-    const padding = 20
-    const paddingTop = 50
-    const backgroundColor = colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE
-    const height = '100%'
-    const styles = screenStyles(padding, paddingTop, backgroundColor, height)
-
     const handleOnPressPrimary = () => {
         ToastAndroid.show('Primary Button Pressed', ToastAndroid.LONG)
         return

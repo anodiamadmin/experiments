@@ -1,4 +1,4 @@
-import { View,ToastAndroid, useColorScheme } from 'react-native'
+import { View,ToastAndroid, StatusBar, useColorScheme } from 'react-native'
 import { useState } from 'react'
 import { Colors } from "../constants/Colors"
 import LabelAnodiam from "../components/UI/LabelAnodiam"
@@ -7,12 +7,15 @@ import ButtonAnodiam from "../components/UI/ButtonAnodiam"
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../configs/FirebaseConfig'
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { backGroundStyles } from "../components/UI/styles"
+import { screenStyles } from "../components/UI/styles"
 
 export default function SignIn() {
   const colorScheme = useColorScheme();
-  // const backgroundColor = colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE
-  const backgroundColor = Colors.GREEN
+  const padding = 20
+  const paddingTop = 20
+  const backgroundColor = colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE
+  const height = '100%'
+  const styles = screenStyles(padding, paddingTop, backgroundColor, height)
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -45,32 +48,32 @@ export default function SignIn() {
       //setIsBusy(false)
     });
   }
-  const styles = backGroundStyles(backgroundColor)
   return (
-    <View style={styles.gypseeBackground}>
-      <ButtonAnodiam buttonType='arrowback' fontSize={24} color={Colors.BLACK}/>
-      <View style={{marginTop: 30}}>
-        <LabelAnodiam labelText={'Sign-in to Gypsee'} color={Colors.dark.ANODIAM_TIFFANY} fontSize={24} fontFamily='Anodiam-Bold'/>
+    <View style={styles.anodiamScreen}>
+      <StatusBar style={colorScheme} backgroundColor={backgroundColor} />
+      <View style={{marginTop: 10}}>
+        <LabelAnodiam labelText={'Sign-in to Gypsee'} fontSize={24} fontFamily='Anodiam-Bold'
+            color={colorScheme === 'dark' ? Colors.dark.CONTRAST_DARK : Colors.light.CONTRAST_DARK}/>
       </View>
       <View style={{marginTop: 10}}>
-        <LabelAnodiam labelText={'Welcome!'} color={Colors.dark.CONTRAST_TIFFANY} fontSize={16}/>
+        <LabelAnodiam labelText={'Welcome!'} color={Colors.CONTRAST} fontSize={16}/>
+      </View>
+      <View style={{marginTop: 5}}>
+        <LabelAnodiam labelText={'Your adventure starts here...'} color={Colors.CONTRAST} fontSize={16}/>
       </View>
       <View style={{marginTop: 15}}>
-        <LabelAnodiam labelText={'Your adventure starts here...'} color={Colors.dark.CONTRAST_TIFFANY} fontSize={16}/>
-      </View>
-      <View style={{marginTop: 25}}>
         <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleKeyPressEmail}/>
       </View>
-      <View style={{marginTop: 25}}>
+      <View style={{marginTop: 15}}>
         <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPassword}/>
       </View>
-      <View style={{marginTop: 40}}>
+      <View style={{marginTop: 20}}>
         <ButtonAnodiam buttonText={'Sign In'} onPrsBtnAnodiam={handleLogin}/>
       </View>
-      <View style={{marginTop: 20}}>
+      <View style={{marginTop: 15}}>
         <ButtonAnodiam buttonText={'Create Account'} buttonType='secondary'/>
       </View>
-      <View style={{marginTop: 20}}>
+      <View style={{marginTop: 0}}>
         <ButtonAnodiam buttonText={'Forgot Password'} buttonType='hyperlink'/>
       </View>
     </View>
