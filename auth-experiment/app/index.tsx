@@ -1,11 +1,10 @@
 import { View } from "react-native";
-//import ScreenZero from "../components/UI/ScreenZero"
-import SignIn from "../auth/SignIn"
+import SignUp from "./auth/sign-up"
 
 const Index = () => {
   return (
     <View>
-      <SignIn/>
+      <SignUp/>
     </View>
   );
 }

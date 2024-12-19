@@ -1,13 +1,13 @@
 import { View,ToastAndroid, StatusBar, useColorScheme } from 'react-native'
 import { useState } from 'react'
-import { Colors } from "../constants/Colors"
-import LabelAnodiam from "../components/UI/LabelAnodiam"
-import TextInputAnodiam  from "../components/UI/TextInputAnodiam"
-import ButtonAnodiam from "../components/UI/ButtonAnodiam"
+import { Colors } from "../../constants/Colors"
+import LabelAnodiam from "../../components/UI/LabelAnodiam"
+import TextInputAnodiam  from "../../components/UI/TextInputAnodiam"
+import ButtonAnodiam from "../../components/UI/ButtonAnodiam"
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../configs/FirebaseConfig'
+import { auth } from '../../configs/FirebaseConfig'
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { screenStyles } from "../components/UI/styles"
+import { screenStyles } from "../../components/UI/styles"
 
 export default function SignIn() {
   const colorScheme = useColorScheme();
