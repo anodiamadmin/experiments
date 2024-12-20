@@ -50,7 +50,7 @@ export default function SignIn() {
   return (
     <View style={styles.anodiamScreen}>
       <StatusBar style={colorScheme} backgroundColor={backgroundColor} />
-      <View style={{marginTop: 10}}>
+      <View style={{marginTop: 20}}>
         <LabelAnodiam labelText={'Sign-in to Gypsee'} fontSize={24} fontFamily='Anodiam-Bold'
             color={colorScheme === 'dark' ? Colors.dark.CONTRAST_DARK : Colors.light.CONTRAST_DARK}/>
       </View>
@@ -60,19 +60,19 @@ export default function SignIn() {
       <View style={{marginTop: 5}}>
         <LabelAnodiam labelText={'Your adventure starts here...'} color={Colors.CONTRAST} fontSize={16}/>
       </View>
-      <View style={{marginTop: 15}}>
+      <View style={{marginTop: 20}}>
         <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleKeyPressEmail}/>
       </View>
       <View style={{marginTop: 15}}>
         <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPassword}/>
       </View>
-      <View style={{marginTop: 20}}>
+      <View style={{marginTop: 30}}>
         <ButtonAnodiam buttonText={'Sign In'} onPrsBtnAnodiam={handleLogin}/>
       </View>
-      <View style={{marginTop: 15}}>
+      <View style={{marginTop: 20}}>
         <ButtonAnodiam buttonText={'Create Account'} buttonType='secondary'/>
       </View>
-      <View style={{marginTop: 0}}>
+      <View style={{marginTop: 5}}>
         <ButtonAnodiam buttonText={'Forgot Password'} buttonType='hyperlink'/>
       </View>
     </View>
