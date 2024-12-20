@@ -11,19 +11,19 @@ export default function TabLayout() {
       tabBarActiveTintColor: Colors.ANODIAM,
       tabBarInactiveTintColor: Colors.DARKEST_TIFFANY,
     }}>
-      <Tabs.Screen name="mytrip"
+      <Tabs.Screen name="MyTrips"
         options={{
           tabBarLabel: 'My Trips',
           tabBarIcon:({color})=><Ionicons name="location-sharp" size={24} color={color}/>
         }}
       />
-      <Tabs.Screen name="discover"
+      <Tabs.Screen name="Discover"
         options={{
           tabBarLabel: 'Discover',
           tabBarIcon:({color})=><Ionicons name="globe-sharp" size={24} color={color}/>
         }}
       />
-      <Tabs.Screen name="profile"
+      <Tabs.Screen name="MyProfile"
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon:({color})=><Ionicons name="people-circle" size={24} color={color}/>

@@ -1,5 +1,5 @@
 import { TouchableOpacity, useColorScheme } from 'react-native'
-import { buttonStyles } from "./styles"
+import { buttonStyles } from "./Styles"
 import { Colors } from '@/constants/Colors'
 import LabelAnodiam from "./LabelAnodiam"
 import { Ionicons } from '@expo/vector-icons';

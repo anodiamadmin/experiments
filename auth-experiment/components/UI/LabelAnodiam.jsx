@@ -1,5 +1,5 @@
 import { View, Text, useColorScheme } from 'react-native'
-import { labelStyles } from "./styles"
+import { labelStyles } from "./Styles"
 import { Colors } from '@/constants/Colors'
 
 const LabelAnodiam = (props) => {

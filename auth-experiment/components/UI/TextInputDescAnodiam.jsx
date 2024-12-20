@@ -1,7 +1,7 @@
 import { View } from 'react-native'
 import { Colors } from '@/constants/Colors'
 import LabelAnodiam from "./LabelAnodiam"
-import { textInputStyles } from "./styles"
+import { textInputStyles } from "./Styles"
 
 const TextInputAnodiam = (props) => {
     const labelText = props.labelText || 'TextInput-Anodiam'

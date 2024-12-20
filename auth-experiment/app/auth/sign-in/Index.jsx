@@ -1,21 +1,20 @@
 import { View,ToastAndroid, StatusBar, useColorScheme } from 'react-native'
 import { useState } from 'react'
-import { Colors } from "../../constants/Colors"
-import LabelAnodiam from "../../components/UI/LabelAnodiam"
-import TextInputAnodiam  from "../../components/UI/TextInputAnodiam"
-import ButtonAnodiam from "../../components/UI/ButtonAnodiam"
+import { Colors } from "../../../constants/Colors"
+import LabelAnodiam from "../../../components/UI/LabelAnodiam"
+import TextInputAnodiam  from "../../../components/UI/TextInputAnodiam"
+import ButtonAnodiam from "../../../components/UI/ButtonAnodiam"
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../../configs/FirebaseConfig'
+import { auth } from '../../../configs/FirebaseConfig'
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { screenStyles } from "../../components/UI/styles"
+import { screenStyles } from "../../../components/UI/Styles"
 
 export default function SignIn() {
   const colorScheme = useColorScheme();
   const padding = 20
-  const paddingTop = 20
   const backgroundColor = colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE
   const height = '100%'
-  const styles = screenStyles(padding, paddingTop, backgroundColor, height)
+  const styles = screenStyles(padding, backgroundColor, height)
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")

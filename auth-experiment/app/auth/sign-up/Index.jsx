@@ -7,7 +7,7 @@ import ButtonAnodiam from "../../../components/UI/ButtonAnodiam"
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../../configs/FirebaseConfig'
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { screenStyles } from "../../../components/UI/styles"
+import { screenStyles } from "../../../components/UI/Styles"
 
 export default function SignUp() {
   const colorScheme = useColorScheme();

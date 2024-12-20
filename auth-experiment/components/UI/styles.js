@@ -1,10 +1,26 @@
 import { StyleSheet } from 'react-native';
 
-const screenStyles = (padding, paddingTop, backgroundColor, height) => {
+const imageStyles = (justifyContent, alignItems, width, height) => {
+    return StyleSheet.create({
+        gifContainer: {
+            justifyContent: justifyContent,
+            alignItems: alignItems,
+        },
+        gif: {
+            width: width,
+            height: height,
+        },
+        bottomLogoPng: {
+            width: 150,
+            height: 40,
+        }
+    });
+};
+
+const screenStyles = (padding, backgroundColor, height) => {
     return StyleSheet.create({
         anodiamScreen: {
             padding: padding,
-            paddingTop: paddingTop,
             backgroundColor: backgroundColor,
             height: height
         },
@@ -94,4 +110,4 @@ const textInputStyles = (borderRadius, borderWidth, padding, color, inputColor) 
     });
 };
 
-export { screenStyles, labelStyles, buttonStyles, textInputStyles };
+export { imageStyles, screenStyles, labelStyles, buttonStyles, textInputStyles };

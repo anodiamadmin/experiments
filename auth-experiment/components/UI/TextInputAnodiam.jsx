@@ -1,7 +1,7 @@
 import { View, TextInput, useColorScheme, TouchableOpacity } from 'react-native'
 import { Colors } from '@/constants/Colors'
 import TextInputDescAnodiam from "./TextInputDescAnodiam"
-import { textInputStyles } from "./styles"
+import { textInputStyles } from "./Styles"
 import { Ionicons } from '@expo/vector-icons'
 import { useState } from 'react'
 
