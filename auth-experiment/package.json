@@ -1,5 +1,5 @@
 {
-  "name": "components-experiments",
+  "name": "auth-experiment",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {

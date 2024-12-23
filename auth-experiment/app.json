@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "components-experiments",
-    "slug": "components-experiments",
+    "name": "auth-experiment",
+    "slug": "auth-experiment",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
