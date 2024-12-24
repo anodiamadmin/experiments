@@ -8,6 +8,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../../configs/FirebaseConfig'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { screenStyles } from "../../../components/UI/Styles"
+import { useRouter } from 'expo-router'
 
 export default function SignUp() {
   const colorScheme = useColorScheme();
@@ -16,22 +17,48 @@ export default function SignUp() {
   const backgroundColor = colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE
   const height = '100%'
   const styles = screenStyles(padding, paddingTop, backgroundColor, height)
+  const router = useRouter()
 
+  const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [createPassword, setCreatePassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
 
+  const handleKeyPressFullName = (fullName) => {
+    setFullName(fullName)
+  }
   const handleKeyPressEmail = (email) => {
     setEmail(email)
   }
-  const handleKeyPressPassword = (password) => {
-    setPassword(password)
+  const handleKeyPressCreatePassword = (createPassword) => {
+    setCreatePassword(createPassword)
   }
-  const handleLogin = () => {
-    if(!email&&!password){
-      ToastAndroid.show('Please enter Email and password', ToastAndroid.LONG)
+  const handleKeyPressConfirmPassword = (confirmPassword) => {
+    setConfirmPassword(confirmPassword)
+  }
+  const handleCreateAccount = () => {
+    if(!fullName){
+      ToastAndroid.show('Please enter your Full Name', ToastAndroid.LONG)
       return
     }
-    createUserWithEmailAndPassword(auth, email, password)
+    if(!email){
+      ToastAndroid.show('Please enter your Email', ToastAndroid.LONG)
+      return
+    }
+    if(!createPassword){
+      ToastAndroid.show('Please enter your Password', ToastAndroid.LONG)
+      return
+    }
+    if(!confirmPassword){
+      ToastAndroid.show('Please enter your Confirm Password', ToastAndroid.LONG)
+      return
+    }
+    if(createPassword !== confirmPassword){
+      ToastAndroid.show('Passwords do not match', ToastAndroid.LONG)
+      return
+    }
+    alert("hi")
+    createUserWithEmailAndPassword(auth, email, createPassword)
     .then((userCredential) => {
       // Sign in 
       const user = userCredential.user;
@@ -48,33 +75,35 @@ export default function SignUp() {
       //setIsBusy(false)
     });
   }
+
+  const handleRouteSignIn = () => {
+    router.push('/auth/sign-in/Index')
+  }
+  
   return (
     <View style={styles.anodiamScreen}>
       <StatusBar style={colorScheme} backgroundColor={backgroundColor} />
-      <View style={{marginTop: 10}}>
-        <LabelAnodiam labelText={'Sign-up with Gypsee'} fontSize={24} fontFamily='Anodiam-Bold'
+      <View style={{marginTop: 20}}>
+        <LabelAnodiam labelText={'Create New Account'} fontSize={24} fontFamily='Anodiam-Bold'
             color={colorScheme === 'dark' ? Colors.dark.CONTRAST_DARK : Colors.light.CONTRAST_DARK}/>
       </View>
-      <View style={{marginTop: 10}}>
-        <LabelAnodiam labelText={'Welcome!'} color={Colors.CONTRAST} fontSize={16}/>
-      </View>
-      <View style={{marginTop: 5}}>
-        <LabelAnodiam labelText={'Your adventure starts here...'} color={Colors.CONTRAST} fontSize={16}/>
+      <View style={{marginTop: 15}}>
+        <TextInputAnodiam labelText={'Full Name'} onChngTxtIpAnodiam={handleKeyPressFullName}/>
       </View>
       <View style={{marginTop: 15}}>
         <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleKeyPressEmail}/>
       </View>
       <View style={{marginTop: 15}}>
-        <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPassword}/>
-      </View>
-      <View style={{marginTop: 20}}>
-        <ButtonAnodiam buttonText={'Sign In'} onPrsBtnAnodiam={handleLogin}/>
+        <TextInputAnodiam labelText={'Password'} textInputType={'create-password'} onChngTxtIpAnodiam={handleKeyPressCreatePassword}/>
       </View>
       <View style={{marginTop: 15}}>
-        <ButtonAnodiam buttonText={'Create Account'} buttonType='secondary'/>
+        <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} onChngTxtIpAnodiam={handleKeyPressConfirmPassword}/>
       </View>
-      <View style={{marginTop: 0}}>
-        <ButtonAnodiam buttonText={'Forgot Password'} buttonType='hyperlink'/>
+      <View style={{marginTop: 30}}>
+        <ButtonAnodiam buttonText={'Create Account'} onPrsBtnAnodiam={handleCreateAccount}/>
+      </View>
+      <View style={{marginTop: 20}}>
+        <ButtonAnodiam buttonText={'Sign In'} buttonType='secondary' onPrsBtnAnodiam= {handleRouteSignIn}/>
       </View>
     </View>
   )
