@@ -97,7 +97,7 @@ export default function SignUp() {
         <TextInputAnodiam labelText={'Password'} textInputType={'create-password'} onChngTxtIpAnodiam={handleKeyPressCreatePassword}/>
       </View>
       <View style={{marginTop: 15}}>
-        <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} onChngTxtIpAnodiam={handleKeyPressConfirmPassword}/>
+        <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} placeholder= {'Re-enter Password'} onChngTxtIpAnodiam={handleKeyPressConfirmPassword}/>
       </View>
       <View style={{marginTop: 30}}>
         <ButtonAnodiam buttonText={'Create Account'} onPrsBtnAnodiam={handleCreateAccount}/>

@@ -18,9 +18,7 @@ const TextInputAnodiam = (props) => {
                     <Ionicons name='checkmark' color={Colors.GREEN} size={fontSize*1.5} marginLeft={-40}/>
                 </View>) : '')
     const color = props.color || Colors.ANODIAM
-    const placeholder = props.placeholder || 
-                    (textInputType==='confirm-password' || textInputType==='create-password') ? 
-                    (labelText.length > 30 ? labelText.substring(0, 30) + "..." : labelText) :
+    const placeholder = props.placeholder ||
                     ('Enter ' + (labelText.length > 30 ? labelText.substring(0, 30) + "..." : labelText))
     const inputColor = props.inputColor || (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARKER : Colors.light.ANODIAM_DARKER)
     const validationTextColor = props.validationTextColor
