@@ -4,6 +4,7 @@ import TextInputDescAnodiam from "./TextInputDescAnodiam"
 import { textInputStyles } from "./Styles"
 import { Ionicons } from '@expo/vector-icons'
 import { useState } from 'react'
+import PasswordStrengthMeter from "./PasswordStrengthMeter"
 
 const TextInputAnodiam = (props) => {
     const colorScheme = useColorScheme();
@@ -17,8 +18,10 @@ const TextInputAnodiam = (props) => {
                     <Ionicons name='checkmark' color={Colors.GREEN} size={fontSize*1.5} marginLeft={-40}/>
                 </View>) : '')
     const color = props.color || Colors.ANODIAM
-    const placeholder = props.placeholder || textInputType==='confirm-password' ? 'Confirm Password' :
-                     'Enter: ' + (labelText.length > 30 ? labelText.substring(0, 30) + "..." : labelText)
+    const placeholder = props.placeholder || 
+                    (textInputType==='confirm-password' || textInputType==='create-password') ? 
+                    (labelText.length > 30 ? labelText.substring(0, 30) + "..." : labelText) :
+                    ('Enter ' + (labelText.length > 30 ? labelText.substring(0, 30) + "..." : labelText))
     const inputColor = props.inputColor || (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARKER : Colors.light.ANODIAM_DARKER)
     const validationTextColor = props.validationTextColor
     const validationFontSize = props.validationFontSize
@@ -33,7 +36,22 @@ const TextInputAnodiam = (props) => {
             <Ionicons name={isPasswordVisible ? 'eye-off' : 'eye'} size={fontSize*1.5} color={inputColor} />
         </TouchableOpacity>
     )
-    let content 
+    const [createPswdStrength, setCreatePswdStrength] = useState("")
+    const calculatePasswordStrength = (createPswd) => {
+        if (!createPswd || createPswd.trim() === "") { return ("")}
+        let criteriaMet = 0;
+        if (/[a-z]/.test(createPswd)) { criteriaMet += 1 }
+        if (/[A-Z]/.test(createPswd)) { criteriaMet += 1 }
+        if (/[0-9]/.test(createPswd)) { criteriaMet += 1 }
+        if (/[~`!@#$%^&*()_\-+=]/.test(createPswd)) { criteriaMet += 1 }
+        if (createPswd.length >= 6) { criteriaMet += 1 }
+        return(criteriaMet)
+    };
+    const createPswdTextChange = (createPswd) => {
+        setCreatePswdStrength(calculatePasswordStrength(createPswd))
+        props.onChngTxtIpAnodiam(createPswd)
+    }
+    let content
     switch (textInputType) {
         case 'password':
             content = (
@@ -44,7 +62,7 @@ const TextInputAnodiam = (props) => {
                         placeholder={placeholder} 
                         placeholderTextColor={Colors.GRAY}
                         autoCapitalize="none"
-                        autoCorrect={false} // Disable autocorrect
+                        autoCorrect={false}
                         onChangeText={props.onChngTxtIpAnodiam}/>
                     {passwordVisibility}
                 </View>
@@ -59,7 +77,7 @@ const TextInputAnodiam = (props) => {
                         placeholder={placeholder}
                         placeholderTextColor={Colors.GRAY}
                         autoCapitalize="none"
-                        autoCorrect={false} // Disable autocorrect
+                        autoCorrect={false}
                         onChangeText={props.onChngTxtIpAnodiam}/>
                     {passwordVisibility}
                 </View>
@@ -67,16 +85,19 @@ const TextInputAnodiam = (props) => {
             break;
         case 'create-password':
             content = (
-                <View style={styles.inputContainer}>
-                    <TextInput style={styles.textInput}
-                        secureTextEntry={!isPasswordVisible}
-                        cursorColor={color}
-                        placeholder={placeholder}
-                        placeholderTextColor={Colors.GRAY}
-                        autoCapitalize="none"
-                        autoCorrect={false} // Disable autocorrect
-                        onChangeText={props.onChngTxtIpAnodiam}/>
-                    {passwordVisibility}
+                <View>
+                    <View style={styles.inputContainer}>
+                        <TextInput style={styles.textInput}
+                            secureTextEntry={!isPasswordVisible}
+                            cursorColor={color}
+                            placeholder={placeholder}
+                            placeholderTextColor={Colors.GRAY}
+                            autoCapitalize="none"
+                            autoCorrect={false}
+                            onChangeText={createPswdTextChange}/>
+                        {passwordVisibility}
+                    </View>
+                    {createPswdStrength? <PasswordStrengthMeter createPswdStrength={createPswdStrength}/> : ''}
                 </View>
             )
             break;
@@ -86,11 +107,11 @@ const TextInputAnodiam = (props) => {
                     cursorColor={color}
                     placeholder={placeholder} 
                     placeholderTextColor={Colors.GRAY}   
-                    keyboardType="email-address" // Email-specific keyboard
-                    autoCapitalize="none" // Prevent capitalization
-                    autoCorrect={false} // Disable autocorrect
+                    keyboardType="email-address"
+                    autoCapitalize="none"
+                    autoCorrect={false}
                     textContentType="emailAddress" // Enable autofill for email (ios specific)
-                    autoComplete="email"//cross platform
+                    autoComplete="email"
                     onChangeText={props.onChngTxtIpAnodiam}/>
                 )
                 break;

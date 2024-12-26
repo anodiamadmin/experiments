@@ -59,10 +59,10 @@ export default function ForgotPassword() {
         <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleKeyPressEmail}/>
       </View>
       <View style={{marginTop: 15}}>
-        <TextInputAnodiam labelText={'New Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPassword}/>
+        <TextInputAnodiam labelText={'New Password'} textInputType={'create-password'} onChngTxtIpAnodiam={handleKeyPressPassword}/>
       </View>
       <View style={{marginTop: 15}}>
-        <TextInputAnodiam labelText={'Confirm New Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPassword}/>
+        <TextInputAnodiam labelText={'Confirm New Password'} textInputType={'confirm-password'} placeholder = {'Re-enter New Password'} onChngTxtIpAnodiam={handleKeyPressPassword}/>
       </View>
       <View style={{marginTop: 30}}>
         <ButtonAnodiam buttonText={'Reset Password'}/>
