@@ -5,7 +5,11 @@ import { textInputStyles } from "./Styles"
 import { Ionicons } from '@expo/vector-icons'
 import { useState } from 'react'
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import PasswordStrengthMeter from "./PasswordStrengthMeter"
+=======
+import PasswordStrengthMeter from './PasswordStrengthMeter'
+>>>>>>> Stashed changes
 =======
 import PasswordStrengthMeter from './PasswordStrengthMeter'
 >>>>>>> Stashed changes
@@ -54,8 +58,11 @@ const TextInputAnodiam = (props) => {
         props.onChngTxtIpAnodiam(createPswd)
     }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     let content
 =======
+=======
+>>>>>>> Stashed changes
     let content 
 >>>>>>> Stashed changes
     switch (textInputType) {

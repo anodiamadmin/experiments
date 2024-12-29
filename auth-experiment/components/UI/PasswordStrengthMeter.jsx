@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import * as Progress from 'react-native-progress';
@@ -36,6 +37,8 @@ const PasswordStrengthMeter = (props) => {
                 style={styles.progressBar}
             />
 =======
+=======
+>>>>>>> Stashed changes
 import { View, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
 import { Colors } from '@/constants/Colors';
@@ -82,6 +85,9 @@ const PasswordStrengthMeter = (props) => {
     return (
         <View style={styles.container}>
             {renderBars()}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         </View>
     );
@@ -90,11 +96,17 @@ const PasswordStrengthMeter = (props) => {
 const styles = StyleSheet.create({
     container: {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         marginTop: 8,
         width: '100%',
     },
     progressBar: {
         borderRadius: 5,
+=======
+        marginTop: 4,
+        flexDirection: 'row',
+        alignItems: 'center',
+>>>>>>> Stashed changes
 =======
         marginTop: 4,
         flexDirection: 'row',
