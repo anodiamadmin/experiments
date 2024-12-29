@@ -28,10 +28,11 @@ const PasswordStrengthMeter = (props) => {
             <Progress.Bar
                 progress={progress}
                 width={null} // Full-width bar
-                height={10} // Adjust the height of the progress bar
-                borderRadius={5}
+                height={6} // Adjust the height of the progress bar
+                borderRadius={3}
                 color={color}
-                unfilledColor="#e0e0e0" // Light gray for unfilled portion
+                unfilledColor="#77777744" // Light gray transparent for unfilled portion
+                borderWidth={0} // No border
                 style={styles.progressBar}
             />
         </View>

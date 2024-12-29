@@ -2,9 +2,6 @@
  * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
  */
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
-
 export const Colors = {
   WHITE: '#FFF',
   OFF_WHITE: 'EEE',
