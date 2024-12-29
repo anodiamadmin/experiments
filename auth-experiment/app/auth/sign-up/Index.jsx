@@ -13,16 +13,16 @@ import { useRouter } from 'expo-router'
 export default function SignUp() {
   const colorScheme = useColorScheme();
   const padding = 20
-  const paddingTop = 20
   const backgroundColor = colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE
   const height = '100%'
-  const styles = screenStyles(padding, paddingTop, backgroundColor, height)
+  const styles = screenStyles(padding, backgroundColor, height)
   const router = useRouter()
 
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [createPassword, setCreatePassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
+  const [pswdConfirmed, setPswdConfirmed] = useState(false)
 
   const handleKeyPressFullName = (fullName) => {
     setFullName(fullName)
@@ -32,9 +32,11 @@ export default function SignUp() {
   }
   const handleKeyPressCreatePassword = (createPassword) => {
     setCreatePassword(createPassword)
+    createPassword.length>=6 && createPassword===confirmPassword ? setPswdConfirmed(true) : setPswdConfirmed(false)
   }
   const handleKeyPressConfirmPassword = (confirmPassword) => {
     setConfirmPassword(confirmPassword)
+    createPassword.length>=6 && confirmPassword===createPassword ? setPswdConfirmed(true) : setPswdConfirmed(false)
   }
   const handleCreateAccount = () => {
     if(!fullName){
@@ -97,7 +99,11 @@ export default function SignUp() {
         <TextInputAnodiam labelText={'Password'} textInputType={'create-password'} onChngTxtIpAnodiam={handleKeyPressCreatePassword}/>
       </View>
       <View style={{marginTop: 15}}>
+<<<<<<< Updated upstream
         <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} placeholder= {'Re-enter Password'} onChngTxtIpAnodiam={handleKeyPressConfirmPassword}/>
+=======
+        <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} pswdConfirmed={pswdConfirmed} onChngTxtIpAnodiam={handleKeyPressConfirmPassword}/>
+>>>>>>> Stashed changes
       </View>
       <View style={{marginTop: 30}}>
         <ButtonAnodiam buttonText={'Create Account'} onPrsBtnAnodiam={handleCreateAccount}/>

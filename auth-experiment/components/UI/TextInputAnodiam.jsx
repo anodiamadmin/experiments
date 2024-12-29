@@ -4,7 +4,11 @@ import TextInputDescAnodiam from "./TextInputDescAnodiam"
 import { textInputStyles } from "./Styles"
 import { Ionicons } from '@expo/vector-icons'
 import { useState } from 'react'
+<<<<<<< Updated upstream
 import PasswordStrengthMeter from "./PasswordStrengthMeter"
+=======
+import PasswordStrengthMeter from './PasswordStrengthMeter'
+>>>>>>> Stashed changes
 
 const TextInputAnodiam = (props) => {
     const colorScheme = useColorScheme();
@@ -49,7 +53,11 @@ const TextInputAnodiam = (props) => {
         setCreatePswdStrength(calculatePasswordStrength(createPswd))
         props.onChngTxtIpAnodiam(createPswd)
     }
+<<<<<<< Updated upstream
     let content
+=======
+    let content 
+>>>>>>> Stashed changes
     switch (textInputType) {
         case 'password':
             content = (
