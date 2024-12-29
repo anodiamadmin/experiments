@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import * as Progress from 'react-native-progress';
 import { Colors } from '@/constants/Colors';
+import { PasswordStrengthMeterStyles } from './styles';
 
 const PasswordStrengthMeter = (props) => {
     const passwordStrength = props.createPswdStrength || 0;
@@ -24,29 +25,18 @@ const PasswordStrengthMeter = (props) => {
     }
 
     return (
-        <View style={styles.container}>
+        <View style={PasswordStrengthMeterStyles.passwordMeterContainer}>
             <Progress.Bar
                 progress={progress}
                 width={null} // Full-width bar
-                height={6} // Adjust the height of the progress bar
-                borderRadius={3}
+                height={PasswordStrengthMeterStyles.progressBar.height}
+                borderRadius={PasswordStrengthMeterStyles.progressBar.borderRadius}
                 color={color}
-                unfilledColor="#77777744" // Light gray transparent for unfilled portion
-                borderWidth={0} // No border
-                style={styles.progressBar}
+                unfilledColor={PasswordStrengthMeterStyles.progressBar.unfilledColor}
+                style={PasswordStrengthMeterStyles.progressBarStyle}
             />
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        marginTop: 8,
-        width: '100%',
-    },
-    progressBar: {
-        borderRadius: 5,
-    },
-});
 
 export default PasswordStrengthMeter;
