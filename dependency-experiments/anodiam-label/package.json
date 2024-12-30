@@ -1,8 +1,8 @@
 {
   "name": "anodiam-label",
-  "main": "dist/index.js", 
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
@@ -51,6 +51,6 @@
     "jest-expo": "~52.0.2",
     "react-native-typescript-transformer": "^1.2.13",
     "react-test-renderer": "18.3.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.7.2"
   }
 }
