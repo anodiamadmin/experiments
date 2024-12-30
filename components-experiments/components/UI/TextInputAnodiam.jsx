@@ -11,7 +11,7 @@ const TextInputAnodiam = (props) => {
     const textInputType = props.textInputType || 'text'
     const labelText = props.labelText
     const fontFamily = props.fontFamily || 'Anodiam-Regular'
-    const fontSize = props.fontSize || 16
+    const fontSize = props.fontSize || 14
     const validationText = props.validationText || 
                 ((textInputType==='confirm-password' && props.pswdConfirmed===true)?
                 (<View>

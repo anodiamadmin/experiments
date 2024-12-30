@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import * as Progress from 'react-native-progress';
 import { Colors } from '@/constants/Colors';
 import { PasswordStrengthMeterStyles } from './styles';
@@ -10,10 +10,10 @@ const PasswordStrengthMeter = (props) => {
     // Map password strength to progress (0 to 1) and bar color
     const getStrengthAttributes = (strength) => {
         if (strength <= 1) return { progress: 0.2, color: Colors.RED }; // Weak
-        if (strength === 2) return { progress: 0.4, color: Colors.RED }; // Fair
-        if (strength === 3) return { progress: 0.6, color: Colors.AMBER }; // Moderate
-        if (strength === 4) return { progress: 0.8, color: Colors.AMBER }; // Strong
-        if (strength === 5) return { progress: 1, color: Colors.GREEN }; // Very Strong
+        if (strength === 2) return { progress: 0.4, color: Colors.DARKREDISHAMBER };
+        if (strength === 3) return { progress: 0.6, color: Colors.REDISHAMBER };
+        if (strength === 4) return { progress: 0.8, color: Colors.AMBER }; 
+        if (strength === 5) return { progress: 1, color: Colors.GREEN }; // Strong
         return { progress: 0, color: Colors.RED }; // Default (no strength)
     };
 
@@ -34,6 +34,7 @@ const PasswordStrengthMeter = (props) => {
                 color={color}
                 unfilledColor={PasswordStrengthMeterStyles.progressBar.unfilledColor}
                 style={PasswordStrengthMeterStyles.progressBarStyle}
+                borderWidth={PasswordStrengthMeterStyles.progressBar.borderWidth}
             />
         </View>
     );

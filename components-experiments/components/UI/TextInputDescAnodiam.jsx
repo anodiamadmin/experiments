@@ -7,7 +7,7 @@ const TextInputAnodiam = (props) => {
     const labelText = props.labelText || 'TextInput-Anodiam'
     const validationText = props.validationText || ' '
     const fontFamily = props.fontFamily || 'Anodiam-Regular'
-    const fontSize = props.fontSize || 16
+    const fontSize = props.fontSize || 14
     const color = props.color || Colors.ANODIAM
     const validationTextColor = props.validationTextColor || Colors.RED
     const validationFontSize = props.validationFontSize || 14
