@@ -22,7 +22,7 @@ const ScreenZero = () => {
     const [pswd, setPswd] = useState("")
     const [validationPswd, setValidationPswd] = useState("")
     const [confPswd, setConfPswd] = useState("")
-    const [pswdConfirmed, setPswdConfirmed] = useState(false)
+    const [pswdConfirmed, setPswdConfirmed] = useState(null)
     const [createPswd, setCreatePswd] = useState("")
     const [numeric, setNumeric] = useState("")
     const [email, setEmail] = useState("")
@@ -43,11 +43,11 @@ const ScreenZero = () => {
     }
     const handleKeyPressPswd = (pswd) => {
         setPswd(pswd)
-        pswd.length>=6 && pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false)
+        pswd.length>=6 && confPswd.length>=6 ? pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false) : setPswdConfirmed(null)
     }
     const handleKeyPressConfPswd = (confPswd) => {
         setConfPswd(confPswd)
-        pswd.length>=6 && pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false)
+        pswd.length>=6 && confPswd.length>=6 ? pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false) : setPswdConfirmed(null)
     }
     const handleKeyPressCreatePass = (createPswd) => {
         setCreatePswd(createPswd)

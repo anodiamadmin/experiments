@@ -13,14 +13,15 @@ const TextInputAnodiam = (props) => {
     const fontFamily = props.fontFamily || 'Anodiam-Regular'
     const fontSize = props.fontSize || 14
     const validationText = props.validationText || 
-                ((textInputType==='confirm-password' && props.pswdConfirmed===true)?
-                (<View>
-                    <Ionicons name='checkmark' color={Colors.GREEN} size={fontSize*1.5} marginLeft={-40}/>
-                </View>) : '')
-                // <View>
-                //     <Ionicons name='close' color={Colors.RED} size={fontSize*1.5} marginLeft={-40}/>
-                //     <Text style={{color: Colors.RED, fontSize: fontSize, fontFamily: fontFamily}}>Password Mismatch</Text>
-                // </View>)
+                textInputType==='confirm-password' ?
+                props.pswdConfirmed===null ? '' :
+                props.pswdConfirmed===true ?
+                <Ionicons name='checkmark' color={Colors.GREEN} size={fontSize*1.5} marginLeft={-40}/>
+                : <View style={{flexDirection: 'row', alignItems: 'right', justifyContent: 'right'}}>
+                    <Ionicons name='close' color={Colors.RED} size={fontSize*1.5}/>
+                    <Text style={{color: Colors.RED, fontSize: fontSize, fontFamily: fontFamily}}>Passwords don't match.</Text>
+                </View>
+                : ''
     const color = props.color || Colors.ANODIAM
     const placeholder = props.placeholder || 
                     (textInputType==='confirm-password' || textInputType==='create-password') ? 
