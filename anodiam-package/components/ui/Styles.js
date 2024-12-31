@@ -1,3 +1,4 @@
+import { Colors } from '@/constants/Colors';
 import { StyleSheet } from 'react-native';
 
 const screenStyles = (padding, paddingTop, backgroundColor, height) => {
@@ -91,21 +92,22 @@ const textInputStyles = (borderRadius, borderWidth, padding, color, inputColor) 
     });
 };
 
-const PasswordStrengthMeterStyles = StyleSheet.create({
-    passwordMeterContainer: {
-        marginTop: 6,
-        width: '100%',
-    },
-    progressBar: {
-        height: 6, // Adjust height here
-        borderRadius: 3,
-        unfilledColor: '#77777744', // Light gray for unfilled portion
-        borderWidth: 0, // No border
-    },
-    progressBarStyle: {
-        borderRadius: 5,
-    },
-});
-
+const PasswordStrengthMeterStyles = () => {
+    return StyleSheet.create({
+        passwordMeterContainer: {
+            marginTop: 6,
+            width: '100%',
+        },
+        progressBar: {
+            height: 6, // Adjust height here
+            borderRadius: 3,
+            unfilledColor: Colors.TRANSPARENTSCREEN, // Light gray for unfilled portion
+            borderWidth: 0, // No border
+        },
+        progressBarStyle: {
+            borderRadius: 5,
+        },
+    });
+}
 
 export { screenStyles, labelStyles, buttonStyles, textInputStyles, PasswordStrengthMeterStyles };

@@ -23,18 +23,18 @@ const PasswordStrengthMeter = (props) => {
     if (passwordStrength === 0) {
         return null;
     }
-
+    const styles = PasswordStrengthMeterStyles()
     return (
-        <View style={PasswordStrengthMeterStyles.passwordMeterContainer}>
+        <View style={styles.passwordMeterContainer}>
             <Progress.Bar
                 progress={progress}
                 width={null} // Full-width bar
-                height={PasswordStrengthMeterStyles.progressBar.height}
-                borderRadius={PasswordStrengthMeterStyles.progressBar.borderRadius}
+                height={styles.progressBar.height}
+                borderRadius={styles.progressBar.borderRadius}
                 color={color}
-                unfilledColor={PasswordStrengthMeterStyles.progressBar.unfilledColor}
-                style={PasswordStrengthMeterStyles.progressBarStyle}
-                borderWidth={PasswordStrengthMeterStyles.progressBar.borderWidth}
+                unfilledColor={styles.progressBar.unfilledColor}
+                style={styles.progressBarStyle}
+                borderWidth={styles.progressBar.borderWidth}
             />
         </View>
     );

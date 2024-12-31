@@ -14,9 +14,13 @@ const ScreenZero = () => {
     const height = '100%'
     const styles = screenStyles(padding, paddingTop, backgroundColor, height)
 
+    const maxLength = 64
     const [name, setName] = useState("")
+    const [validationName, setValidationName] = useState("")
     const [surname, setSurname] = useState("")
+    const [validationSurname, setValidationSurname] = useState("")
     const [pswd, setPswd] = useState("")
+    const [validationPswd, setValidationPswd] = useState("")
     const [confPswd, setConfPswd] = useState("")
     const [pswdConfirmed, setPswdConfirmed] = useState(false)
     const [createPswd, setCreatePswd] = useState("")
@@ -33,33 +37,40 @@ const ScreenZero = () => {
     };
     const handleKeyPressName = (name) => {
         setName(name)
-        console.log("Name: ", {name});
     }
     const handleKeyPressSurname = (surname) => {
         setSurname(surname)
-        console.log("Surname: ", {surname});
     }
     const handleKeyPressPswd = (pswd) => {
         setPswd(pswd)
         pswd.length>=6 && pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false)
-        console.log("Password: ", {pswd});
     }
     const handleKeyPressConfPswd = (confPswd) => {
         setConfPswd(confPswd)
         pswd.length>=6 && pswd===confPswd ? setPswdConfirmed(true) : setPswdConfirmed(false)
-        console.log("Confirm Password: ", {confPswd});
     }
     const handleKeyPressCreatePass = (createPswd) => {
         setCreatePswd(createPswd)
-        console.log("Create Password: ", {createPswd});
     }
     const handleKeyPressNumeric = (numeric) => {
         setNumeric(numeric)
-        console.log("Numeric Input: ", {numeric});
     }
     const handleKeyPressEmail = (email) => {
         setEmail(email)
-        console.log("Email: ", {email});
+    }
+    const handleOnBlurName = () => {
+        if (name.trim().length < 3 || name.trim() === "" || name.length > maxLength) {
+            setValidationName("Name must be 3 to " + maxLength + " characters long")
+        } else {
+            setValidationName("")
+        }
+    }
+    const handleOnBlurSurname = () => {
+        if (surname.trim().length < 3 || surname.trim() === "" || surname.length > maxLength) {
+            setValidationSurname("Surname must be 3 to " + maxLength + " characters long")
+        } else {
+            setValidationSurname("")
+        }
     }
     return (
         <ScrollView style={styles.anodiamScreen}>
@@ -68,8 +79,8 @@ const ScreenZero = () => {
             <ButtonAnodiam buttonText={'My Button'} onPrsBtnAnodiam={handleOnPressPrimary}/>
             <ButtonAnodiam buttonText={'hyper-link'} buttonType={'hyperlink'} onPrsBtnAnodiam={handleOnPress}/>
             <ButtonAnodiam buttonType={'secondary'} onPrsBtnAnodiam={handleOnPress}/>
-            <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressName}/>
-            <TextInputAnodiam labelText={'Surname'} validationText={'Invalid surnane'} onChngTxtIpAnodiam={handleKeyPressSurname}/>
+            <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressName} onBlurTxtIpAnodiam={handleOnBlurName} validationText={validationName}/>
+            <TextInputAnodiam labelText={'Surname'} onChngTxtIpAnodiam={handleKeyPressSurname} onBlurTxtIpAnodiam={handleOnBlurSurname} validationText={validationSurname}/>
             <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPswd}/>
             <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} pswdConfirmed={pswdConfirmed} onChngTxtIpAnodiam={handleKeyPressConfPswd}/>
             <TextInputAnodiam labelText={'Create Password'} textInputType={'create-password'} onChngTxtIpAnodiam={handleKeyPressCreatePass}/>

@@ -1,4 +1,4 @@
-import { View, TextInput, useColorScheme, TouchableOpacity } from 'react-native'
+import { View, TextInput, useColorScheme, TouchableOpacity, Text } from 'react-native'
 import { Colors } from '@/constants/Colors'
 import TextInputDescAnodiam from "./TextInputDescAnodiam"
 import { textInputStyles } from "./Styles"
@@ -17,6 +17,10 @@ const TextInputAnodiam = (props) => {
                 (<View>
                     <Ionicons name='checkmark' color={Colors.GREEN} size={fontSize*1.5} marginLeft={-40}/>
                 </View>) : '')
+                // <View>
+                //     <Ionicons name='close' color={Colors.RED} size={fontSize*1.5} marginLeft={-40}/>
+                //     <Text style={{color: Colors.RED, fontSize: fontSize, fontFamily: fontFamily}}>Password Mismatch</Text>
+                // </View>)
     const color = props.color || Colors.ANODIAM
     const placeholder = props.placeholder || 
                     (textInputType==='confirm-password' || textInputType==='create-password') ? 
@@ -28,6 +32,7 @@ const TextInputAnodiam = (props) => {
     const borderRadius = props.borderRadius || 10
     const borderWidth = props.borderWidth || 1
     const padding = props.padding || 10
+    const maxLength = props.maxLength || 64
     const [isPasswordVisible, setPasswordVisible] = useState(false);
     const togglePasswordVisibility = () => {setPasswordVisible((prevState) => !prevState)}
     const styles = textInputStyles(borderRadius, borderWidth, padding, color, inputColor)
@@ -63,6 +68,8 @@ const TextInputAnodiam = (props) => {
                         placeholderTextColor={Colors.GRAY}
                         autoCapitalize="none"
                         autoCorrect={false}
+                        maxLength={maxLength}
+                        onBlur={props.onBlurTxtIpAnodiam}
                         onChangeText={props.onChngTxtIpAnodiam}/>
                     {passwordVisibility}
                 </View>
@@ -78,6 +85,8 @@ const TextInputAnodiam = (props) => {
                         placeholderTextColor={Colors.GRAY}
                         autoCapitalize="none"
                         autoCorrect={false}
+                        maxLength={maxLength}
+                        onBlur={props.onBlurTxtIpAnodiam}
                         onChangeText={props.onChngTxtIpAnodiam}/>
                     {passwordVisibility}
                 </View>
@@ -94,6 +103,8 @@ const TextInputAnodiam = (props) => {
                             placeholderTextColor={Colors.GRAY}
                             autoCapitalize="none"
                             autoCorrect={false}
+                            maxLength={maxLength}
+                            onBlur={props.onBlurTxtIpAnodiam}
                             onChangeText={createPswdTextChange}/>
                         {passwordVisibility}
                     </View>
@@ -112,6 +123,8 @@ const TextInputAnodiam = (props) => {
                     autoCorrect={false}
                     textContentType="emailAddress" // Enable autofill for email (ios specific)
                     autoComplete="email"
+                    maxLength={maxLength}
+                    onBlur={props.onBlurTxtIpAnodiam}
                     onChangeText={props.onChngTxtIpAnodiam}/>
                 )
                 break;
@@ -123,6 +136,8 @@ const TextInputAnodiam = (props) => {
                     cursorColor={color}
                     placeholder={placeholder} 
                     placeholderTextColor={Colors.GRAY}
+                    maxLength={maxLength}
+                    onBlur={props.onBlurTxtIpAnodiam}
                     onChangeText={props.onChngTxtIpAnodiam}/>
             )
             break;
@@ -132,6 +147,8 @@ const TextInputAnodiam = (props) => {
                     cursorColor={color}
                     placeholder={placeholder}
                     placeholderTextColor={Colors.GRAY}
+                    maxLength={maxLength}
+                    onBlur={props.onBlurTxtIpAnodiam}
                     onChangeText={props.onChngTxtIpAnodiam}/>
             )
         }

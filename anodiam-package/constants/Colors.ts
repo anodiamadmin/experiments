@@ -17,6 +17,7 @@ export const Colors = {
   REDISHAMBER: '#FF8B00',
   AMBER: '#F6BC04',
   GREEN: '#00B050',
+  TRANSPARENTSCREEN: 'rgba(128, 128, 128, 0.125)',
   light: {
     ANODIAM_JETDARK:'#240808',
     ANODIAM_DARKEST: '#771B1B',
