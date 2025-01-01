@@ -8,7 +8,7 @@ const Index: React.FC = () => {
   };
    return (
     <View>
-      <ButtonWithStyles label="Press Me" onPress={showAlert} />
+      <ButtonWithStyles buttonLabel="Press Me" onAnodiamButtonPress={showAlert} />
     </View>
   );
 };

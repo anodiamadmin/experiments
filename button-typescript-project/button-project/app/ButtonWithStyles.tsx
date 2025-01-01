@@ -2,14 +2,14 @@ import React from 'react';
 import { TouchableOpacity, Text,StyleSheet  } from 'react-native';
 
 interface ButtonProps {
-  label: string;
-  onPress: () => void;
+  buttonLabel: string;
+  onAnodiamButtonPress: () => void;
 }
 
-const ButtonWithStyles: React.FC<ButtonProps> = ({ label, onPress }) => {
+const ButtonWithStyles: React.FC<ButtonProps> = ({ buttonLabel, onAnodiamButtonPress }) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
-      <Text style={styles.buttonText}>{label}</Text>
+    <TouchableOpacity style={styles.button} onPress={onAnodiamButtonPress}>
+      <Text style={styles.buttonText}>{buttonLabel}</Text>
     </TouchableOpacity>
   );
 };
