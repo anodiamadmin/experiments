@@ -18,6 +18,7 @@ interface LabelAnodiamProps {
   textAlign?: string;
   justifyContent?: string;
   alignItems?: string;
+  backgroundColor?:string;
 }
 
 // Default values for the properties
