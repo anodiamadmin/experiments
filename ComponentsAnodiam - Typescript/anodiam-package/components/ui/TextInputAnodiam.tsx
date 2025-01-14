@@ -52,7 +52,7 @@ const TextInputAnodiam: React.FC<TextInputAnodiamProps> = (props) => {
           : (
               //Commented off as it was giving error
               // <View style={{ flexDirection: 'row', alignItems: 'right', justifyContent: 'right' }}>
-              <View>  
+              <View style={{flexDirection:'row',alignItems:'flex-end',justifyContent:'flex-end'}}>  
                 <Ionicons name='close' color={Colors.RED} size={fontSize * 1.5} />
                 <Text style={{ color: Colors.RED, fontSize, fontFamily }}>Passwords don't match.</Text>
               </View>
@@ -191,7 +191,7 @@ const TextInputAnodiam: React.FC<TextInputAnodiamProps> = (props) => {
       <TextInputDescAnodiam
         labelText={labelText}
         //Commented off as it was giving error
-        // validationText={validationText}
+        //validationText={validationText}
         fontFamily={fontFamily}
         fontSize={fontSize}
         color={color}

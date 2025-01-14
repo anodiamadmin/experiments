@@ -4,7 +4,7 @@ import { Colors } from '@/assets/Colors'
 import TextInputAnodiam from "../../components/ui/TextInputAnodiam"
 import LabelAnodiam from "../../components/ui/LabelAnodiam"
 import ButtonAnodiam from "../../components/ui/ButtonAnodiam"
-import { router, useRouter } from 'expo-router'
+import { useRouter } from 'expo-router'
 
 const ScreenZero = () => {
     const maxLength = 64
@@ -19,14 +19,22 @@ const ScreenZero = () => {
     const [numeric, setNumeric] = useState("")
     const [email, setEmail] = useState("")
     
-    const handleOnPressPrimary = () => {
+    const handleOnPressPrimary = () => 
+    {
         ToastAndroid.show('Primary Button Pressed', ToastAndroid.LONG)
         return
-      };
-    const handleOnPress = () => {
-        ToastAndroid.show('Secondary Button or Hyperlink Pressed', ToastAndroid.LONG)
+    };
+    const handleOnPressHyperlink = () => 
+    {
+        ToastAndroid.show('Hyper-Link Pressed', ToastAndroid.LONG)
         return
     };
+    const handleOnPressSecondary = () => 
+    {
+        ToastAndroid.show('Secondary Button Pressed', ToastAndroid.LONG)
+        return
+    };
+   
     const handleKeyPressName = (name) => {
         setName(name)
     }
@@ -70,12 +78,12 @@ const ScreenZero = () => {
     }
     return (
         <View>
-            <LabelAnodiam labelText={'My name is Soubhanik'}/>
-            <View style={{height: 80}}/>
-            <LabelAnodiam labelText={'Hello Anodiam'} color={Colors.RED} fontSize={20}/>
-            <ButtonAnodiam buttonText={'My Button'} onPrsBtnAnodiam={handleOnPressPrimary}/>
-            <ButtonAnodiam buttonText={'hyper-link'} buttonType={'hyperlink'} onPrsBtnAnodiam={handleOnPress} />
-            <ButtonAnodiam buttonType={'secondary'} onPrsBtnAnodiam={handleOnPress}/>
+            <LabelAnodiam labelText={'Typescript Project'}/>
+            <View style={{height: 40}}/>
+            <LabelAnodiam labelText={'Hello Everybody'} color={Colors.RED} fontSize={20}/>
+            <ButtonAnodiam buttonText={'Typescript Button'} onPrsBtnAnodiam={handleOnPressPrimary}/>
+            <ButtonAnodiam buttonText={'Typescript Hyper-Link'} buttonType={'hyperlink'} onPrsBtnAnodiam={handleOnPressHyperlink} />
+            <ButtonAnodiam buttonType={'Typescript Secondary'} onPrsBtnAnodiam={handleOnPressSecondary}/>
             <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressName} onBlurTxtIpAnodiam={handleOnBlurName} validationText={validationName}/>
             <TextInputAnodiam labelText={'Surname'} onChngTxtIpAnodiam={handleKeyPressSurname} onBlurTxtIpAnodiam={handleOnBlurSurname} validationText={validationSurname}/>
             <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPswd}/>
@@ -84,8 +92,8 @@ const ScreenZero = () => {
             <TextInputAnodiam labelText={'Number'} textInputType={'numeric'} onChngTxtIpAnodiam={handleKeyPressNumeric}/>
             <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleKeyPressEmail}/>
             <View style={{height: 20}}/>
-            <ButtonAnodiam buttonText={'Visit Tabs'} onPrsBtnAnodiam={handleVisitTabs}/>
-            <View style={{height: 60}}/>
+            <ButtonAnodiam buttonText={'Visit Tabs'} onPrsBtnAnodiam={handleVisitTabs}/> 
+            <View style={{height: 60}}/> 
         </View>
     )
 }

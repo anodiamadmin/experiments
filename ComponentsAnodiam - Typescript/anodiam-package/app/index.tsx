@@ -1,5 +1,6 @@
+import React from 'react';
 import { StatusBar, useColorScheme, ScrollView } from "react-native";
-import ScreenZeroTypescript from "./auth/ScreenZeroTypescript";
+import ScreenZero from "./auth/ScreenZero";
 import { Colors } from "@/assets/Colors";
 import { screenStyles } from "@/components/ui/utils/Styles";
 
@@ -13,7 +14,7 @@ export default function Index() {
   return (
     <ScrollView style={styles.anodiamScreen}>
       <StatusBar backgroundColor={backgroundColor} />
-      <ScreenZeroTypescript/>
+      <ScreenZero/>
     </ScrollView>
   );
 }
