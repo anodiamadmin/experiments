@@ -83,7 +83,7 @@ const ScreenZero = () => {
             <LabelAnodiam labelText={'Hello Everybody'} color={Colors.RED} fontSize={20}/>
             <ButtonAnodiam buttonText={'Typescript Button'} onPrsBtnAnodiam={handleOnPressPrimary}/>
             <ButtonAnodiam buttonText={'Typescript Hyper-Link'} buttonType={'hyperlink'} onPrsBtnAnodiam={handleOnPressHyperlink} />
-            <ButtonAnodiam buttonType={'Typescript Secondary'} onPrsBtnAnodiam={handleOnPressSecondary}/>
+            <ButtonAnodiam buttonText={'Typescript Secondary'} buttonType={'Secondary'} onPrsBtnAnodiam={handleOnPressSecondary}/>
             <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressName} onBlurTxtIpAnodiam={handleOnBlurName} validationText={validationName}/>
             <TextInputAnodiam labelText={'Surname'} onChngTxtIpAnodiam={handleKeyPressSurname} onBlurTxtIpAnodiam={handleOnBlurSurname} validationText={validationSurname}/>
             <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPswd}/>
