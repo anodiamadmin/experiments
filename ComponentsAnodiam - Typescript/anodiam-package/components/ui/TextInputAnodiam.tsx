@@ -132,8 +132,8 @@ const TextInputAnodiam: React.FC<TextInputAnodiamProps> = (props) => {
             autoCapitalize="none"
             autoCorrect={false}
             maxLength={maxLength}
-            onBlur={props.onBlurTxtIpAnodiam}
-            onChangeText={props.onChngTxtIpAnodiam}
+            onBlur={createPswdOnBlur}
+            onChangeText={createPswdTextChange}
           />
           {passwordVisibility}
         </View>
