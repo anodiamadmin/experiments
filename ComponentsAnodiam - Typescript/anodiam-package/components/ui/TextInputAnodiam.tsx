@@ -191,7 +191,7 @@ const TextInputAnodiam: React.FC<TextInputAnodiamProps> = (props) => {
       <TextInputDescAnodiam
         labelText={labelText}
         //Commented off as it was giving error
-        //validationText={validationText}
+        validationText={typeof validationText === 'string' ? validationText : ''}
         fontFamily={fontFamily}
         fontSize={fontSize}
         color={color}

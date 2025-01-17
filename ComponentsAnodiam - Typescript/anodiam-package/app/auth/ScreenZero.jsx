@@ -81,9 +81,9 @@ const ScreenZero = () => {
             <LabelAnodiam labelText={'Typescript Project'}/>
             <View style={{height: 40}}/>
             <LabelAnodiam labelText={'Hello Everybody'} color={Colors.RED} fontSize={20}/>
-            <ButtonAnodiam buttonText={'Typescript Button'} onPrsBtnAnodiam={handleOnPressPrimary}/>
+            <ButtonAnodiam buttonText={'Typescript Primary'} onPrsBtnAnodiam={handleOnPressPrimary}/>
             <ButtonAnodiam buttonText={'Typescript Hyper-Link'} buttonType={'hyperlink'} onPrsBtnAnodiam={handleOnPressHyperlink} />
-            <ButtonAnodiam buttonText={'Typescript Secondary'} buttonType={'Secondary'} onPrsBtnAnodiam={handleOnPressSecondary}/>
+            <ButtonAnodiam buttonText={'Typescript Secondary'} buttonType={'secondary'} onPrsBtnAnodiam={handleOnPressSecondary}/>
             <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressName} onBlurTxtIpAnodiam={handleOnBlurName} validationText={validationName}/>
             <TextInputAnodiam labelText={'Surname'} onChngTxtIpAnodiam={handleKeyPressSurname} onBlurTxtIpAnodiam={handleOnBlurSurname} validationText={validationSurname}/>
             <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPswd}/>
@@ -93,7 +93,7 @@ const ScreenZero = () => {
             <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleKeyPressEmail}/>
             <View style={{height: 20}}/>
             <ButtonAnodiam buttonText={'Visit Tabs'} onPrsBtnAnodiam={handleVisitTabs}/> 
-            <View style={{height: 60}}/> 
+            <View style={{height: 60}}/>  
         </View>
     )
 }
