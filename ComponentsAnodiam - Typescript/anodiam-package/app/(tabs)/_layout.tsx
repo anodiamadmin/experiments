@@ -1,5 +1,5 @@
 import React from 'react';
-import BottomNavAnodiam from '../../components/ui/ButtonNavAnodiam';
+import BottomNavAnodiam from '../../components/ui/BottomNavAnodiam';
 
 export default function TabLayout() {
   return (
