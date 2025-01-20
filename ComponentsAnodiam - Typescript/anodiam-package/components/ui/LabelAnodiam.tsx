@@ -66,7 +66,7 @@ const LabelAnodiam: React.FC<LabelAnodiamProps> = (props) => {
 
   return (
     <View style={styles.textContainer}>
-      <Text style={styles.text}>{labelText}</Text>
+      <Text style={styles.text}>{labelText !== 'Label-Anodiam'? labelText : ''}</Text>
     </View>
   );
 };
