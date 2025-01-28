@@ -5,6 +5,7 @@ import TextInputAnodiam from "../../components/ui/TextInputAnodiam"
 import LabelAnodiam from "../../components/ui/LabelAnodiam"
 import ButtonAnodiam from "../../components/ui/ButtonAnodiam"
 import { useRouter } from 'expo-router'
+import TestEnumerators from '../../components/ui/TestEnumerators'
 
 const ScreenZero = () => {
     const maxLength = 64
@@ -79,7 +80,8 @@ const ScreenZero = () => {
     return (
         <View>
             <LabelAnodiam labelText={'Typescript Project'}/>
-            <View style={{height: 40}}/>
+            {/* <View style={{height: 40}}/> */}
+            <TestEnumerators />
             <LabelAnodiam labelText={'Hello Everybody'} color={Colors.RED} fontSize={20}/>
             <ButtonAnodiam buttonText={'Typescript Primary'} onPrsBtnAnodiam={handleOnPressPrimary}/>
             <ButtonAnodiam buttonText={'Typescript Hyper-Link'} buttonType={'hyperlink'} onPrsBtnAnodiam={handleOnPressHyperlink} />
