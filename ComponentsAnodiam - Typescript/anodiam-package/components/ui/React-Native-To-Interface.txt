@@ -1,0 +1,4 @@
+Convert this program below in react native using interface.
+All the properties and methods should be declared in the interface.
+The properties should have default value as per program.
+The methods should have same arguements and return type as per the program.
