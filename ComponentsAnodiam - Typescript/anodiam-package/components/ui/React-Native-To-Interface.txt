@@ -3,40 +3,64 @@ All the properties and methods should be declared in the interface.
 The properties should have default value as per program.
 The methods should have same arguements and return type as per the program.
 
-import { View, Text, useColorScheme } from 'react-native'
-import { labelStyles } from "./utils/Styles"
+import { TouchableOpacity, useColorScheme } from 'react-native'
+import { buttonStyles } from "./utils/Styles"
 import { Colors } from '@/assets/Colors'
+import LabelAnodiam from "./LabelAnodiam"
 import * as validation from './utils/Validation';
 import * as constants from './utils/ConstantsAnodiam'
 
-const LabelAnodiam = (props) => {
+const ButtonAnodiam = (props) => {
     const colorScheme = useColorScheme();
-    const fileName = 'LabelAnodiam'
-    
+    const fileName = 'ButtonAnodiam'
     // Props
-    const labelText = props.labelText || constants.defaultLabelText
-    const color = props.color || (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARK : Colors.light.ANODIAM_DARK)
-    const fontFamily = props.fontFamily || constants.defaultFont
-    const fontSize = props.fontSize || constants.defaultFontSize
-    const fontWeight = props.fontWeight || constants.defaultFontWeight;
-    const fontStyle = props.fontStyle || constants.defaultFontStyle
-    const textDecorationLine = props.textDecorationLine || constants.defaultTextDecorationLine
-    const padding = props.padding || constants.defaultPadding
+    const buttonType = Object.values(constants.VALID_BUTTON_TYPES).includes(props.buttonType) ? props.buttonType : constants.defaultButtonType
+    const buttonText = props.buttonText || constants.defaultButtonText
+    const color = props.color || (buttonType === 'primary' ? (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.WHITE) : Colors.ANODIAM )
+    const borderColor = props.borderColor || color
+    const backgroundColor = props.backgroundColor || (buttonType === 'primary' ? Colors.ANODIAM : (buttonType === 'secondary' ? (colorScheme === 'dark' ? Colors.dark.ANODIAM_PALE : Colors.light.ANODIAM_LIGHTEST) : (colorScheme === 'dark' ? Colors.dark.CONTRAST_PALE : Colors.light.ANODIAM_PALE)))
+    const padding = props.padding || constants.defaultButtonPadding
     const margin = props.margin || constants.defaultMargin
+    const borderRadius = props.borderRadius || constants.defaultBorderRadius
+    const borderWidth = props.borderWidth || constants.defaultButtonBorderWidth
+    const fontFamily = props.fontFamily || constants.defaultFont
+    const fontSize = props.fontSize || constants.defaultButtonFontSize
+    const fontWeight = props.fontWeight || constants.boldFontWeight;
+    const textDecorationLine = props.textDecorationLine || constants.hyperlinkTextDecoration
     const textAlign = props.textAlign || constants.textAlignDefault
     const justifyContent = props.justifyContent || constants.justifyContentDefault
     const alignItems = props.alignItems || constants.alignItemsDefault
     // Validations
-    validation.validateProps(fileName, { labelText, color, fontFamily, fontSize, fontWeight, fontStyle, 
-                                            textDecorationLine, padding, margin, textAlign, justifyContent, alignItems });
+    validation.validateProps(fileName, { buttonType, buttonText, color, borderColor, backgroundColor, padding, margin,
+                                            borderRadius, borderWidth, fontFamily, fontSize, fontWeight,
+                                            textDecorationLine, textAlign, justifyContent, alignItems });
     // Styles
-    const styles = labelStyles(color, fontFamily, fontSize, fontWeight, fontStyle, textDecorationLine,
-                                padding, margin, textAlign, justifyContent, alignItems)
-    return (
-        <View style={styles.textContainer}>
-            <Text style={styles.text}>{labelText}</Text>
-        </View>
-    )
+    const styles = buttonStyles(backgroundColor, padding, margin, borderRadius, borderColor, borderWidth)
+    
+    switch (buttonType) {
+        case 'hyperlink':
+            return (
+                <TouchableOpacity style={styles.hyperLink} onPress={props.onPrsBtnAnodiam}>
+                    <LabelAnodiam labelText={buttonText} color={color} fontFamily={fontFamily}
+                                    fontWeight={fontWeight} fontSize={fontSize} textDecorationLine={textDecorationLine}
+                                    textAlign={textAlign} justifyContent={justifyContent}
+                                    alignItems={alignItems}/>
+                </TouchableOpacity> )
+        case 'secondary':
+            return (
+                <TouchableOpacity style={styles.buttonSecondary} onPress={props.onPrsBtnAnodiam}>
+                    <LabelAnodiam labelText={buttonText} color={color} backgroundColor={'transparent'} 
+                                    fontWeight={fontWeight} fontFamily={fontFamily} fontSize={fontSize} textAlign={textAlign}
+                                    justifyContent={justifyContent} alignItems={alignItems}/>
+                </TouchableOpacity> )
+        default:
+            return (
+                <TouchableOpacity style={styles.buttonPrimary} onPress={props.onPrsBtnAnodiam}>
+                    <LabelAnodiam labelText={buttonText} color={color} backgroundColor={'transparent'} 
+                                    fontWeight={fontWeight} fontFamily={fontFamily} fontSize={fontSize} textAlign={textAlign}
+                                    justifyContent={justifyContent} alignItems={alignItems}/>
+                </TouchableOpacity> )
+    }
 }
 
-export default LabelAnodiam
+export default ButtonAnodiam

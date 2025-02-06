@@ -83,19 +83,19 @@ const ScreenZero = () => {
             {/* <View style={{height: 40}}/> */}
             {/* <TestEnumerators /> */}
             <LabelAnodiam labelText={'Hello Everybody'} color={Colors.RED} fontSize={20}/>
-            {/* <ButtonAnodiam buttonText={'Typescript Primary'} onPrsBtnAnodiam={handleOnPressPrimary}/>
+            <ButtonAnodiam buttonText={'Typescript Primary'} onPrsBtnAnodiam={handleOnPressPrimary}/>
             <ButtonAnodiam buttonText={'Typescript Hyper-Link'} buttonType={'hyperlink'} onPrsBtnAnodiam={handleOnPressHyperlink} />
             <ButtonAnodiam buttonText={'Typescript Secondary'} buttonType={'secondary'} onPrsBtnAnodiam={handleOnPressSecondary}/>
-            <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressName} onBlurTxtIpAnodiam={handleOnBlurName} validationText={validationName}/>
+            {/* <TextInputAnodiam labelText={'Name'} onChngTxtIpAnodiam={handleKeyPressName} onBlurTxtIpAnodiam={handleOnBlurName} validationText={validationName}/>
             <TextInputAnodiam labelText={'Surname'} onChngTxtIpAnodiam={handleKeyPressSurname} onBlurTxtIpAnodiam={handleOnBlurSurname} validationText={validationSurname}/>
             <TextInputAnodiam labelText={'Password'} textInputType={'password'} onChngTxtIpAnodiam={handleKeyPressPswd}/>
             <TextInputAnodiam labelText={'Confirm Password'} textInputType={'confirm-password'} pswdConfirmed={pswdConfirmed} onChngTxtIpAnodiam={handleKeyPressConfPswd}/>
             <TextInputAnodiam labelText={'Create Password'} textInputType={'create-password'} onChngTxtIpAnodiam={handleKeyPressCreatePass}/>
             <TextInputAnodiam labelText={'Number'} textInputType={'numeric'} onChngTxtIpAnodiam={handleKeyPressNumeric}/>
             <TextInputAnodiam labelText={'Email'} textInputType={'email'} onChngTxtIpAnodiam={handleKeyPressEmail}/>
-            <View style={{height: 20}}/>
+            <View style={{height: 20}}/> */}
             <ButtonAnodiam buttonText={'Visit Tabs'} onPrsBtnAnodiam={handleVisitTabs}/> 
-            <View style={{height: 60}}/>   */}
+            <View style={{height: 60}}/>  
         </View>
     )
 }

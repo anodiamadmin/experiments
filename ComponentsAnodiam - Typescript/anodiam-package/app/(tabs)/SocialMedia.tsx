@@ -4,7 +4,7 @@ import React from 'react'
 const SocialMedia = () => {
   return (
     <View>
-      <Text>Social Social Media</Text>
+      <Text>Social Media</Text>
     </View>
   )
 }
