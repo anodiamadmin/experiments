@@ -1,74 +1,61 @@
 import React from 'react';
-import { View, Text, useColorScheme } from 'react-native';
-import { labelStyles } from './utils/Styles';
+import { View, Text, useColorScheme, StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { labelStyles } from "./utils/Styles";
 import { Colors } from '@/assets/Colors';
 import * as validation from './utils/Validation';
+import * as constants from './utils/ConstantsAnodiam';
 
-// Interface for the component props
+// Define an interface for the component props
 interface LabelAnodiamProps {
-  labelText?: string;
-  color?: string;
-  fontFamily?: string;
-  fontSize?: number;
-  fontWeight?: string;
-  fontStyle?: string;
-  textDecorationLine?: string;
-  padding?: number;
-  margin?: number;
-  textAlign?: string;
-  justifyContent?: string;
-  alignItems?: string;
-  backgroundColor?:string;
+    labelText?: string;
+    color?: string;
+    fontFamily?: string;
+    fontSize?: number;
+    fontWeight?: TextStyle["fontWeight"];
+    fontStyle?: TextStyle["fontStyle"];
+    textDecorationLine?: TextStyle["textDecorationLine"];
+    padding?: number;
+    margin?: number;
+    textAlign?: TextStyle["textAlign"];
+    justifyContent?: ViewStyle["justifyContent"];
+    alignItems?: ViewStyle["alignItems"];
 }
 
-// Default values for the properties
-const defaultLabelText = 'Label-Anodiam';
-const maxTextLength = 4096;
-
-// BUTTON SPECIFIC VALIDATION
-//-----------------------------------------------------------------------------------------------
-
 const LabelAnodiam: React.FC<LabelAnodiamProps> = (props) => {
-  const colorScheme = useColorScheme();
-  const filename = 'LabelAnodiam';
+    const colorScheme = useColorScheme();
+    const fileName = 'LabelAnodiam';
+    
+    // Assign default values if props are not provided
+    const {
+        labelText = constants.defaultLabelText,
+        color = colorScheme === 'dark' ? Colors.dark.ANODIAM_DARK : Colors.light.ANODIAM_DARK,
+        fontFamily = constants.defaultFont,
+        fontSize = constants.defaultFontSize,
+        fontWeight = constants.defaultFontWeight,
+        fontStyle = constants.defaultFontStyle,
+        textDecorationLine = constants.defaultTextDecorationLine,
+        padding = constants.defaultPadding,
+        margin = constants.defaultMargin,
+        textAlign = constants.textAlignDefault,
+        justifyContent = constants.justifyContentDefault,
+        alignItems = constants.alignItemsDefault,
+    } = props;
 
-  // Default and user-provided props handling
-  const labelText = props.labelText || defaultLabelText;
-  validation.validateText('labelText', labelText, maxTextLength, filename);
-
-  const color = props.color || (colorScheme === 'dark' ? Colors.dark.ANODIAM_DARK : Colors.light.ANODIAM_DARK);
-  validation.validateColorProp('color', props.color, color, filename);
-
-  const fontFamily = props.fontFamily || 'Anodiam-Regular';
-  const fontSize = props.fontSize || 14;
-  const fontWeight = props.fontWeight || 'normal';
-  const fontStyle = props.fontStyle || 'normal';
-  const textDecorationLine = props.textDecorationLine || 'none';
-  const padding = props.padding || 0;
-  const margin = props.margin || 0;
-  const textAlign = props.textAlign || 'auto';
-  const justifyContent = props.justifyContent || 'flex-start';
-  const alignItems = props.alignItems || 'stretch';
-
-  const styles = labelStyles(
-    color,
-    fontFamily,
-    fontSize,
-    fontWeight,
-    fontStyle,
-    textDecorationLine,
-    padding,
-    margin,
-    textAlign,
-    justifyContent,
-    alignItems
-  );
-
-  return (
-    <View style={styles.textContainer}>
-      <Text style={styles.text}>{labelText !== 'Label-Anodiam'? labelText : ''}</Text>
-    </View>
-  );
+    // Validations
+    validation.validateProps(fileName, {
+        labelText, color, fontFamily, fontSize, fontWeight, fontStyle, 
+        textDecorationLine, padding, margin, textAlign, justifyContent, alignItems
+    });
+    
+    // Styles
+    const styles = labelStyles(color, fontFamily, fontSize, fontWeight, fontStyle, textDecorationLine,
+        padding, margin, textAlign, justifyContent, alignItems);
+    
+    return (
+        <View style={styles.textContainer}>
+            <Text style={styles.text}>{labelText}</Text>
+        </View>
+    );
 };
 
 export default LabelAnodiam;

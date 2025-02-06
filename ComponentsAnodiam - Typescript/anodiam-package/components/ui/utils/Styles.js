@@ -1,13 +1,13 @@
 import { Colors } from '@/assets/Colors';
-import { Dimensions, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const screenStyles = (padding, paddingTop, backgroundColor, height) => {
     return StyleSheet.create({
         anodiamScreen: {
-            padding: padding,
-            paddingTop: paddingTop,
-            backgroundColor: backgroundColor,
-            height: height
+            padding,
+            paddingTop,
+            backgroundColor,
+            height,
         },
     });
 };
@@ -16,19 +16,19 @@ const labelStyles = (color, fontFamily, fontSize, fontWeight, fontStyle, textDec
                         padding, margin, textAlign, justifyContent, alignItems) => {
     return StyleSheet.create({
         textContainer: {
-            justifyContent: justifyContent,
-            alignItems: alignItems,
-            padding: padding,
+            justifyContent,
+            alignItems,
+            padding,
         },
         text: {
-            color: color,
-            fontSize: fontSize,
-            fontFamily: fontFamily,
-            textAlign: textAlign,
-            margin: margin,
-            fontWeight: fontWeight,
-            fontStyle: fontStyle,
-            textDecorationLine: textDecorationLine
+            color,
+            fontSize,
+            fontFamily,
+            textAlign,
+            margin,
+            fontWeight,
+            fontStyle,
+            textDecorationLine,
         },
     });
 };
@@ -36,21 +36,21 @@ const labelStyles = (color, fontFamily, fontSize, fontWeight, fontStyle, textDec
 const buttonStyles = (backgroundColor, padding, margin, borderRadius, borderColor, borderWidth) => {
     return StyleSheet.create({
         buttonPrimary: {
-            backgroundColor: backgroundColor,
-            padding: padding,
-            margin: margin,
-            borderRadius: borderRadius,
+            backgroundColor,
+            padding,
+            margin,
+            borderRadius,
         },
         buttonSecondary: {
-            backgroundColor: backgroundColor,
+            backgroundColor,
             padding: padding - 2*borderWidth,
-            margin: margin,
-            borderRadius: borderRadius,
-            borderColor: borderColor,
-            borderWidth: borderWidth
+            margin,
+            borderRadius,
+            borderColor,
+            borderWidth,
         },
         hyperLink: {
-            margin: margin,
+            margin,
         },
     });
 };
@@ -73,9 +73,9 @@ const textInputStyles = (borderRadius, borderWidth, padding, color, inputColor) 
         },
         textInput: {
             width: '100%',
-            padding: padding,
-            borderWidth: borderWidth,
-            borderRadius: borderRadius,
+            padding,
+            borderWidth,
+            borderRadius,
             color: inputColor,
             borderColor: color,
         },
@@ -107,14 +107,25 @@ const PasswordStrengthMeterStyles = () => {
     });
 }
 
-const bottomNavStyles = (iconSize) => {
+const bottomNavStyles = (iconSize, fontFamily, fontSize, fontWeight, padding, backgroundColor, bottomNavHeight) => {
     return StyleSheet.create({
         bigIconBox: {
-            width: iconSize * 1.7,
-            height: iconSize * 1.7,
-            marginTop: iconSize * 0.5,
+            width: iconSize * 2.2,
+            height: iconSize * 2.2,
+            marginTop: iconSize,
             justifyContent: 'center',
             alignItems: 'center',
+        },
+        tabBarLabelStyle: {
+            fontFamily,
+            fontSize,
+            fontWeight,
+            padding,
+        },
+        tabBarStyle: {
+            backgroundColor,
+            height: bottomNavHeight,
+            padding,
         },
     });
 }
