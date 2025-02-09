@@ -1,4 +1,5 @@
 type StatusProp = {
+    //Union of string literals
     status: `loading` | `success` | `error`
 }
 

@@ -3,6 +3,10 @@ import {Greet} from "../src/components/Greet"
 import {Person} from "../src/components/Person"
 import {PersonList} from "../src/components/PersonList"
 import {Status} from "../src/components/Status"
+import { Heading } from './components/Heading'
+import { Oscar } from './components/Oscar'
+import { OptionalGreet } from './components/OptionalGreet'
+import { Button } from './components/Button'
 
 function App() {
   const personName={
@@ -29,6 +33,12 @@ function App() {
       <Person name={personName}/>
       <PersonList names={nameList}/>
       <Status status='error'/>
+      <Heading>Placeholder text</Heading>
+      <Oscar>
+        <Heading>Oscar goes to Lianordo Di Capro!</Heading>
+      </Oscar>
+      <OptionalGreet name='Sayan'isLoggedIn={true}/>
+      <Button handleClick={(event,id)=>console.log('Button Clicked',event,id)}/>
     </div>
   )
 }
