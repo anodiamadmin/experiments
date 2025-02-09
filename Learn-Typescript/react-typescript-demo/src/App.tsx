@@ -7,6 +7,7 @@ import { Heading } from './components/Heading'
 import { Oscar } from './components/Oscar'
 import { OptionalGreet } from './components/OptionalGreet'
 import { Button } from './components/Button'
+import UserDetails from './components/UserDetails'
 
 function App() {
   const personName={
@@ -39,6 +40,7 @@ function App() {
       </Oscar>
       <OptionalGreet name='Sayan'isLoggedIn={true}/>
       <Button handleClick={(event,id)=>console.log('Button Clicked',event,id)}/>
+      <UserDetails />
     </div>
   )
 }
