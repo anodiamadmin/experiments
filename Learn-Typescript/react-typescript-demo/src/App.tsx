@@ -8,6 +8,8 @@ import { Oscar } from './components/Oscar'
 import { OptionalGreet } from './components/OptionalGreet'
 import { Button } from './components/Button'
 import UserDetails from './components/UserDetails'
+import { ListOfPersons } from './components/ListOfPersons'
+import { LoggedIn } from './components/LoggedIn'
 
 function App() {
   const personName={
@@ -40,7 +42,12 @@ function App() {
       </Oscar>
       <OptionalGreet name='Sayan'isLoggedIn={true}/>
       <Button handleClick={(event,id)=>console.log('Button Clicked',event,id)}/>
+      {/* Interface */}
       <UserDetails />
+      {/* Props Types and Tips */}
+      <ListOfPersons names={nameList}/>
+      {/* useState Hook and Future Value */}
+      <LoggedIn />
     </div>
   )
 }
