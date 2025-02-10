@@ -14,6 +14,9 @@ import { User } from './components/User'
 import { SignedInUser } from './components/SignedInUser'
 import { Box } from './components/context/Box'
 import { ThemeContextProvider } from './components/context/ThemeContext'
+import ReactWrapper from './components/ReactWrapper'
+import { Private } from './components/auth/Private'
+import { Profile } from './components/auth/Profile'
 
 function App() {
   const personName={
@@ -60,6 +63,10 @@ function App() {
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+      {/* children: React.ReactNode */}
+      <ReactWrapper />
+      {/* Component Prop */}
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   )
 }
