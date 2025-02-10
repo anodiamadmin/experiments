@@ -11,6 +11,7 @@ import UserDetails from './components/UserDetails'
 import { ListOfPersons } from './components/ListOfPersons'
 import { LoggedIn } from './components/LoggedIn'
 import { User } from './components/User'
+import { SignedInUser } from './components/SignedInUser'
 
 function App() {
   const personName={
@@ -51,6 +52,8 @@ function App() {
       <LoggedIn />
       {/* useState Future Value  */}
       <User />
+      {/* useState Type Assertion */}
+      <SignedInUser />
     </div>
   )
 }

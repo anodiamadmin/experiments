@@ -6,14 +6,13 @@ type Authuser={
 }
 
 export const User  =() =>{
-    const [message,setMessage] = useState('');
     const [loggedInUser,setLoggedInUser] = useState<Authuser|null>(null)
 
     const handleLogin=()=>
     {
         setLoggedInUser({
             name:"Vishwas",
-            email:"Vishwas,mg@gmail.com"
+            email:"Vishwasmg@gmail.com"
         })
     }
 
