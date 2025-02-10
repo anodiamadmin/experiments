@@ -12,6 +12,8 @@ import { ListOfPersons } from './components/ListOfPersons'
 import { LoggedIn } from './components/LoggedIn'
 import { User } from './components/User'
 import { SignedInUser } from './components/SignedInUser'
+import { Box } from './components/context/Box'
+import { ThemeContextProvider } from './components/context/ThemeContext'
 
 function App() {
   const personName={
@@ -54,6 +56,10 @@ function App() {
       <User />
       {/* useState Type Assertion */}
       <SignedInUser />
+      {/* useContext Hook */}
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   )
 }
