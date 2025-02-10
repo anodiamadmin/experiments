@@ -10,6 +10,7 @@ import { Button } from './components/Button'
 import UserDetails from './components/UserDetails'
 import { ListOfPersons } from './components/ListOfPersons'
 import { LoggedIn } from './components/LoggedIn'
+import { User } from './components/User'
 
 function App() {
   const personName={
@@ -46,8 +47,10 @@ function App() {
       <UserDetails />
       {/* Props Types and Tips */}
       <ListOfPersons names={nameList}/>
-      {/* useState Hook and Future Value */}
+      {/* useState Hook  */}
       <LoggedIn />
+      {/* useState Future Value  */}
+      <User />
     </div>
   )
 }
