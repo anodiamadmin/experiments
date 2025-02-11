@@ -24,6 +24,8 @@ import { CustomButton } from './components/html/CustomButton'
 import { CustomInput } from './components/html/CustomInput'
 import { CustomComponent } from './components/CustomComponent'
 import { PolyText } from './components/polymorphic/PolyText'
+import { DomRef } from './components/DomRef'
+import Reducer from './components/Reducer'
 
 function App() {
   const personName={
@@ -66,10 +68,14 @@ function App() {
       <User />
       {/* useState Type Assertion */}
       <SignedInUser />
+      {/* UseReducer */}
+      <Reducer />
       {/* useContext Hook */}
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+      {/* useRef*/}
+      <DomRef />
       {/* children: React.ReactNode */}
       <ReactWrapper />
       {/* Component Prop */}
