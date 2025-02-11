@@ -18,6 +18,7 @@ import ReactWrapper from './components/ReactWrapper'
 import { Private } from './components/auth/Private'
 import { Profile } from './components/auth/Profile'
 import { GenericList } from './components/generics/GenericList'
+import { RandomNumber } from './components/restriction/RandomNumber'
 
 function App() {
   const personName={
@@ -68,9 +69,11 @@ function App() {
       <ReactWrapper />
       {/* Component Prop */}
       <Private isLoggedIn={true} component={Profile} />
-      {/* Lists */}
+      {/* Generics */}
       <GenericList items={['Batman','Superman','Wonder Woman']} onClick={(item)=>alert(item)} />
       <GenericList items={[10,100,1000]} onClick={(item)=>alert(item)} />
+      {/*Restricting Props*/}
+      <RandomNumber value={50} isZero/>
     </div>
   )
 }
