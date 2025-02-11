@@ -17,6 +17,7 @@ import { ThemeContextProvider } from './components/context/ThemeContext'
 import ReactWrapper from './components/ReactWrapper'
 import { Private } from './components/auth/Private'
 import { Profile } from './components/auth/Profile'
+import { GenericList } from './components/generics/GenericList'
 
 function App() {
   const personName={
@@ -67,6 +68,9 @@ function App() {
       <ReactWrapper />
       {/* Component Prop */}
       <Private isLoggedIn={true} component={Profile} />
+      {/* Lists */}
+      <GenericList items={['Batman','Superman','Wonder Woman']} onClick={(item)=>alert(item)} />
+      <GenericList items={[10,100,1000]} onClick={(item)=>alert(item)} />
     </div>
   )
 }
