@@ -87,9 +87,9 @@ function App() {
       {/* Extracting a Components Prop Types */}
       <CustomComponent name='Custom Component' messageCount={50} isLoggedIn={true}/>
        {/* Polymorphic Components */}
-       <PolyText size='lg'>Heading</PolyText>
-       <PolyText size='md'>Paragraph</PolyText>
-       <PolyText size='sm' color='primary'>Label</PolyText>
+       <PolyText as='h1' size='lg'>Heading</PolyText>
+       <PolyText as='p' size='md'>Paragraph</PolyText>
+       <PolyText as='label' size='sm' htmlFor='someId' color='primary'>Label</PolyText>
     </div>
   )
 }
