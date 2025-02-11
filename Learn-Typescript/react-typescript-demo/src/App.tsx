@@ -19,7 +19,11 @@ import { Private } from './components/auth/Private'
 import { Profile } from './components/auth/Profile'
 import { GenericList } from './components/generics/GenericList'
 import { RandomNumber } from './components/restriction/RandomNumber'
-import { Toast } from './components/templateliterals/toast'
+import { Toast } from './components/templateliterals/Toast'
+import { CustomButton } from './components/html/CustomButton'
+import { CustomInput } from './components/html/CustomInput'
+import { CustomComponent } from './components/CustomComponent'
+import { PolyText } from './components/polymorphic/PolyText'
 
 function App() {
   const personName={
@@ -77,6 +81,15 @@ function App() {
       <RandomNumber value={50} isZero/>
       {/*Template Literals and Exclude*/}
       <Toast position='center'/>
+      {/* Wrapping HTML Elements */}
+      <CustomButton variant='Secondary' onClick={()=>alert('Buuton Clicked')}>Custom Button</CustomButton>
+      <CustomInput />
+      {/* Extracting a Components Prop Types */}
+      <CustomComponent name='Custom Component' messageCount={50} isLoggedIn={true}/>
+       {/* Polymorphic Components */}
+       <PolyText size='lg'>Heading</PolyText>
+       <PolyText size='md'>Paragraph</PolyText>
+       <PolyText size='sm' color='primary'>Label</PolyText>
     </div>
   )
 }
