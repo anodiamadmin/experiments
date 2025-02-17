@@ -1,5 +1,5 @@
 /* 
-type HeadingProps = { ... }
+type OscarProps = { ... }
 
 This defines a TypeScript type alias named HeadingProps.
 It specifies the structure of the props that a component should accept.

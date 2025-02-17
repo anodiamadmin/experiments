@@ -1,31 +1,31 @@
 import './App.css'
-import {Greet} from "../src/components/Greet"
-import {Person} from "../src/components/Person"
-import {PersonList} from "../src/components/PersonList"
-import {Status} from "../src/components/Status"
-import { Heading } from './components/Heading'
-import { Oscar } from './components/Oscar'
-import { OptionalGreet } from './components/OptionalGreet'
-import { Button } from './components/Button'
-import UserDetails from './components/UserDetails'
-import { ListOfPersons } from './components/ListOfPersons'
-import { LoggedIn } from './components/LoggedIn'
-import { User } from './components/User'
-import { SignedInUser } from './components/SignedInUser'
-import { Box } from './components/context/Box'
-import { ThemeContextProvider } from './components/context/ThemeContext'
-import ReactWrapper from './components/ReactWrapper'
-import { Private } from './components/auth/Private'
-import { Profile } from './components/auth/Profile'
-import { GenericList } from './components/generics/GenericList'
-import { RandomNumber } from './components/restriction/RandomNumber'
-import { Toast } from './components/templateliterals/Toast'
-import { CustomButton } from './components/html/CustomButton'
-import { CustomInput } from './components/html/CustomInput'
-import { CustomComponent } from './components/CustomComponent'
-import { PolyText } from './components/polymorphic/PolyText'
-import { DomRef } from './components/DomRef'
-import Reducer from './components/Reducer'
+import {Greet} from "./components/Link-2/Greet"
+import {Person} from "./components/Link-2/Person"
+import {PersonList} from "./components/Link-2/PersonList"
+import {Status} from "./components/Link-2/Status"
+import { Heading } from './components/Link-2/Heading'
+import { Oscar } from './components/Link-2/Oscar'
+import { OptionalGreet } from './components/Link-2/OptionalGreet'
+import { Button } from './components/Link-2/Button'
+import UserDetails from './components/Link-2/UserDetails'
+import { ListOfPersons } from './components/Link-2/ListOfPersons'
+import { LoggedIn } from './components/Link-2/LoggedIn'
+import { User } from './components/Link-2/User'
+import { SignedInUser } from './components/Link-2/SignedInUser'
+import { Box } from './components/Link-2/context/Box'
+import { ThemeContextProvider } from './components/Link-2/context/ThemeContext'
+import ReactWrapper from './components/Link-2/ReactWrapper'
+import { Private } from './components/Link-2/auth/Private'
+import { Profile } from './components/Link-2/auth/Profile'
+import { GenericList } from './components/Link-2/generics/GenericList'
+import { RandomNumber } from './components/Link-2/restriction/RandomNumber'
+import { Toast } from './components/Link-2/templateliterals/Toast'
+import { CustomButton } from './components/Link-2/html/CustomButton'
+import { CustomInput } from './components/Link-2/html/CustomInput'
+import { CustomComponent } from './components/Link-2/CustomComponent'
+import { PolyText } from './components/Link-2/polymorphic/PolyText'
+import { DomRef } from './components/Link-2/DomRef'
+import Reducer from './components/Link-2/Reducer'
 
 function App() {
   const personName={
