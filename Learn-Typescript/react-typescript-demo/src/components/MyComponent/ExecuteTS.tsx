@@ -1,6 +1,7 @@
 import { SimpleTS } from '../MyComponent/SimpleTS'
 import { DisplayEmployeeList } from './DisplayEmployeeList';
 import {ManagerDetails} from './ManagerDetails'
+import { TestTS } from './TestTS';
 import UserDetails from './UserDetails';
 
 const ExecuteTS = () => {
@@ -38,6 +39,7 @@ const ExecuteTS = () => {
 
   return (
     <div>
+      <TestTS message="Hello, TypeScript!" />
       <SimpleTS>
           <h1>Welcome to Anodiam </h1>
       </SimpleTS>
