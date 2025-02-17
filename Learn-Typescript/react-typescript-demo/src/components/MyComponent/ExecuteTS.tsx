@@ -4,8 +4,8 @@ import {ManagerEmployee} from './ManagerEmployee'
 const ExecuteTS = () => {
 
   const managerDetail={
-    id:1,
-    name:{
+    managerId:1,
+    managerName:{
       firstName:"Sachin",
       middleName:"Ramesh",
       lastName:"Tendulkar"
@@ -16,7 +16,7 @@ const ExecuteTS = () => {
     <SimpleTS>
         <h1>Welcome to Anodiam </h1>
     </SimpleTS>
-    <ManagerEmployee id={managerDetail.id} name={managerDetail.name}  />
+    <ManagerEmployee managerId={managerDetail.managerId} managerName={managerDetail.managerName}  />
     </div>
   )
 }
