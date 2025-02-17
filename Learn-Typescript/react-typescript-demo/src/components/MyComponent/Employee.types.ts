@@ -6,4 +6,5 @@ export type EmployeeProps =
     middleName?:string
     lastName:string
   }
+  employeeAddress:"Garia"|"College Street"|"Australia"
 }
