@@ -1,9 +1,9 @@
 import { SimpleTS } from '../MyComponent/SimpleTS'
-import {SingleEmployee} from './SingleEmployee'
+import {ManagerEmployee} from './ManagerEmployee'
 
 const ExecuteTS = () => {
 
-  const empDetail={
+  const managerDetail={
     id:1,
     name:{
       firstName:"Sachin",
@@ -16,7 +16,7 @@ const ExecuteTS = () => {
     <SimpleTS>
         <h1>Welcome to Anodiam </h1>
     </SimpleTS>
-    <SingleEmployee id={empDetail.id} name={empDetail.name}  />
+    <ManagerEmployee id={managerDetail.id} name={managerDetail.name}  />
     </div>
   )
 }

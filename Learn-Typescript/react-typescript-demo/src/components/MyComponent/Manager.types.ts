@@ -1,4 +1,4 @@
-export type EmployeeProps =
+export type ManagerProps =
 {
   id:number  
   name:{
