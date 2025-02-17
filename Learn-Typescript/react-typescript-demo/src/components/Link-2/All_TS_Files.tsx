@@ -7,7 +7,6 @@ import { Heading } from './Heading'
 import { Oscar } from './Oscar'
 import { OptionalGreet } from './OptionalGreet'
 import { Button } from './Button'
-import UserDetails from './UserDetails'
 import { ListOfPersons } from './ListOfPersons'
 import { LoggedIn } from './LoggedIn'
 import { User } from './User'
@@ -58,8 +57,6 @@ function All_TS_Files() {
       </Oscar>
       <OptionalGreet name='Sayan'isLoggedIn={true}/>
       <Button handleClick={(event,id)=>console.log('Button Clicked',event,id)}/>
-      {/* Interface */}
-      <UserDetails />
       {/* Props Types and Tips */}
       <ListOfPersons names={nameList}/>
       {/* useState Hook  */}

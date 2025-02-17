@@ -1,6 +1,7 @@
 import { SimpleTS } from '../MyComponent/SimpleTS'
 import { DisplayEmployeeList } from './DisplayEmployeeList';
 import {ManagerDetails} from './ManagerDetails'
+import UserDetails from './UserDetails';
 
 const ExecuteTS = () => {
   const managerDetail={
@@ -42,6 +43,8 @@ const ExecuteTS = () => {
       </SimpleTS>
       <ManagerDetails managerId={managerDetail.managerId} managerName={managerDetail.managerName} managerDept="Accounts"  />
       <DisplayEmployeeList employees={employeesDetail}/>
+      {/* Use of interface*/}
+      <UserDetails />
     </div>
   )
 }
