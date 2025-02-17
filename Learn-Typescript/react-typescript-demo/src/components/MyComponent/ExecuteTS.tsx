@@ -1,5 +1,5 @@
 import { SimpleTS } from '../MyComponent/SimpleTS'
-import {ManagerEmployee} from './ManagerEmployee'
+import {ManagerDetails} from './ManagerDetails'
 
 const ExecuteTS = () => {
 
@@ -9,14 +9,15 @@ const ExecuteTS = () => {
       firstName:"Sachin",
       middleName:"Ramesh",
       lastName:"Tendulkar"
-    }
+    },
+    managerDept: ""
   }
   return (
     <div>
     <SimpleTS>
         <h1>Welcome to Anodiam </h1>
     </SimpleTS>
-    <ManagerEmployee managerId={managerDetail.managerId} managerName={managerDetail.managerName}  />
+    <ManagerDetails managerId={managerDetail.managerId} managerName={managerDetail.managerName} managerDept="Accounts"  />
     </div>
   )
 }
