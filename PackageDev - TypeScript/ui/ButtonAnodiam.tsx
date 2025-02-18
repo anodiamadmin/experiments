@@ -5,13 +5,9 @@ import LabelAnodiam from "./LabelAnodiam";
 import * as validation from './utils/Validation';
 import * as constants from './utils/ConstantsAnodiam';
 
-// Define button types
-type ButtonType = "primary" | "secondary" | "hyperlink";
-type TextAlign ="auto" | "left" | "right" | "center" | "justify";
-type FontWeight= "100"|"200"|"300"|"400"|"500"|"600"|"700"|"800"|"900"|"thin"| "ultralight"| "light"| "normal"| "medium"| "semibold"| "bold"| "extrabold"| "heavy";
-type TextDecoration="none" | "underline" | "line-through" | "underline line-through";
-type JustifyContent="center" | "flex-start" | "flex-end" | "space-between" | "space-around" | "space-evenly";
-type AlignItems= "stretch"|"flex-start"|"flex-end"|"center"|"baseline";
+// Define button types (ButtonType is used in multiple place,hence it is declared here)
+type ButtonType = typeof constants.VALID_BUTTON_TYPES[number];
+
 // Define props interface
 interface ButtonAnodiamProps {
     buttonType?: ButtonType;
@@ -25,11 +21,11 @@ interface ButtonAnodiamProps {
     borderWidth?: number;
     fontFamily?: string;
     fontSize?: number;
-    fontWeight?: FontWeight;
-    textDecorationLine?: TextDecoration;
-    textAlign?: TextAlign;
-    justifyContent?: JustifyContent;
-    alignItems?: AlignItems;
+    fontWeight?: typeof constants.VALID_FONT_WEIGHTS[number];
+    textDecorationLine?: typeof constants.VALID_TEXT_DECORATION_LINES[number];
+    textAlign?: typeof constants.VALID_TEXT_ALIGNS[number];
+    justifyContent?: typeof constants.VALID_JUSTIFY_CONTENTS[number];
+    alignItems?: typeof constants.VALID_ALIGN_ITEMS[number];
     onPrsBtnAnodiam?: () => void;
 }
 
@@ -91,8 +87,8 @@ const ButtonAnodiam: React.FC<ButtonAnodiamProps> = (props) => {
             <LabelAnodiam
                 labelText={buttonText}
                 color={color}
-                // backgroundColor={'transparent'}
-                // fontWeight={fontWeight}
+                //backgroundColor={'transparent'}
+                fontWeight={fontWeight}
                 fontFamily={fontFamily}
                 fontSize={fontSize}
                 textAlign={textAlign}

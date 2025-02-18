@@ -21,7 +21,7 @@ export const defaultFont: typeof VALID_FONTS[number] = VALID_FONTS[0];
 
 export const VALID_FONT_WEIGHTS = [
   '100', '200', '300', '400', '500', '600', '700', '800', '900',
-  'thin', 'ultralight', 'light', 'normal', 'medium', 'semibold', 'bold', 'extrabold', 'heavy'
+  'thin', 'ultralight', 'light', 'normal', 'medium', 'semibold', 'bold',  'heavy'
 ] as const;
 export const boldFontWeight: typeof VALID_FONT_WEIGHTS[number] = 'bold';
 export const defaultFontWeight: typeof VALID_FONT_WEIGHTS[number] = 'normal';
