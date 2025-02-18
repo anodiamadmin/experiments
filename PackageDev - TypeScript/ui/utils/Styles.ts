@@ -17,10 +17,17 @@ export const screenStyles = (
   });
 };
 
-// Define the types for the styles
+// Define the types for the Label styles
 interface LabelStyles {
   textContainer: ViewStyle;
   text: TextStyle;
+}
+
+// Define the types for the Button styles
+interface ButtonStyles {
+  buttonPrimary: ViewStyle;
+  buttonSecondary: ViewStyle;
+  hyperLink: ViewStyle;
 }
 
 export const labelStyles = (
@@ -62,7 +69,7 @@ export const buttonStyles = (
   borderRadius: number,
   borderColor: string,
   borderWidth: number
-): ReturnType<typeof StyleSheet.create> => {
+): ButtonStyles => {
   return StyleSheet.create({
     buttonPrimary: {
       backgroundColor,

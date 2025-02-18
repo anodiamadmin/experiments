@@ -20,7 +20,7 @@ interface LabelAnodiamProps {
   alignItems?: ViewStyle['alignItems'];
 }
 
-const LabelAnodiam: React.FC<LabelAnodiamProps> = (props) => {
+const LabelAnodiam = (props:LabelAnodiamProps) => {
   const colorScheme = useColorScheme();
   const fileName = 'LabelAnodiam';
 
