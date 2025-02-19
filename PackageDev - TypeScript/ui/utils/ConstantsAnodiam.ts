@@ -105,7 +105,7 @@ export const defaultTextInputLabel: string = 'TextInput-Anodiam';
 export const defaultValidationText: string = ' ';
 export const defaultMandatoryStarText: string = '*';
 
-export const textInputTypes = ['none', 'password', 'create-password', 'email', 'numeric'] as const;
+export const textInputTypes = ['','none', 'password', 'create-password', 'email', 'numeric'] as const;
 export const defaultTextInputType: typeof textInputTypes[number] = 'none';
 
 export const defaultTextInputLabels: string[] = [

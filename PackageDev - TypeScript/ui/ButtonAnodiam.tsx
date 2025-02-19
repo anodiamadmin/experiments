@@ -29,7 +29,7 @@ interface ButtonAnodiamProps {
     onPrsBtnAnodiam?: () => void;
 }
 
-const ButtonAnodiam: React.FC<ButtonAnodiamProps> = (props) => {
+const ButtonAnodiam = (props:ButtonAnodiamProps) => {
     const colorScheme = useColorScheme();
     const fileName = 'ButtonAnodiam';
 

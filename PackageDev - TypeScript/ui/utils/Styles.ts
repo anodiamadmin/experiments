@@ -30,6 +30,27 @@ interface ButtonStyles {
   hyperLink: ViewStyle;
 }
 
+// Define the types for the Text styles
+interface TextStyles {
+  inputLabelRow: ViewStyle;
+  leftName: ViewStyle;
+  rightMessage: ViewStyle;
+  inputContainer:ViewStyle;
+  iconContainer:ViewStyle;
+  textInput:TextStyle;
+}
+
+// Define the types for the Password Meter styles
+interface CustomViewStyle extends ViewStyle {
+  unfilledColor?: string;
+}
+
+export interface PwdStrengthMeterStyles {
+  passwordMeterContainer: ViewStyle;
+  progressBar: CustomViewStyle;
+  progressBarStyle: ViewStyle;
+}
+
 export const labelStyles = (
   color: string,
   fontFamily: string,
@@ -97,7 +118,7 @@ export const textInputStyles = (
   padding: number,
   color: string,
   inputColor: string
-): ReturnType<typeof StyleSheet.create> => {
+): TextStyles => {
   return StyleSheet.create({
     inputLabelRow: {
       flexDirection: 'row', // Arrange texts in a row
@@ -131,25 +152,22 @@ export const textInputStyles = (
   });
 };
 
-export const PasswordStrengthMeterStyles = (): ReturnType<
-  typeof StyleSheet.create
-> => {
-  return StyleSheet.create({
+export const PasswordStrengthMeterStyles = (): PwdStrengthMeterStyles => {
+  return {
     passwordMeterContainer: {
       marginTop: 6,
       width: '100%',
-    } as ViewStyle,
+    },
     progressBar: {
       height: 6, // Adjust height here
       borderRadius: 3,
-      // Using a custom property for unfilledColor; if not supported, consider handling it separately.
-      unfilledColor: Colors.TRANSPARENTSCREEN,
       borderWidth: 0,
-    } as ViewStyle,
+      unfilledColor: Colors.TRANSPARENTSCREEN, // Custom property
+    },
     progressBarStyle: {
       borderRadius: 5,
-    } as ViewStyle,
-  });
+    },
+  } as PwdStrengthMeterStyles;
 };
 
 export const bottomNavStyles = (
