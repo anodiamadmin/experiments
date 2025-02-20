@@ -99,15 +99,14 @@ const ScreenZero = () => {
             <ButtonAnodiam buttonText={'MY-LINK'} buttonType={'hyperlink'} textDecorationLine={'underline line-through'}/>
             <ButtonAnodiam buttonText={'Yellow Button'} buttonType={'primary'} color={'yellow'} backgroundColor={'pink'}/> */}
             {/* <TextInputAnodiam />*/}
-            {/* <TextInputAnodiam textInputLabel={'myName'} mandatory={true}/> */}
-            <TextInputAnodiam textInputLabel={'my email'} textInputType={'email'} mandatory={true} validateApplicationLogic={myEmailBusinessLogic}/>
             <TextInputAnodiam textInputLabel={'myName'} mandatory={true}/>
-            <TextInputAnodiam textInputLabel={'my number'} textInputType={'numeric'} />
+            <TextInputAnodiam textInputType={'email'} mandatory={true} validateApplicationLogic={myEmailBusinessLogic}/>
+            <TextInputAnodiam textInputType={'numeric'}/>
             <TextInputAnodiam textInputType={'password'}/>
-            <TextInputAnodiam textInputLabel={'Create password'} textInputType={'create-password'} gapVertical={10}/>  
-            {/* <TextInputAnodiam textInputLabel={'Conf Password'} textInputType={'confirm-password'}/>  */}
+            <TextInputAnodiam textInputType={'create-password'} gapVertical={10}/>
+            {/* <TextInputAnodiam textInputLabel={'Conf Password'} textInputType={'confirm-password'}/> */}
             <View style={{height: 50}}/>
-            <ButtonAnodiam buttonText={'Visit Tabs'} onPrsBtnAnodiam={handleVisitTabs} buttonType={'any type'} /> 
+            <ButtonAnodiam buttonText={'Visit Tabs'} onPrsBtnAnodiam={handleVisitTabs} buttonType={'any type'} />
             <View style={{height: 60}}/>
         </View>
     )

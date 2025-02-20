@@ -96,7 +96,6 @@ const TextInputAnodiam = (props:TextInputAnodiamProps) => {
   });
 
   const emailValidation = (emailId: string) => {
-    console.log('Inside email Validation');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailId) && emailId) {
       setValidationText('Invalid email format.');
@@ -217,7 +216,6 @@ const TextInputAnodiam = (props:TextInputAnodiamProps) => {
   };
 
   let content: JSX.Element | JSX.Element[] = <></>;
-  console.log(textInputType);
   switch (textInputType) {
     case 'password':
       content = (
