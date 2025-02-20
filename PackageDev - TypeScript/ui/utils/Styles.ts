@@ -51,6 +51,12 @@ export interface PwdStrengthMeterStyles {
   progressBarStyle: ViewStyle;
 }
 
+export interface ButtomNavStyles{
+  bigIconBox: ViewStyle;
+  tabBarLabelStyle: TextStyle;
+  tabBarStyle: ViewStyle;
+}
+
 export const labelStyles = (
   color: string,
   fontFamily: string,
@@ -178,7 +184,7 @@ export const bottomNavStyles = (
   padding: number,
   backgroundColor: string,
   bottomNavHeight: number
-): ReturnType<typeof StyleSheet.create> => {
+): ButtomNavStyles => {
   return StyleSheet.create({
     bigIconBox: {
       width: iconSize * 2.2,

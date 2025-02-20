@@ -1,5 +1,5 @@
 import React from 'react';
-import BottomNavAnodiam from '../../ui/ButtonAnodiam';
+import BottomNavAnodiam from '../../ui/ButtonNavAnodiam';
 
 export interface Tab {
   name: string;
