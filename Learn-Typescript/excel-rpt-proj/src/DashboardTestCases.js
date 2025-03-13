@@ -96,8 +96,8 @@ const DashboardTestCases = () => {
 
   const data = [
     { metric: "Total Test Cases", value: totalTestCases,statusColor:totalTestCasesColor },
-    { metric: "Passed Test Cases (%)", value: passedTestCasesPercent,statusColor:passedTestCasesPercentColor},
-    { metric: "Defect Density (%)", value: defectDensityPercent,statusColor:defectDensityPercentColor },
+    { metric: "Passed Test Cases (%)", value: passedTestCasesPercent.toString() + "%",statusColor:passedTestCasesPercentColor},
+    { metric: "Defect Density (%)", value: defectDensityPercent.toString() + "%",statusColor:defectDensityPercentColor },
     { metric: "Test Coverage (%)", value: null,statusColor:null },
     { metric: "Defect Leakage (%)", value: null,statusColor:null },
     { metric: "Flaky Tests (%)", value: null,statusColor:null },
