@@ -1,5 +1,6 @@
 import React,{ useEffect, useState } from "react";
-import { TotalTestCases, PassedTestCases,FailedTestCases,total,covered } from './testResultsVariables';
+import { TotalTestCases, PassedTestCases,FailedTestCases,total,covered,
+        found_in_testing,found_in_production } from './testResultsVariables';
 import {
   Table,
   TableBody,
@@ -23,6 +24,9 @@ const DashboardTestCases = () => {
 
   const [testCoveragePercent, setTestCoveragePercent] = useState(0);
   const [testCoveragePercentColor, setTestCoveragePercentColor] = useState('');
+
+  const [defectLeakagePercent, setDefectLeakagePercent] = useState(0);
+  const [defectLeakagePercentColor, setDefectLeakagePercentColor] = useState('');
 
   useEffect(() => {
     async function fetchData() {
@@ -82,17 +86,36 @@ const DashboardTestCases = () => {
       const testCoveragePer=Math.round((linesOfCodeTested/totalLinesOfCode)*100)
       setTestCoveragePercent(testCoveragePer)
       if(testCoveragePer>90)
-        {
-          setTestCoveragePercentColor(greenColor);
-        }
-        if(testCoveragePer>70 && testCoveragePer<=90)
-        {
-          setTestCoveragePercentColor(amberColor);
-        }
-        if(testCoveragePer<=75)
-        {
-          setTestCoveragePercentColor(redColor);
-        }
+      {
+        setTestCoveragePercentColor(greenColor);
+      }
+      if(testCoveragePer>70 && testCoveragePer<=90)
+      {
+        setTestCoveragePercentColor(amberColor);
+      }
+      if(testCoveragePer<=75)
+      {
+        setTestCoveragePercentColor(redColor);
+      }
+
+      const defect_found_in_testing=await found_in_testing;
+      const defect_found_in_production=await found_in_production;
+      const defectLeakagePer=Math.round((defect_found_in_production/(defect_found_in_production + defect_found_in_testing))*100)
+      setDefectLeakagePercent(defectLeakagePer)
+      //< 1%	< 5%	>= 5%
+      if(defectLeakagePer<1)
+      {
+        setDefectLeakagePercentColor(greenColor);
+      }
+      if(defectLeakagePer>1 && defectLeakagePer<5)
+      {
+        setDefectLeakagePercentColor(amberColor);
+      }
+      if(defectLeakagePer>=5)
+      {
+        setDefectLeakagePercentColor(redColor);
+      }
+  
     }
     fetchData();
   }, []);
@@ -118,7 +141,7 @@ const DashboardTestCases = () => {
     { metric: "Passed Test Cases (%)", value: passedTestCasesPercent.toString() + "%",statusColor:passedTestCasesPercentColor},
     { metric: "Defect Density (%)", value: defectDensityPercent.toString() + "%",statusColor:defectDensityPercentColor },
     { metric: "Test Coverage (%)", value: testCoveragePercent.toString() + "%",statusColor:testCoveragePercentColor },
-    { metric: "Defect Leakage (%)", value: null,statusColor:null },
+    { metric: "Defect Leakage (%)", value: defectLeakagePercent.toString() + "%",statusColor:defectLeakagePercentColor },
     { metric: "Flaky Tests (%)", value: null,statusColor:null },
     { metric: "Test Optimization (%)", value: null,statusColor:null },
     { metric: "CI/CD Build Verification Rate (%)", value: null ,statusColor:null},

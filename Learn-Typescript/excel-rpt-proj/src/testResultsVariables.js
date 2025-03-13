@@ -27,3 +27,15 @@ const fetchTestSummaryResults = fetch('/coverage-summary.json')
   });
 export const total = fetchTestSummaryResults.then(data => data?.total?.lines?.total ?? 0);
 export const covered = fetchTestSummaryResults.then(data => data?.total?.lines?.covered ?? 0);
+
+const fetchDefectResults = fetch('/defect-summary.json')
+  .then(response => response.json())
+  .catch(error => {
+    console.error('Error fetching test-results.json:', error);
+    return {
+      found_in_testing: null,
+      found_in_production: null
+    };
+  });
+export const found_in_testing = fetchDefectResults.then(data => data.defects.found_in_testing );
+export const found_in_production = fetchDefectResults.then(data => data.defects.found_in_production);
