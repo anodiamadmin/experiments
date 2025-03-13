@@ -1,5 +1,5 @@
 import React,{ useEffect, useState } from "react";
-import { TotalTestCases, PassedTestCases,FailedTestCases } from './testResultsVariables';
+import { TotalTestCases, PassedTestCases,FailedTestCases,total,covered } from './testResultsVariables';
 import {
   Table,
   TableBody,
@@ -20,6 +20,9 @@ const DashboardTestCases = () => {
   
   const [defectDensityPercent, setDefectDensityPercent] = useState(0);
   const [defectDensityPercentColor, setDefectDensityPercentColor] = useState('');
+
+  const [testCoveragePercent, setTestCoveragePercent] = useState(0);
+  const [testCoveragePercentColor, setTestCoveragePercentColor] = useState('');
 
   useEffect(() => {
     async function fetchData() {
@@ -74,6 +77,22 @@ const DashboardTestCases = () => {
         setDefectDensityPercentColor(redColor);
       }
 
+      const totalLinesOfCode=await total;
+      const linesOfCodeTested=await covered;
+      const testCoveragePer=Math.round((linesOfCodeTested/totalLinesOfCode)*100)
+      setTestCoveragePercent(testCoveragePer)
+      if(testCoveragePer>90)
+        {
+          setTestCoveragePercentColor(greenColor);
+        }
+        if(testCoveragePer>70 && testCoveragePer<=90)
+        {
+          setTestCoveragePercentColor(amberColor);
+        }
+        if(testCoveragePer<=75)
+        {
+          setTestCoveragePercentColor(redColor);
+        }
     }
     fetchData();
   }, []);
@@ -98,7 +117,7 @@ const DashboardTestCases = () => {
     { metric: "Total Test Cases", value: totalTestCases,statusColor:totalTestCasesColor },
     { metric: "Passed Test Cases (%)", value: passedTestCasesPercent.toString() + "%",statusColor:passedTestCasesPercentColor},
     { metric: "Defect Density (%)", value: defectDensityPercent.toString() + "%",statusColor:defectDensityPercentColor },
-    { metric: "Test Coverage (%)", value: null,statusColor:null },
+    { metric: "Test Coverage (%)", value: testCoveragePercent.toString() + "%",statusColor:testCoveragePercentColor },
     { metric: "Defect Leakage (%)", value: null,statusColor:null },
     { metric: "Flaky Tests (%)", value: null,statusColor:null },
     { metric: "Test Optimization (%)", value: null,statusColor:null },
