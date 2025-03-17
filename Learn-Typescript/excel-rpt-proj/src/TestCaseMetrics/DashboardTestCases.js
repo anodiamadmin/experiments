@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from "react";
 import { TotalTestCases, PassedTestCases,FailedTestCases,total,covered,
-        found_in_testing,found_in_production } from '../testResultsVariables';
+        found_in_testing,found_in_production } from './testResultsVariables';
 import {
   Table,
   TableBody,
@@ -10,7 +10,7 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
-
+import * as constants from '../Utils/ConstantsAnodiam';
 
 const DashboardTestCases = () => {
   const [totalTestCases, setTotalTestCases] = useState(0);
@@ -30,9 +30,9 @@ const DashboardTestCases = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const greenColor='#00FF00';
-      const amberColor='#ffbf00';
-      const redColor='#FF0000';
+      const greenColor=constants.GREEN_COLOR;
+      const amberColor=constants.AMBER_COLOR;
+      const redColor=constants.RED_COLOR;
 
       const totalTests = await TotalTestCases;
       setTotalTestCases(totalTests);

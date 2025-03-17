@@ -12,35 +12,34 @@ import {
 import * as constants from '../Utils/ConstantsAnodiam';
 
 const data = [
-  { name: 'Jan', value: 75 },
-  { name: 'Feb', value: 35 },
-  { name: 'Mar', value: 65 },
-  { name: 'Apr', value: 56 },
-  { name: 'May', value: 10 },
-  { name: 'Jun', value: 72 },
-  { name: 'Jul', value: 80 },
+  { name: 'Sep-2024', value: 196 },
+  { name: 'Oct-2024', value: 284 },
+  { name: 'Nov-2024', value: 336 },
+  { name: 'Dec-2024', value: 280 },
+  { name: 'Jan-2025', value: 296 },
+  { name: 'Feb-2025', value: 360 }
 ];
 
-const CustomLineChart = () => {
+const TotalTestCasesChart = () => {
   return (
     <Paper elevation={3} sx={{ p: 2 }}>
-      <Typography variant="h6">Performance Over Time</Typography>
+      <Typography variant="h6">Total Test Cases Metrics for last 6 months</Typography>
 
       <Box display="flex" justifyContent="center" mt={2}>
         <LineChart
-          width={500}
-          height={300}
+          width={800}
+          height={400}
           data={data}
           margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
         >
           {/* Background colored areas according to thresholds */}
-          <ReferenceArea y1={0} y2={50} fill={constants.RED_COLOR} fillOpacity={0.4} />
-          <ReferenceArea y1={50} y2={74} fill={constants.AMBER_COLOR} fillOpacity={0.4} />
-          <ReferenceArea y1={75} y2={100} fill={constants.GREEN_COLOR} fillOpacity={0.4} />
+          <ReferenceArea y1={0} y2={200} fill={constants.RED_COLOR} fillOpacity={0.4} />
+          <ReferenceArea y1={201} y2={300} fill={constants.AMBER_COLOR} fillOpacity={0.4} />
+          <ReferenceArea y1={301} y2={500} fill={constants.GREEN_COLOR} fillOpacity={0.4} />
 
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis domain={[0, 100]} />
+          <YAxis domain={[0, 500]} />
           <Tooltip />
 
           <Line
@@ -56,4 +55,4 @@ const CustomLineChart = () => {
   );
 };
 
-export default CustomLineChart;
+export default TotalTestCasesChart;
