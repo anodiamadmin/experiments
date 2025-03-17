@@ -1,10 +1,11 @@
 import './App.css';
-import DashboardTestCases from './DashboardTestCases'
+//import DashboardTestCases from './DashboardTestCases'
+import CustomLineChart from './CustomLineChart';
 
 function App() {
   return (
     <div className="App">
-      <DashboardTestCases />
+      <CustomLineChart />
     </div>
   );
 }
