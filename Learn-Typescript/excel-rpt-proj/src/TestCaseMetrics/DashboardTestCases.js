@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from "react";
 import { TotalTestCases, PassedTestCases,FailedTestCases,total,covered,
-        found_in_testing,found_in_production } from './testResultsVariables';
+        found_in_testing,found_in_production } from '../testResultsVariables';
 import {
   Table,
   TableBody,
