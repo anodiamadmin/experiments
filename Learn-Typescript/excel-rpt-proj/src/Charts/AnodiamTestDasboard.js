@@ -28,32 +28,50 @@ const AnodiamTestDasboard = () => {
 
   return (
     <Box sx={{ padding: 4, fontFamily: 'Arial' }}>
-      {/* Header Section */}
-      <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-        <Box component="img" src="/anodiam_logo.png" alt="Anodiam Logo" sx={{ height: 40, mr: 1 }} />
-        <Typography variant="h5" fontWeight="bold" color="#5f5f5f">
-          Automation Test Dashboard:
-        </Typography>
-        <Typography variant="h5" sx={{ ml: 1 }}>
-          &lt;Project Name&gt; : &lt;Version Number(yy.mm.##)&gt;
-        </Typography>
-      </Box>
+      
 
-      {/* Sub Header Info */}
+      {/* //Sub Header Info
       <Typography variant="subtitle1" sx={{ mb: 2 }}>
         <strong>Released on:</strong> &lt;Release Date&gt; | <strong>Features Released:</strong> &lt;Number&gt; | <strong>Known Issues:</strong> &lt;Number&gt; |{' '}
         <Link href="#" underline="hover">Link to detail Release Notes</Link>
-      </Typography>
+      </Typography> */}
 
       {/* Table Layout Section */}
       <Table sx={{ width: '100%' }}>
         <TableBody>
           <TableRow>
+            <TableCell colSpan={2} align="center">
+              {/* Header Section */}
+                <Typography variant="h4" fontWeight="bold" color="#5f5f5f">
+                  Automation Test Dashboard: SyanGypsee  Version Number V1.0.0(25.03.01)
+                </Typography>
+                <Typography variant="h5" sx={{ mb: 2 }}>
+                  <strong>Released on:</strong> &lt;25.03.2025&gt; | <strong>Features Released:</strong> &lt;5&gt; | <strong>Known Issues:</strong> &lt;30&gt; |{' '}
+                  <Link href="#" underline="hover">Link to detail Release Notes</Link>
+                </Typography>
+            </TableCell>
+          </TableRow>
+          <TableRow>
             {/* Left Side */}
             <TableCell sx={{ verticalAlign: 'top', width: '50%' }}>
               {/* Pie Chart */}
               <TestCasePieChart />
-
+              {/* Quality Metrics */}
+              <Box sx={{ mb: 3 }}>
+                              {[
+                  'Test Coverage %',
+                  'Defect Leakage %',
+                  'Flaky Tests %',
+                  'Test Optimization %',
+                  'CICD Build Verificn %',
+                  'Build Stability %',
+                  'Pipeline Exec Mins',
+                ].map((label, idx) => (
+                  <Typography key={idx} variant="body1" sx={{ mb: 1 }}>
+                    {label} <Box component="span" sx={{ color: 'red' }}>&lt;#&gt;</Box>
+                  </Typography>
+                ))}
+              </Box>
               {/* Detail Trend Selector */}
               <Box sx={{ display: 'flex', alignItems: 'center', mt: 2 }}>
                 <Typography variant="subtitle1">Detail Trend: Last</Typography>
@@ -87,27 +105,33 @@ const AnodiamTestDasboard = () => {
                   GO
                 </Button>
               </Box>
+                {/* Other Releases Section */}
+              <Box sx={{ mt: 4 }}>
+                <Typography variant="h6" sx={{ mb: 1 }}>
+                  Other releases
+                </Typography>
+
+                <Box sx={{ ml: 2 }}>
+                  {['<Project Name>', '<Project Name>', '<Project Name>'].map((project, idx) => (
+                    <Box key={idx} sx={{ mb: 2 }}>
+                      <Typography variant="subtitle1" sx={{ mb: 1 }}>
+                        • {project}:
+                      </Typography>
+                      <Box sx={{ ml: 2, display: 'flex', flexDirection: 'column' }}>
+                        {['<Version (yy.mm.##)>', '<Version (yy.mm.##)>', '<Version (yy.mm.##)>', '<Version (yy.mm.##)>', '<Version (yy.mm.##)>', '<Version (yy.mm.##)>'].map((version, index) => (
+                          <Link key={index} href="#" underline="hover" sx={{ mb: 0.5 }}>
+                            {version}
+                          </Link>
+                        ))}
+                      </Box>
+                    </Box>
+                  ))}
+                </Box>
+              </Box>
             </TableCell>
 
             {/* Right Side */}
             <TableCell sx={{ verticalAlign: 'top', width: '50%' }}>
-              {/* Quality Metrics */}
-              <Box sx={{ mb: 3 }}>
-                {[
-                  'Test Coverage %',
-                  'Defect Leakage %',
-                  'Flaky Tests %',
-                  'Test Optimization %',
-                  'CICD Build Verificn %',
-                  'Build Stability %',
-                  'Pipeline Exec Mins',
-                ].map((label, idx) => (
-                  <Typography key={idx} variant="body1" sx={{ mb: 1 }}>
-                    {label} <Box component="span" sx={{ color: 'red' }}>&lt;#&gt;</Box>
-                  </Typography>
-                ))}
-              </Box>
-
               {/* Overall Quality Trend */}
               <Typography variant="h6" sx={{ mb: 1 }}>
                 Overall Quality Trend
@@ -123,29 +147,7 @@ const AnodiamTestDasboard = () => {
         </TableBody>
       </Table>
 
-      {/* Other Releases Section */}
-      <Box sx={{ mt: 4 }}>
-        <Typography variant="h6" sx={{ mb: 1 }}>
-          Other releases
-        </Typography>
-
-        <Box sx={{ ml: 2 }}>
-          {['<Project Name>', '<Project Name>', '<Project Name>'].map((project, idx) => (
-            <Box key={idx} sx={{ mb: 2 }}>
-              <Typography variant="subtitle1" sx={{ mb: 1 }}>
-                • {project}:
-              </Typography>
-              <Box sx={{ ml: 2, display: 'flex', flexDirection: 'column' }}>
-                {['<Version (yy.mm.##)>', '<Version (yy.mm.##)>', '<Version (yy.mm.##)>', '<Version (yy.mm.##)>', '<Version (yy.mm.##)>', '<Version (yy.mm.##)>'].map((version, index) => (
-                  <Link key={index} href="#" underline="hover" sx={{ mb: 0.5 }}>
-                    {version}
-                  </Link>
-                ))}
-              </Box>
-            </Box>
-          ))}
-        </Box>
-      </Box>
+    
     </Box>
   );
 };
