@@ -6,21 +6,30 @@ import {
   Cell,
 } from 'recharts';
 import { currentTotalTestCases,currentPassedTestCases,currentFailedTestCases } from './testCaseHistoryResults';
+import * as constants from '../Utils/ConstantsAnodiam';
 
 const TestCasePieChart = () => {
   const [curTotalTestCases, setCurTotalTestCases] = useState(0);
   const [curPassedTestCases, setCurPassedTestCases] = useState(0);
+  const [curPassedTestCasesPercent, setCurPassedTestCasesPercent] = useState(0);
   const [curFailedTestCases, setCurFailedTestCases] = useState(0);
+  const [curFailedTestCasesPercent, setCurFailedTestCasesPercent] = useState(0);
 
   useEffect(() => {
     async function fetchData() 
     {
       const currentTotalTests  = await currentTotalTestCases;
       setCurTotalTestCases(currentTotalTests);
+
       const currentPassedTests = await currentPassedTestCases;
       setCurPassedTestCases(currentPassedTests);
+      let passedTestPercent = Math.round((currentPassedTests / currentTotalTests) * 100);
+      setCurPassedTestCasesPercent(passedTestPercent);
+
       const currentFailedCases = await currentFailedTestCases;
       setCurFailedTestCases(currentFailedCases);
+      let failedTestPercent = Math.round((currentFailedCases / currentTotalTests) * 100);
+      setCurFailedTestCasesPercent(failedTestPercent);
     }
     fetchData();
   }, []);
@@ -30,7 +39,7 @@ const TestCasePieChart = () => {
     { name: 'Fail', value: curFailedTestCases },
   ];
   
-  const COLORS = ['#74D87E', '#F65555']; // Green and Red like in your image
+  const COLORS = [constants.GREEN_COLOR, constants.RED_COLOR]; // Green and Red like in your image
   return (
     <Box sx={{ position: 'relative', width: 400, height: 300, mx: 'auto' }}>
       {/* Labels */}
@@ -43,11 +52,11 @@ const TestCasePieChart = () => {
           fontWeight: 'bold',
         }}
       >
-        <Box component="span" sx={{ color: 'red' }}>Defect </Box>
-        <Box component="span" sx={{ color: 'orange' }}>Density %</Box>
+        <Box component="span" sx={{ color: constants.RED_COLOR }}>Defect </Box>
+        <Box component="span" sx={{ color: constants.RED_COLOR }}>Density {curFailedTestCasesPercent}%</Box>
         <br />
-        <Box component="span" sx={{ color: 'red' }}>Fail </Box>
-        <Box component="span" sx={{ color: 'green' }}>Number</Box>
+        <Box component="span" sx={{ color: constants.RED_COLOR }}>Fail </Box>
+        <Box component="span" sx={{ color: constants.RED_COLOR }}>{curFailedTestCases}</Box>
       </Typography>
 
       <Typography
@@ -59,9 +68,9 @@ const TestCasePieChart = () => {
           fontWeight: 'bold',
         }}
       >
-        <Box component="span" sx={{ color: 'red' }}>Pass %</Box>
+        <Box component="span" sx={{ color: constants.GREEN_COLOR }}>Pass {curPassedTestCasesPercent}%</Box>
         <br />
-        <Box component="span" sx={{ color: 'green' }}>Pass Number</Box>
+        <Box component="span" sx={{ color: constants.GREEN_COLOR }}>Pass {curPassedTestCases}</Box>
       </Typography>
 
       {/* Pie Chart */}
