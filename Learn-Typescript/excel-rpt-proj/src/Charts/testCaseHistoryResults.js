@@ -34,3 +34,20 @@ export const historyTotalTestCases = fetchTestCases.map(promise =>
 export const historyPassedTestCases = fetchTestCases.map(promise =>
   promise.then(result => result.passed)
 );
+
+const currentTestfileName = 'February-2025-test-cases-results.json';
+
+const fetchCurrentTestResult = fetch('/charts/' + currentTestfileName)
+  .then(response => response.json())
+  .catch(error => {
+    console.error('Error fetching ' + currentTestfileName + ': ', error);
+    return {
+      numTotalTests: null,
+      numPassedTests: null,
+      numFailedTests: null
+    };
+  });
+
+export const currentTotalTestCases  = fetchCurrentTestResult.then(data => data.numTotalTests);
+export const currentPassedTestCases = fetchCurrentTestResult.then(data => data.numPassedTests);
+export const currentFailedTestCases = fetchCurrentTestResult.then(data => data.numFailedTests);
