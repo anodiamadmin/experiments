@@ -1,22 +1,13 @@
-import React, { useState } from 'react';
-import { Box,Typography,Select,MenuItem,Button,Table,TableBody,TableCell,TableHead,TableRow } from '@mui/material';
+import React from 'react';
+import { Box,Typography,Table,TableBody,TableCell,TableHead,TableRow } from '@mui/material';
 import TestCasePieChart from './TestCasePieChart';
 import TotalTestCasesChart from './TotalTestCasesChart';
 import PassedCasesPercentChart from './PassedCasesPercentChart';
 import DashboardHeader from './DashboardHeader';
 import { OtherReleasesSection } from './OtherReleasesSection';
+import { DetailTrendSelector } from './DetailTrendSelector';
 
 const AnodiamTestDashboard = () => {
-  const [selectedReleases, setSelectedReleases] = useState(3);
-
-  const handleSelectChange = (event) => {
-    setSelectedReleases(event.target.value);
-  };
-
-  const handleGoClick = () => {
-    console.log(`Fetching data for last ${selectedReleases} releases`);
-  };
-
   return (
     <Box sx={{ p: { xs: 2, md: 4 }, fontFamily: 'Oxygen' }}>
       <Table sx={{ width: '100%' }}>
@@ -61,7 +52,8 @@ const AnodiamTestDashboard = () => {
                 </Box>
 
                 {/* Detail Trend Selector */}
-                <Box
+                <DetailTrendSelector />
+                {/* <Box
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
@@ -99,7 +91,7 @@ const AnodiamTestDashboard = () => {
                   >
                     GO
                   </Button>
-                </Box>
+                </Box> */}
                 {/* Other Releases Section */}
                 <OtherReleasesSection />
               </Box>
