@@ -8,14 +8,16 @@ import {
   Link,
   Table,
   TableBody,
-  TableRow,
   TableCell,
+  TableHead,
+  TableRow,
 } from '@mui/material';
 import TestCasePieChart from './TestCasePieChart';
 import TotalTestCasesChart from './TotalTestCasesChart';
 import PassedCasesPercentChart from './PassedCasesPercentChart';
+import DashboardHeader from './DashboardHeader';
 
-const AnodiamTestDasboard = () => {
+const AnodiamTestDashboard = () => {
   const [selectedReleases, setSelectedReleases] = useState(3);
 
   const handleSelectChange = (event) => {
@@ -27,27 +29,24 @@ const AnodiamTestDasboard = () => {
   };
 
   return (
-    <Box sx={{ p: { xs: 2, md: 4 }, fontFamily: 'Arial' }}>
-      {/* Header Section */}
-      <Box sx={{ textAlign: 'center', mb: 4 }}>
-        <Typography variant="h4" fontWeight="bold" color="#5f5f5f">
-          Automation Test Dashboard: SyanGypsee Version Number V1.0.0(25.03.01)
-        </Typography>
-        <Typography variant="h5" sx={{ mt: 2 }}>
-          <strong>Released on:</strong> &lt;25.03.2025&gt; |{' '}
-          <strong>Features Released:</strong> &lt;5&gt; |{' '}
-          <strong>Known Issues:</strong> &lt;30&gt; |{' '}
-          <Link href="#" underline="hover">Link to detail Release Notes</Link>
-        </Typography>
-      </Box>
+    <Box sx={{ p: { xs: 2, md: 4 }, fontFamily: 'Oxygen' }}>
+      <Table sx={{ width: '100%' }}>
+        {/* Table Header */}
+        <TableHead>
+          <TableRow>
+            <TableCell colSpan={2} sx={{ borderBottom: 'none', p: 0 }}>
+              <DashboardHeader />
+            </TableCell>
+          </TableRow>
+        </TableHead>
 
-      {/* Table Layout for Content */}
-      <Table>
+        {/* Table Body */}
         <TableBody>
           <TableRow>
-            {/* Left Side */}
+            {/* Left Panel */}
             <TableCell sx={{ verticalAlign: 'top', width: '50%' }}>
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                {/* Pie Chart */}
                 <Box sx={{ mb: 4 }}>
                   <TestCasePieChart />
                 </Box>
@@ -64,7 +63,10 @@ const AnodiamTestDasboard = () => {
                     'Pipeline Exec Mins',
                   ].map((label, idx) => (
                     <Typography key={idx} variant="body1" sx={{ mb: 1 }}>
-                      {label} <Box component="span" sx={{ color: 'red' }}>&lt;#&gt;</Box>
+                      {label}{' '}
+                      <Box component="span" sx={{ color: 'red' }}>
+                        &lt;#&gt;
+                      </Box>
                     </Typography>
                   ))}
                 </Box>
@@ -116,31 +118,44 @@ const AnodiamTestDasboard = () => {
                     Other releases
                   </Typography>
                   <Box sx={{ ml: 2 }}>
-                    {['<Project Name>', '<Project Name>', '<Project Name>'].map((project, idx) => (
-                      <Box key={idx} sx={{ mb: 2 }}>
-                        <Typography variant="subtitle1" sx={{ mb: 1 }}>
-                          • {project}:
-                        </Typography>
-                        <Box sx={{ ml: 2, display: 'flex', flexDirection: 'column' }}>
-                          {[
-                            '<Version (yy.mm.##)>',
-                            '<Version (yy.mm.##)>',
-                            '<Version (yy.mm.##)>',
-                            '<Version (yy.mm.##)>',
-                          ].map((version, index) => (
-                            <Link key={index} href="#" underline="hover" sx={{ mb: 0.5 }}>
-                              {version}
-                            </Link>
-                          ))}
+                    {['<Project Name>', '<Project Name>', '<Project Name>'].map(
+                      (project, idx) => (
+                        <Box key={idx} sx={{ mb: 2 }}>
+                          <Typography variant="subtitle1" sx={{ mb: 1 }}>
+                            • {project}:
+                          </Typography>
+                          <Box
+                            sx={{
+                              ml: 2,
+                              display: 'flex',
+                              flexDirection: 'column',
+                            }}
+                          >
+                            {[
+                              '<Version (yy.mm.##)>',
+                              '<Version (yy.mm.##)>',
+                              '<Version (yy.mm.##)>',
+                              '<Version (yy.mm.##)>',
+                            ].map((version, index) => (
+                              <Link
+                                key={index}
+                                href="#"
+                                underline="hover"
+                                sx={{ mb: 0.5 }}
+                              >
+                                {version}
+                              </Link>
+                            ))}
+                          </Box>
                         </Box>
-                      </Box>
-                    ))}
+                      )
+                    )}
                   </Box>
                 </Box>
               </Box>
             </TableCell>
 
-            {/* Right Side */}
+            {/* Right Panel */}
             <TableCell sx={{ verticalAlign: 'top', width: '50%' }}>
               <Box>
                 <Typography variant="h6" sx={{ mb: 1 }}>
@@ -161,4 +176,4 @@ const AnodiamTestDasboard = () => {
   );
 };
 
-export default AnodiamTestDasboard;
+export default AnodiamTestDashboard;
