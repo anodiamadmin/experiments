@@ -1,21 +1,10 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Typography,
-  Select,
-  MenuItem,
-  Button,
-  Link,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-} from '@mui/material';
+import { Box,Typography,Select,MenuItem,Button,Table,TableBody,TableCell,TableHead,TableRow } from '@mui/material';
 import TestCasePieChart from './TestCasePieChart';
 import TotalTestCasesChart from './TotalTestCasesChart';
 import PassedCasesPercentChart from './PassedCasesPercentChart';
 import DashboardHeader from './DashboardHeader';
+import { OtherReleasesSection } from './OtherReleasesSection';
 
 const AnodiamTestDashboard = () => {
   const [selectedReleases, setSelectedReleases] = useState(3);
@@ -111,47 +100,8 @@ const AnodiamTestDashboard = () => {
                     GO
                   </Button>
                 </Box>
-
                 {/* Other Releases Section */}
-                <Box sx={{ mt: 4 }}>
-                  <Typography variant="h6" sx={{ mb: 1 }}>
-                    Other releases
-                  </Typography>
-                  <Box sx={{ ml: 2 }}>
-                    {['<Project Name>', '<Project Name>', '<Project Name>'].map(
-                      (project, idx) => (
-                        <Box key={idx} sx={{ mb: 2 }}>
-                          <Typography variant="subtitle1" sx={{ mb: 1 }}>
-                            • {project}:
-                          </Typography>
-                          <Box
-                            sx={{
-                              ml: 2,
-                              display: 'flex',
-                              flexDirection: 'column',
-                            }}
-                          >
-                            {[
-                              '<Version (yy.mm.##)>',
-                              '<Version (yy.mm.##)>',
-                              '<Version (yy.mm.##)>',
-                              '<Version (yy.mm.##)>',
-                            ].map((version, index) => (
-                              <Link
-                                key={index}
-                                href="#"
-                                underline="hover"
-                                sx={{ mb: 0.5 }}
-                              >
-                                {version}
-                              </Link>
-                            ))}
-                          </Box>
-                        </Box>
-                      )
-                    )}
-                  </Box>
-                </Box>
+                <OtherReleasesSection />
               </Box>
             </TableCell>
 
