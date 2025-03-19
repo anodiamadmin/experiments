@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { Box,Typography,Select,MenuItem,Button } from '@mui/material';
 
-export const DetailTrendSelector = () => {
+const DetailTrendSelector = () => {
     const [selectedReleases, setSelectedReleases] = useState(3);
 
     const handleSelectChange = (event) => {
@@ -30,3 +30,5 @@ export const DetailTrendSelector = () => {
         </Box>
   )
 }
+
+export default DetailTrendSelector;

@@ -4,8 +4,9 @@ import TestCasePieChart from './TestCasePieChart';
 import TotalTestCasesChart from './TotalTestCasesChart';
 import PassedCasesPercentChart from './PassedCasesPercentChart';
 import DashboardHeader from './DashboardHeader';
-import { OtherReleasesSection } from './OtherReleasesSection';
-import { DetailTrendSelector } from './DetailTrendSelector';
+import OtherReleasesSection from './OtherReleasesSection';
+import DetailTrendSelector from './DetailTrendSelector';
+import QualityMetrics from './QualityMetrics';
 
 const AnodiamTestDashboard = () => {
   return (
@@ -30,68 +31,12 @@ const AnodiamTestDashboard = () => {
                 <Box sx={{ mb: 4 }}>
                   <TestCasePieChart />
                 </Box>
-
                 {/* Quality Metrics */}
                 <Box sx={{ mb: 3 }}>
-                  {[
-                    'Test Coverage %',
-                    'Defect Leakage %',
-                    'Flaky Tests %',
-                    'Test Optimization %',
-                    'CICD Build Verificn %',
-                    'Build Stability %',
-                    'Pipeline Exec Mins',
-                  ].map((label, idx) => (
-                    <Typography key={idx} variant="body1" sx={{ mb: 1 }}>
-                      {label}{' '}
-                      <Box component="span" sx={{ color: 'red' }}>
-                        &lt;#&gt;
-                      </Box>
-                    </Typography>
-                  ))}
+                 <QualityMetrics />
                 </Box>
-
                 {/* Detail Trend Selector */}
                 <DetailTrendSelector />
-                {/* <Box
-                  sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                    gap: 1,
-                    mt: 2,
-                  }}
-                >
-                  <Typography variant="subtitle1">Detail Trend: Last</Typography>
-                  <Select
-                    value={selectedReleases}
-                    onChange={handleSelectChange}
-                    size="small"
-                    sx={{ width: 80 }}
-                  >
-                    <MenuItem value={3}>3</MenuItem>
-                    <MenuItem value={6}>6</MenuItem>
-                    <MenuItem value={12}>12</MenuItem>
-                    <MenuItem value={48}>48</MenuItem>
-                  </Select>
-                  <Typography variant="subtitle1">Releases</Typography>
-                  <Button
-                    variant="contained"
-                    onClick={handleGoClick}
-                    sx={{
-                      backgroundColor: '#444',
-                      color: '#fff',
-                      fontWeight: 'bold',
-                      '&:hover': { backgroundColor: '#333' },
-                      px: 3,
-                      py: 1,
-                      borderRadius: '5px',
-                      boxShadow: '2px 2px 5px rgba(0,0,0,0.4)',
-                    }}
-                  >
-                    GO
-                  </Button>
-                </Box> */}
                 {/* Other Releases Section */}
                 <OtherReleasesSection />
               </Box>

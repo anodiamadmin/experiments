@@ -51,3 +51,27 @@ const fetchCurrentTestResult = fetch('/charts/' + currentTestfileName)
 export const currentTotalTestCases  = fetchCurrentTestResult.then(data => data.numTotalTests);
 export const currentPassedTestCases = fetchCurrentTestResult.then(data => data.numPassedTests);
 export const currentFailedTestCases = fetchCurrentTestResult.then(data => data.numFailedTests);
+
+const fetchTestSummaryResults = fetch('/dev-env/coverage-summary.json')
+  .then(response => response.json())
+  .catch(error => {
+    console.error('Error fetching test-cases-results.json:', error);
+    return {
+      total: null,
+      covered: null
+    };
+  });
+export const total = fetchTestSummaryResults.then(data => data?.total?.lines?.total ?? 0);
+export const covered = fetchTestSummaryResults.then(data => data?.total?.lines?.covered ?? 0);
+
+const fetchDefectResults = fetch('/dev-env/defect-summary.json')
+  .then(response => response.json())
+  .catch(error => {
+    console.error('Error fetching test-cases-results.json:', error);
+    return {
+      found_in_testing: null,
+      found_in_production: null
+    };
+  });
+export const found_in_testing = fetchDefectResults.then(data => data.defects.found_in_testing );
+export const found_in_production = fetchDefectResults.then(data => data.defects.found_in_production);

@@ -36,13 +36,13 @@ const DashboardHeader = () => {
                 Automation Test Dashboard: SyanGypsee Version Number V1.0.0(25.03.01)
               </Typography>
               <Typography variant="h5" sx={{ mt: 2 }}>
-                <strong>Released on:</strong> &lt;25.03.2025&gt; |{' '}
-                <strong>Features Released:</strong> &lt;5&gt; |{' '}
-                <strong>Known Issues:</strong> &lt;30&gt; |{' '}
+                <strong>Released on: 25.03.2025</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Features Released: 5</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Known Issues: 30</strong>&nbsp;&nbsp;&nbsp;&nbsp;
                 <Link href="#" underline="hover">
                   Link to detail Release Notes
                 </Link>
-              </Typography>
+            </Typography>
             </TableCell>
           </TableRow>
         </TableBody>

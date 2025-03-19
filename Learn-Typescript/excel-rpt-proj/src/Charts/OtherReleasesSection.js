@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Link } from '@mui/material';
 
-export const OtherReleasesSection = () => {
+const OtherReleasesSection = () => {
   return (
     <Box sx={{ mt: 4 }}>
       <Typography variant="h6" sx={{ mb: 1 }}>
@@ -75,3 +75,5 @@ export const OtherReleasesSection = () => {
     </Box>
   );
 };
+
+export default OtherReleasesSection;
