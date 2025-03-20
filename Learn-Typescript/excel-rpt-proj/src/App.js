@@ -1,10 +1,10 @@
-import './App.css';
-import AnodiamTestCasesDashboard from './Dashboard/AnodiamTestCasesDasboard';
+import React from 'react';
+import AnodiamRouter from './Menu/AnodiamRouter';
 
 function App() {
   return (
     <div className="App">
-      <AnodiamTestCasesDashboard />
+      <AnodiamRouter />
     </div>
   );
 }
