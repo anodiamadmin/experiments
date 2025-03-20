@@ -1,13 +1,10 @@
 import './App.css';
-//import DashboardTestCases from './TestCaseMetrics/DashboardTestCases'
-//import AllCharts from './Charts/AllCharts';
-//import TestCasePieChart from './Charts/TestCasePieChart'
-import AnodiamTestDashboard from './Charts/AnodiamTestDasboard';
+import AnodiamTestCasesDashboard from './Dashboard/AnodiamTestCasesDasboard';
 
 function App() {
   return (
     <div className="App">
-      <AnodiamTestDashboard />
+      <AnodiamTestCasesDashboard />
     </div>
   );
 }

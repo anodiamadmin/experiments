@@ -9,7 +9,7 @@ const fileNames = [
 
 // Fetch both total and passed test cases at once for each file
 const fetchTestCases = fileNames.map((fileName) => {
-  const filePath = `/charts/${fileName}`;
+  const filePath = `/dev-env/last-6-test-cases-results/${fileName}`;
 
   return fetch(filePath)
     .then((response) => response.json())
@@ -37,7 +37,7 @@ export const historyPassedTestCases = fetchTestCases.map(promise =>
 
 const currentTestfileName = 'February-2025-test-cases-results.json';
 
-const fetchCurrentTestResult = fetch('/charts/' + currentTestfileName)
+const fetchCurrentTestResult = fetch('/dev-env/last-6-test-cases-results/' + currentTestfileName)
   .then(response => response.json())
   .catch(error => {
     console.error('Error fetching ' + currentTestfileName + ': ', error);
@@ -52,10 +52,10 @@ export const currentTotalTestCases  = fetchCurrentTestResult.then(data => data.n
 export const currentPassedTestCases = fetchCurrentTestResult.then(data => data.numPassedTests);
 export const currentFailedTestCases = fetchCurrentTestResult.then(data => data.numFailedTests);
 
-const fetchTestSummaryResults = fetch('/dev-env/coverage-summary.json')
+const fetchTestSummaryResults = fetch('/dev-env/last-6-test-cases-results/coverage-summary.json')
   .then(response => response.json())
   .catch(error => {
-    console.error('Error fetching test-cases-results.json:', error);
+    console.error('Error fetching coverage-summary.json:', error);
     return {
       total: null,
       covered: null
@@ -64,10 +64,10 @@ const fetchTestSummaryResults = fetch('/dev-env/coverage-summary.json')
 export const total = fetchTestSummaryResults.then(data => data?.total?.lines?.total ?? 0);
 export const covered = fetchTestSummaryResults.then(data => data?.total?.lines?.covered ?? 0);
 
-const fetchDefectResults = fetch('/dev-env/defect-summary.json')
+const fetchDefectResults = fetch('/dev-env/last-6-test-cases-results/defect-summary.json')
   .then(response => response.json())
   .catch(error => {
-    console.error('Error fetching test-cases-results.json:', error);
+    console.error('Error fetching defect-summary.json:', error);
     return {
       found_in_testing: null,
       found_in_production: null

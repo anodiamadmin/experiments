@@ -8,7 +8,7 @@ import OtherReleasesSection from './OtherReleasesSection';
 import DetailTrendSelector from './DetailTrendSelector';
 import QualityMetrics from './QualityMetrics';
 
-const AnodiamTestDashboard = () => {
+const AnodiamTestCasesDashboard = () => {
   return (
     <Box sx={{ p: { xs: 2, md: 4 }, fontFamily: 'Oxygen' }}>
       <Table sx={{ width: '100%' }}>
@@ -63,4 +63,4 @@ const AnodiamTestDashboard = () => {
   );
 };
 
-export default AnodiamTestDashboard;
+export default AnodiamTestCasesDashboard;

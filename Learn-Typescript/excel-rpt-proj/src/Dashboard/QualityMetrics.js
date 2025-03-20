@@ -1,5 +1,5 @@
 import React,{ useEffect, useState } from "react";
-import { total,covered,found_in_testing,found_in_production } from './testCaseHistoryResults';
+import { total,covered,found_in_testing,found_in_production } from './extractTestResultsVariables';
 import {
   Table,
   TableBody,

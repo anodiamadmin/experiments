@@ -5,11 +5,12 @@ import {
   Pie,
   Cell,
 } from 'recharts';
-import { currentTotalTestCases, currentPassedTestCases, currentFailedTestCases } from './testCaseHistoryResults';
+import { currentTotalTestCases, currentPassedTestCases, currentFailedTestCases } from './extractTestResultsVariables';
 import * as constants from '../Utils/ConstantsAnodiam';
 
 const TestCasePieChart = () => {
   const [curTotalTestCases, setCurTotalTestCases] = useState(0);
+  const [totalTestCasesColor, setTotalTestCasesColor] = useState('');  
   const [curPassedTestCases, setCurPassedTestCases] = useState(0);
   const [curPassedTestCasesPercent, setCurPassedTestCasesPercent] = useState(0);
   const [curFailedTestCases, setCurFailedTestCases] = useState(0);
@@ -19,7 +20,18 @@ const TestCasePieChart = () => {
     async function fetchData() {
       const currentTotalTests = await currentTotalTestCases;
       setCurTotalTestCases(currentTotalTests);
-
+      if(currentTotalTests>300)
+      {
+        setTotalTestCasesColor(constants.GREEN_COLOR)
+      }
+      if(currentTotalTests>200 && currentTotalTests<300)
+      {
+        setTotalTestCasesColor(constants.AMBER_COLOR)
+      }
+      if(currentTotalTests<=200)
+      {
+        setTotalTestCasesColor(constants.RED_COLOR)
+      }
       const currentPassedTests = await currentPassedTestCases;
       setCurPassedTestCases(currentPassedTests);
       const passedTestPercent = Math.round((currentPassedTests / currentTotalTests) * 100);
@@ -38,20 +50,25 @@ const TestCasePieChart = () => {
     { name: 'Fail', value: curFailedTestCases },
   ];
 
-  const COLORS = ['#90ee90', '#ff6666']; // light green and red
+  const COLORS = [constants.GREEN_COLOR, constants.RED_COLOR]; 
 
   return (
     <Box sx={{ textAlign: 'center', mb: 2 }}>
-      <Typography
+      <Typography 
         variant="h5"
         sx={{
           mb: 2,
-          color: '#333',
           fontWeight: 'bold',
-          textShadow: '1px 1px 3px rgba(0,0,0,0.2)',
         }}
       >
-        Total {curTotalTestCases} Test Cases
+        Total{' '}
+        <Box 
+          component="span"
+          sx={{ color: totalTestCasesColor }} // <- Color for the number
+        >
+          {curTotalTestCases}
+        </Box>{' '}
+        Test Cases
       </Typography>
 
       <Box
