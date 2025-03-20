@@ -46,7 +46,7 @@ const QualityMetrics = () => {
       const defectLeakagePer=Math.round((defect_found_in_production/(defect_found_in_production + defect_found_in_testing))*100)
       setDefectLeakagePercent(defectLeakagePer)
       //< 1%	< 5%	>= 5%
-      if(defectLeakagePer<1)
+      if(defectLeakagePer<=1)
       {
         setDefectLeakagePercentColor(greenColor);
       }

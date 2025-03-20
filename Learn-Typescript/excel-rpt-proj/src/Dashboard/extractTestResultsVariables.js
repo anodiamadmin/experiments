@@ -19,7 +19,6 @@ const fileNames = [
   '6-February-2025-test-cases-results.json'
 ];
 
-
 // Fetch both total and passed test cases at once for each file
 const fetchTestCases = fileNames.map(async (fileName) => {
   const filePath = `${testCasesFolderPath}${fileName}`;
