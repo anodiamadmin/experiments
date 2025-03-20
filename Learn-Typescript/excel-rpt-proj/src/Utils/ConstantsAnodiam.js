@@ -1,3 +1,3 @@
-export const GREEN_COLOR='#2E6F40';
+export const GREEN_COLOR='#90ee90';
 export const AMBER_COLOR='#ffbf00';
-export const RED_COLOR='#FF0000';
+export const RED_COLOR='#ff6666';

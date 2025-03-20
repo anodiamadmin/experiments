@@ -38,11 +38,10 @@ const TestCasePieChart = () => {
     { name: 'Fail', value: curFailedTestCases },
   ];
 
-  const COLORS = [constants.GREEN_COLOR, constants.RED_COLOR]; // Green and Red
+  const COLORS = ['#90ee90', '#ff6666']; // light green and red
 
   return (
     <Box sx={{ textAlign: 'center', mb: 2 }}>
-      {/* Total Test Cases line */}
       <Typography
         variant="h5"
         sx={{
@@ -55,58 +54,27 @@ const TestCasePieChart = () => {
         Total {curTotalTestCases} Test Cases
       </Typography>
 
-      <Box sx={{ position: 'relative', width: 400, height: 300, mx: 'auto' }}>
-        {/* Top Right Labels */}
-        <Typography
-          variant="h6"
-          sx={{
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            textAlign: 'right',
-            fontWeight: 'bold',
-            color: constants.RED_COLOR,
-            textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-          }}
-        >
-          <Box component="span" sx={{ color: constants.RED_COLOR }}>Defect </Box>
-          <Box component="span" sx={{ color: constants.RED_COLOR }}>Density {curFailedTestCasesPercent}%</Box>
-          <br />
-          <Box component="span" sx={{ color: constants.RED_COLOR }}>Fail </Box>
-          <Box component="span" sx={{ color: constants.RED_COLOR }}>{curFailedTestCases}</Box>
-        </Typography>
-
-        {/* Bottom Left Labels */}
-        <Typography
-          variant="h6"
-          sx={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            textAlign: 'left',
-            fontWeight: 'bold',
-            color: constants.RED_COLOR,
-            textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-          }}
-        >
-          <Box component="span" sx={{ color: constants.GREEN_COLOR }}>Pass </Box>
-          <Box component="span" sx={{ color: constants.GREEN_COLOR }}>{curPassedTestCasesPercent}%</Box>
-          <br />
-          <Box component="span" sx={{ color: constants.GREEN_COLOR }}>Pass </Box>
-          <Box component="span" sx={{ color: constants.GREEN_COLOR }}>{curPassedTestCases}</Box>
-        </Typography>
-
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '100%',
+          maxWidth: 700,
+          mx: 'auto',
+          position: 'relative',
+        }}
+      >
         {/* Pie Chart */}
-        <PieChart width={400} height={300}>
+        <PieChart width={300} height={300}>
           <Pie
             data={data}
             cx="50%"
             cy="50%"
-            innerRadius={60}
             outerRadius={120}
             startAngle={90}
             endAngle={-270}
-            paddingAngle={5}
+            paddingAngle={2}
             dataKey="value"
           >
             {data.map((entry, index) => (
@@ -114,6 +82,33 @@ const TestCasePieChart = () => {
             ))}
           </Pie>
         </PieChart>
+
+        {/* Labels */}
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: 200,
+            ml: 4, // margin left from the chart
+            textAlign: 'left',
+          }}
+        >
+          <Box >
+            <Typography variant="h6" sx={{fontWeight: 'bold', color: constants.RED_COLOR}}>
+              Defect Density {curFailedTestCasesPercent}%
+            </Typography>
+            <Typography variant="h6" sx={{fontWeight: 'bold', color: constants.RED_COLOR}}>
+              Failed {curFailedTestCases} Tests
+            </Typography><br/>
+            <Typography variant="h6" sx={{fontWeight: 'bold', color: constants.GREEN_COLOR}}>
+              Passed {curPassedTestCasesPercent}%
+            </Typography>
+            <Typography variant="h6" sx={{fontWeight: 'bold', color: constants.GREEN_COLOR}}>
+              Passed {curPassedTestCases} Tests
+            </Typography>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
