@@ -1,29 +1,43 @@
+const environmentFolder="Dev-Env";
+const currentSelectorTrendFolder="Latest-6-Test-Cases-Results"
+
+const testCasesFolderPath = `/${environmentFolder}/${currentSelectorTrendFolder}/Test-Cases-Results/`;
+const currentTestfileName = '6-February-2025-test-cases-results.json';
+
+const coverageSummaryFolderPath = `/${environmentFolder}/${currentSelectorTrendFolder}/Coverage-Summary/`;
+const currentCoverageFileName = '6-February-2025-coverage-summary.json';
+
+const defectSummaryFolderPath = `/${environmentFolder}/${currentSelectorTrendFolder}/Defect-Summary/`;
+const currentDefectSummaryFileName = '6-February-2025-defect-summary.json';
+
 const fileNames = [
-  'September-2024-test-cases-results.json',
-  'October-2024-test-cases-results.json',
-  'November-2024-test-cases-results.json',
-  'December-2024-test-cases-results.json',
-  'January-2025-test-cases-results.json',
-  'February-2025-test-cases-results.json'
+  '1-September-2024-test-cases-results.json',
+  '2-October-2024-test-cases-results.json',
+  '3-November-2024-test-cases-results.json',
+  '4-December-2024-test-cases-results.json',
+  '5-January-2025-test-cases-results.json',
+  '6-February-2025-test-cases-results.json'
 ];
 
-// Fetch both total and passed test cases at once for each file
-const fetchTestCases = fileNames.map((fileName) => {
-  const filePath = `/dev-env/last-6-test-cases-results/${fileName}`;
 
-  return fetch(filePath)
-    .then((response) => response.json())
-    .then((data) => ({
+// Fetch both total and passed test cases at once for each file
+const fetchTestCases = fileNames.map(async (fileName) => {
+  const filePath = `${testCasesFolderPath}${fileName}`;
+
+  try {
+    const response = await fetch(filePath);
+    const data = await response.json();
+    return ({
       total: data.numTotalTests ?? null,
       passed: data.numPassedTests ?? null
-    }))
-    .catch((error) => {
-      console.error(`Error fetching ${fileName}:`, error);
-      return {
-        total: null,
-        passed: null
-      };
     });
+  } catch (error) {
+    console.error(`Error fetching ${fileName}:`, error);
+    return {
+      total: null,
+      passed: null
+    };
+  }
 });
 
 // Split them into two separate arrays if needed
@@ -35,9 +49,7 @@ export const historyPassedTestCases = fetchTestCases.map(promise =>
   promise.then(result => result.passed)
 );
 
-const currentTestfileName = 'February-2025-test-cases-results.json';
-
-const fetchCurrentTestResult = fetch('/dev-env/last-6-test-cases-results/' + currentTestfileName)
+const fetchCurrentTestResult = fetch(testCasesFolderPath + currentTestfileName)
   .then(response => response.json())
   .catch(error => {
     console.error('Error fetching ' + currentTestfileName + ': ', error);
@@ -52,10 +64,10 @@ export const currentTotalTestCases  = fetchCurrentTestResult.then(data => data.n
 export const currentPassedTestCases = fetchCurrentTestResult.then(data => data.numPassedTests);
 export const currentFailedTestCases = fetchCurrentTestResult.then(data => data.numFailedTests);
 
-const fetchTestSummaryResults = fetch('/dev-env/last-6-test-cases-results/coverage-summary.json')
+const fetchTestSummaryResults = fetch(coverageSummaryFolderPath + currentCoverageFileName)
   .then(response => response.json())
   .catch(error => {
-    console.error('Error fetching coverage-summary.json:', error);
+    console.error(`Error fetching ${currentCoverageFileName}: `, error);
     return {
       total: null,
       covered: null
@@ -64,10 +76,10 @@ const fetchTestSummaryResults = fetch('/dev-env/last-6-test-cases-results/covera
 export const total = fetchTestSummaryResults.then(data => data?.total?.lines?.total ?? 0);
 export const covered = fetchTestSummaryResults.then(data => data?.total?.lines?.covered ?? 0);
 
-const fetchDefectResults = fetch('/dev-env/last-6-test-cases-results/defect-summary.json')
+const fetchDefectResults = fetch(defectSummaryFolderPath + currentDefectSummaryFileName)
   .then(response => response.json())
   .catch(error => {
-    console.error('Error fetching defect-summary.json:', error);
+    console.error(`Error fetching ${currentDefectSummaryFileName}:`, error);
     return {
       found_in_testing: null,
       found_in_production: null

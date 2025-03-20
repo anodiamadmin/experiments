@@ -46,7 +46,7 @@ const AnodiamTestCasesDashboard = () => {
             <TableCell sx={{ verticalAlign: 'top', width: '50%' }}>
               <Box>
                 <Typography variant="h6" sx={{ mb: 1 }}>
-                  Overall Quality Trend
+                  <b>Overall Quality Trend</b>
                 </Typography>
                 <Box sx={{ mb: 4 }}>
                   <TotalTestCasesChart />
