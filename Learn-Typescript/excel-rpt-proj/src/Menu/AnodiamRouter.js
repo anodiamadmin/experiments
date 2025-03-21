@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AnodiamTestCasesDashboard from '../Dashboard/AnodiamTestCasesDasboard';
+import AnodiamTestCasesDashboard from '../Dashboard/AnodiamTestCasesDashboard';
 import AnodiamTestCasesMenu from './AnodiamTestCasesMenu';
+
+// Your charts or pages
 import TotalTestCasesChart from '../Dashboard/TotalTestCasesChart';
+// ... other components
 
 export default function AnodiamRouter() {
   return (
