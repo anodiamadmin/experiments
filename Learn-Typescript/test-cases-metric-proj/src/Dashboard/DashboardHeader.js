@@ -30,7 +30,7 @@ const DashboardHeader = () => {
           </TableCell>
 
           {/* Header content */}
-          <TableCell  sx={{ borderBottom: 'none',textAlign: 'center',verticalAlign: 'middle', }}>
+          <TableCell  sx={{ borderBottom: 'none',textAlign: 'left',verticalAlign: 'middle', }}>
             <Typography variant="h4" fontWeight="bold" color="#5f5f5f">
               Automation Test Dashboard: SyanGypsee Version Number V1.0.0(25.03.01)
             </Typography>
