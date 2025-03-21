@@ -43,8 +43,6 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^22.13.10",
-    "exceljs": "^4.4.0",
-    "jest-json-reporter": "^1.2.2"
+    "@types/node": "^22.13.10"
   }
 }
