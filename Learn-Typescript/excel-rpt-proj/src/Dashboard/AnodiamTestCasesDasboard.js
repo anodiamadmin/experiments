@@ -5,7 +5,7 @@ import TotalTestCasesChart from './TotalTestCasesChart';
 import PassedCasesPercentChart from './PassedCasesPercentChart';
 import DashboardHeader from './DashboardHeader';
 import OtherReleasesSection from './OtherReleasesSection';
-//import DetailTrendSelector from './DetailTrendSelector';
+import DetailTrendSelector from './DetailTrendSelector';
 import QualityMetrics from './QualityMetrics';
 
 const AnodiamTestCasesDashboard = () => {
@@ -36,7 +36,7 @@ const AnodiamTestCasesDashboard = () => {
                  <QualityMetrics />
                 </Box>
                 {/* Detail Trend Selector */}
-                {/* <DetailTrendSelector /> */}
+                <DetailTrendSelector /> 
                 {/* Other Releases Section */}
                 <OtherReleasesSection />
               </Box>
