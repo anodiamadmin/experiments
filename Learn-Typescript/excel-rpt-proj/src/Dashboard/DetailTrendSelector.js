@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Box, Typography, Select, MenuItem, Button } from '@mui/material';
-//import { useNavigate } from 'react-router-dom'; // ✅ import navigate
+import { useNavigate } from 'react-router-dom'; // ✅ import navigate
 
 const DetailTrendSelector = () => {
   const [selectedReleases, setSelectedReleases] = useState(3);
-  //const navigate = useNavigate(); // ✅ Initialize navigate
+  const navigate = useNavigate(); // ✅ Initialize navigate
 
   const handleSelectChange = (event) => {
     setSelectedReleases(event.target.value);
   };
 
   const handleGoClick = () => {
-    //navigate('/menu'); // ✅ Navigate to AnodiamTestCasesMenu component route
+    navigate('/menu'); // ✅ Navigate to AnodiamTestCasesMenu component route
   };
 
   return (
