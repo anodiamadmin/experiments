@@ -28,13 +28,15 @@ const fetchTestCases = fileNames.map(async (fileName) => {
     const data = await response.json();
     return ({
       total: data.numTotalTests ?? null,
-      passed: data.numPassedTests ?? null
+      passed: data.numPassedTests ?? null,
+      failed:data.numFailedTests ?? null
     });
   } catch (error) {
     console.error(`Error fetching ${fileName}:`, error);
     return {
       total: null,
-      passed: null
+      passed: null,
+      failed:null
     };
   }
 });
@@ -46,6 +48,10 @@ export const historyTotalTestCases = fetchTestCases.map(promise =>
 
 export const historyPassedTestCases = fetchTestCases.map(promise =>
   promise.then(result => result.passed)
+);
+
+export const historyFailedTestCases = fetchTestCases.map(promise =>
+  promise.then(result => result.failed)
 );
 
 const fetchCurrentTestResult = fetch(testCasesFolderPath + currentTestfileName)
