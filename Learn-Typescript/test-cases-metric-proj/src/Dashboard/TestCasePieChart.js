@@ -5,7 +5,7 @@ import {
   Pie,
   Cell,
 } from 'recharts';
-import { currentTotalTestCases, currentPassedTestCases, currentFailedTestCases } from './extractTestResultsVariables';
+import { currentTotalTestCases, currentPassedTestCases, currentFailedTestCases } from '../Utils/extractTestResultsVariables';
 import * as constants from '../Utils/ConstantsAnodiam';
 
 const TestCasePieChart = () => {
