@@ -19,7 +19,7 @@ const fileNames = [
   '6-February-2025-test-cases-results.json'
 ];
 
-// Fetch both total and passed test cases at once for each file
+// Fetch total,passed and failed test cases at once for each file
 const fetchTestCases = fileNames.map(async (fileName) => {
   const filePath = `${testCasesFolderPath}${fileName}`;
 
@@ -78,8 +78,8 @@ const fetchTestSummaryResults = fetch(coverageSummaryFolderPath + currentCoverag
       covered: null
     };
   });
-export const total = fetchTestSummaryResults.then(data => data?.total?.lines?.total ?? 0);
-export const covered = fetchTestSummaryResults.then(data => data?.total?.lines?.covered ?? 0);
+export const total = fetchTestSummaryResults.then(data => data?.total?.statements?.total ?? 0);
+export const covered = fetchTestSummaryResults.then(data => data?.total?.statements?.covered ?? 0);
 
 const fetchDefectResults = fetch(defectSummaryFolderPath + currentDefectSummaryFileName)
   .then(response => response.json())
@@ -92,3 +92,53 @@ const fetchDefectResults = fetch(defectSummaryFolderPath + currentDefectSummaryF
   });
 export const found_in_testing = fetchDefectResults.then(data => data.defects.found_in_testing );
 export const found_in_production = fetchDefectResults.then(data => data.defects.found_in_production);
+
+// Last 6 coverage summary file names
+// const coverageSummaryFileNames = [
+//   '1-September-2024-coverage-summary.json',
+//   '2-October-2024-coverage-summary.json',
+//   '3-November-2024-coverage-summary.json',
+//   '4-December-2024-coverage-summary.json',
+//   '5-January-2025-coverage-summary.json',
+//   '6-February-2025-coverage-summary.json'
+// ];
+
+// Fetch total,passed and failed test cases at once for each file
+// const fetchCoverageSummary = coverageSummaryFileNames.map(async (fileName) => {
+//   const filePath = `${testCasesFolderPath}${fileName}`;
+
+//   try {
+//     const response = await fetch(filePath);
+//     const data = await response.json();
+//     return ({
+//       total: data?.total?.statements?.total ?? null,
+//       covered: data?.total?.statements?.covered ?? null,
+//     });
+//   } catch (error) {
+//     console.error(`Error fetching ${fileName}:`, error);
+//     return {
+//       total: null,
+//       covered: null
+//     };
+//   }
+// });
+
+// // Split them into two separate arrays if needed
+// export const historyTotalTestCases = fetchTestCases.map(promise =>
+//   promise.then(result => result.total)
+// );
+
+// export const historyPassedTestCases = fetchTestCases.map(promise =>
+//   promise.then(result => result.passed)
+// );
+
+
+// Last 6 defect summary file names
+// const defectSummaryFileNames = [
+//   '1-September-2024-defect-summary.json',
+//   '2-October-2024-defect-summary.json',
+//   '3-November-2024-defect-summary.json',
+//   '4-December-2024-defect-summary.json',
+//   '5-January-2025-defect-summary.json',
+//   '6-February-2025-defect-summary.json'
+// ];
