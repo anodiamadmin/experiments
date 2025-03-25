@@ -1,5 +1,3 @@
-//const failedTestPercent = Math.round((currentFailedCases / currentTotalTests) * 100);
-
 import React,{ useEffect, useState } from "react";
 import { Box, Paper, Typography } from '@mui/material';
 import {
