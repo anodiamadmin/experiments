@@ -32,10 +32,10 @@ const PassedCasesPercentChart = () => {
     fetchData();
   }, []);
 
-  const months = ['Sep-2024', 'Oct-2024', 'Nov-2024', 'Dec-2024', 'Jan-2025', 'Feb-2025'];
+  const XAxisValues = ['Sep-2024', 'Oct-2024', 'Nov-2024', 'Dec-2024', 'Jan-2025', 'Feb-2025'];
 
-  const data = months.map((month, index) => ({
-    name: month,
+  const passedData = XAxisValues.map((XAxisVal, index) => ({
+    name: XAxisVal,
     value: passedTestCases[index] || 0
   }));
 
@@ -48,7 +48,7 @@ const PassedCasesPercentChart = () => {
       <LineChart
         width={800}
         height={400}
-        data={data}
+        data={passedData}
         margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
       >
         {/* Color-coded areas for percentage ranges */}

@@ -1,8 +1,8 @@
 {
-    "Environment-Folder":"Dev-Env",
-    "Default-Trend-Selector":6,
-    "Current-Test-Case-Result-Filename": "6-February-2025-test-cases-results.json",
-    "Current-Coverage-Summary-Filename" :"6-February-2025-coverage-summary.json",
-    "Current-Defect-Summary-Filename" :"6-February-2025-defect-summary.json",
-    "Chart-X-axis": ["Sep-2024", "Oct-2024", "Nov-2024", "Dec-2024", "Jan-2025", "Feb-2025"]
+    "Environment_Folder":"Dev-Env",
+    "Default_Trend_Selector":6,
+    "Current_Test_Case_Result_Filename": "6-February-2025-test-cases-results.json",
+    "Current_Coverage_Summary_Filename" :"6-February-2025-coverage-summary.json",
+    "Current_Defect_Summary_Filename" :"6-February-2025-defect-summary.json",
+    "Chart_X_Axis": ["Sep-2024", "Oct-2024", "Nov-2024", "Dec-2024", "Jan-2025", "Feb-2025"]
 }
