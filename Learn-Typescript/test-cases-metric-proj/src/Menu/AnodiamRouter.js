@@ -11,7 +11,7 @@ import CICDBuildVerificationChartDetails from '../TestMetricsDetails/CICDBuildVe
 import BuildStabilityChartDetails from '../TestMetricsDetails/BuildStabilityChartDetails';
 import PipelineExecutionMinsChartDetails from '../TestMetricsDetails/PipelineExecutionMinsChartDetails';
 
-export default function AnodiamRouter() {
+const AnodiamRouter=() => {
   return (
     <Router>
       <Routes>
@@ -36,3 +36,5 @@ export default function AnodiamRouter() {
     </Router>
   );
 }
+
+export default AnodiamRouter;
