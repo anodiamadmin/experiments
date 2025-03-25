@@ -72,67 +72,46 @@ const QualityMetrics = () => {
     { metric: "Build Stability (%)", value: null ,statusColor:null},
     { metric: "Pipeline Execution Time", value: null,statusColor:null },
   ];
-
+  
   return (
     <TableContainer component={Paper} style={{ maxWidth: 800, margin: "20px auto" }}>
-    <Table>
-      <TableHead>
-        <TableRow>
-          <TableCell
-            style={{
-              backgroundColor: "yellow",
-              fontWeight: "bold",
-              textAlign: "center",
-              border: "1px solid #000", // Border added
-            }}
-          >
-            Metric
-          </TableCell>
-          <TableCell
-            style={{
-              backgroundColor: "yellow",
-              fontWeight: "bold",
-              textAlign: "center",
-              border: "1px solid #000", // Border added
-            }}
-          >
-            Value
-          </TableCell>
-          <TableCell
-            style={{
-              backgroundColor: "yellow",
-              fontWeight: "bold",
-              textAlign: "center",
-              border: "1px solid #000", // Border added
-            }}
-          >
-            Status
-          </TableCell>
-        </TableRow>
-      </TableHead>
-
-      <TableBody>
-        {data.map((row, index) => (
-          <TableRow key={index} style={{ border: "1px solid #000" }}>
-            <TableCell style={{ border: "1px solid #000" }}>{row.metric}</TableCell>
-            <TableCell align="center" style={{ border: "1px solid #000" }}>{row.value}</TableCell>
+      <Table>
+        <TableHead>
+          <TableRow>
             <TableCell
-              align="center"
               style={{
-                backgroundColor: row.statusColor,
-                color: "white",
+                backgroundColor: "yellow",
                 fontWeight: "bold",
-                border: "1px solid #000",
+                textAlign: "center",
+                border: "1px solid #000", // Border added
               }}
             >
-              {row.status} {/* Optional: display status text/icon */}
+              Metric
+            </TableCell>
+            <TableCell
+              style={{
+                backgroundColor: "yellow",
+                fontWeight: "bold",
+                textAlign: "center",
+                border: "1px solid #000", // Border added
+              }}
+            >
+              Value
             </TableCell>
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
-  </TableContainer>
-      );
+        </TableHead>
+
+        <TableBody>
+          {data.map((row, index) => (
+            <TableRow key={index} style={{ border: "1px solid #000" }}>
+              <TableCell style={{ border: "1px solid #000" }}>{row.metric}</TableCell>
+              <TableCell align="center" style={{ border: "1px solid #000",color:row.statusColor }}><b>{row.value}</b></TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
 };
 
 export default QualityMetrics;
