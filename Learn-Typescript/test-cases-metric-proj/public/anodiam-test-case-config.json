@@ -1,0 +1,8 @@
+{
+    "Environment-Folder":"Dev-Env",
+    "Default-Trend-Selector":6,
+    "Current-Test-Case-Result-Filename": "6-February-2025-test-cases-results.json",
+    "Current-Coverage-Summary-Filename" :"6-February-2025-coverage-summary.json",
+    "Current-Defect-Summary-Filename" :"6-February-2025-defect-summary.json",
+    "Chart-X-axis": ["Sep-2024", "Oct-2024", "Nov-2024", "Dec-2024", "Jan-2025", "Feb-2025"]
+}
