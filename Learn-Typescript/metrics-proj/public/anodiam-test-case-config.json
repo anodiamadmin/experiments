@@ -1,0 +1,56 @@
+{
+    "Environment_Folder":"Dev-Env",
+    "Default_Trend_Selector":3,
+    "Trend_Selector_Last_3_Info":
+    {
+        "Current_Selector_Trend_Folder":"Latest-3-Test-Cases-Results",
+        "Current_Test_Case_Result_Filename": "3-February-2025-test-cases-results.json",
+        "Current_Coverage_Summary_Filename" :"3-February-2025-coverage-summary.json",
+        "Current_Defect_Summary_Filename" :"3-February-2025-defect-summary.json",
+        "Chart_X_Axis": ["Dec-2024", "Jan-2025", "Feb-2025"],
+        "Test_Cases_Results_File_Names" :[
+            "1-December-2024-test-cases-results.json",
+            "2-January-2025-test-cases-results.json",
+            "3-February-2025-test-cases-results.json"
+          ]
+    },
+    "Trend_Selector_Last_6_Info":
+    {
+        "Current_Selector_Trend_Folder":"Latest-6-Test-Cases-Results",
+        "Current_Test_Case_Result_Filename": "6-February-2025-test-cases-results.json",
+        "Current_Coverage_Summary_Filename" :"6-February-2025-coverage-summary.json",
+        "Current_Defect_Summary_Filename" :"6-February-2025-defect-summary.json",
+        "Chart_X_Axis": ["Sep-2024", "Oct-2024", "Nov-2024", "Dec-2024", "Jan-2025", "Feb-2025"],
+        "Test_Cases_Results_File_Names" : [
+            "1-September-2024-test-cases-results.json",
+            "2-October-2024-test-cases-results.json",
+            "3-November-2024-test-cases-results.json",
+            "4-December-2024-test-cases-results.json",
+            "5-January-2025-test-cases-results.json",
+            "6-February-2025-test-cases-results.json"
+          ]
+    },
+    "Trend_Selector_Last_12_Info":
+    {
+        "Current_Selector_Trend_Folder":"Latest-12-Test-Cases-Results",
+        "Current_Test_Case_Result_Filename": "12-February-2025-test-cases-results.json",
+        "Current_Coverage_Summary_Filename" :"12-February-2025-coverage-summary.json",
+        "Current_Defect_Summary_Filename" :"12-February-2025-defect-summary.json",
+        "Chart_X_Axis": ["Mar-2024","Apr-2024", "May-2024", "Jun-2024", "Jul-2024", "Aug-2024", 
+                         "Sep-2024", "Oct-2024", "Nov-2024", "Dec-2024", "Jan-2025", "Feb-2025"],
+        "Test_Cases_Results_File_Names" : [
+            "1-March-2024-test-cases-results.json",
+            "2-April-2024-test-cases-results.json",
+            "3-May-2024-test-cases-results.json",
+            "4-June-2024-test-cases-results.json",
+            "5-July-2025-test-cases-results.json",
+            "6-August-2025-test-cases-results.json",
+            "7-September-2024-test-cases-results.json",
+            "8-October-2024-test-cases-results.json",
+            "9-November-2024-test-cases-results.json",
+            "10-December-2024-test-cases-results.json",
+            "11-January-2025-test-cases-results.json",
+            "12-February-2025-test-cases-results.json"
+          ]
+    }
+}

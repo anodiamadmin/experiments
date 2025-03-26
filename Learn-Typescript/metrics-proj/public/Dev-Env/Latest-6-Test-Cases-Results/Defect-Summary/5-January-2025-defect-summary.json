@@ -1,0 +1,7 @@
+{
+    "defects": {
+      "found_in_testing": 80,
+      "found_in_production": 20
+    }
+  }
+  
