@@ -11,6 +11,7 @@ const DetailTrendSelector = () => {
   };
 
   const handleGoClick = () => {
+    sessionStorage.setItem('trend_selector',selectedReleases)
     navigate('/menu'); // ✅ Navigate to AnodiamTestCasesMenu component route
   };
 
