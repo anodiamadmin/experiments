@@ -10,7 +10,7 @@ import {
   ReferenceArea
 } from 'recharts';
 import * as constants from '../Utils/ConstantsAnodiam';
-import { historyFailedTestCases,historyTotalTestCases } from '../Utils/extractTestResultsVariables';
+import { historyFailedTestCases,historyTotalTestCases } from '../Utils/extractDashboardInfo';
 
 const DefectDensityChartDetails = () => {
   const [defectDensityPercent_1, setDefectDensityPercent_1] = useState(0);

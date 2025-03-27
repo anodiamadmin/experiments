@@ -10,7 +10,7 @@ import {
   ReferenceArea
 } from 'recharts';
 import * as constants from '../Utils/ConstantsAnodiam';
-import { historyTotalTestCases } from '../Utils/extractTestResultsVariables';
+import { historyTotalTestCases } from '../Utils/extractDashboardInfo';
 
 const TotalTestCasesChartDetails = () => {
   const [totalTestCases, setTotalTestCases] = useState(() => new Array(6).fill(0));

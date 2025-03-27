@@ -10,7 +10,7 @@ import {
   ReferenceArea
 } from 'recharts';
 import * as constants from '../Utils/ConstantsAnodiam';
-import { historyTotalTestCases, historyPassedTestCases } from '../Utils/extractTestResultsVariables';
+import { historyTotalTestCases, historyPassedTestCases } from '../Utils/extractDashboardInfo';
 
 const PassedCasesPercentChart = () => {
   const [passedTestCases, setPassedTestCases] = useState([]);
