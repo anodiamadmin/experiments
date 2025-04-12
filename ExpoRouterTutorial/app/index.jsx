@@ -15,6 +15,7 @@ export default function app() {
           </Link>
 
           <Link href={'/contact'} style={styles.link}>Contact Us</Link>
+          <Link href={'/garbage'} style={[styles.link, {marginTop: 10}]}>Simulate Error</Link>
           
       </ImageBackground>
     </View>

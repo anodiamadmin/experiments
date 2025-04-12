@@ -7,20 +7,15 @@ export default function NotFound() {
 
   return (
     <View style={styles.container}>
+      <Stack.Screen name="index" options={{headerShown: false}}/>  
       <ImageBackground resizeMode="cover" style={styles.image} source={spillCoffeeImg}>
-        {/* <Stack>
-          <Stack.Screen name="index" options={{title: `Home`, headerShown: false}}/>
-          <Stack.Screen name="contact" options={{title: `Contact Us`}}/>
-          <Stack.Screen name="explore" options={{title: `Explore`}}/>
-          <Stack.Screen name="+not-found" options={{title: `Screen Not Found`, headerShown: false}}/>
-        </Stack> */}
-          <Text style={styles.code}>404</Text>
-          <Text style={styles.title}>Page Not Found</Text>
-          <Text style={styles.subtitle}>Oops! This screen doesn’t exist.</Text>
+        <Text style={styles.code}>404</Text>
+        <Text style={styles.title}>Page Not Found</Text>
+        <Text style={styles.subtitle}>Oops! This screen doesn’t exist.</Text>
 
-          <Pressable style={styles.button} onPress={() => router.replace('/')}>
-            <Text style={styles.buttonText}>Go Home</Text>
-          </Pressable>
+        <Pressable style={styles.button} onPress={() => router.replace('/')}>
+          <Text style={styles.buttonText}>Go Home</Text>
+        </Pressable>
         
       </ImageBackground>
     </View>
@@ -33,12 +28,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#443322',
     textAlign: 'center',
-    marginBottom: 80,
+    marginBottom: 40,
   },
   subtitle: {
     fontSize: 16,
-    color: '#64748b',
-    marginTop: 8,
+    color: '#ee241b',
+    fontWeight: 'bold',
+    marginBottom: 30,
     textAlign: 'center',
   },
   container: {
@@ -58,7 +54,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.25)',
-    marginBottom: 120,
+    marginBottom: 50,
   },
   link: {
     color: '#ddaa88',
