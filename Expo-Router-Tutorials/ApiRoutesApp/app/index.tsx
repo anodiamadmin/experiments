@@ -1,11 +1,9 @@
-import { Link } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text>Index Page.</Text>
-      <Link href="/modal"><Text>Open Modal</Text></Link>
+      <Text>API Routes App.</Text>
     </View>
   );
 }
@@ -17,4 +15,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 15,
   },
-})
+});
