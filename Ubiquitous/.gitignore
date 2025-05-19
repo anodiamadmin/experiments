@@ -1,0 +1,91 @@
+# -------------------------------------------------
+# Unity / C# project
+# -------------------------------------------------
+
+# 1. Unity generated
+[Ll]ibrary/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+MemoryCaptures/
+UserSettings/
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+
+# 2. Asset import intermediates
+Assets//Scripts//Generated/*
+Assets//Plugins//.meta
+
+# 3. Local settings / caches
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.suo
+
+# Rider / VSCode / JetBrains
+.idea/
+.vscode/
+.vscode/*
+*.sln.DotSettings
+
+# 4. OS‑specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# 5. Crash / profiler dumps
+sysinfo.txt
+*.stacktrace
+*.dmp
+*.diag
+
+# 6. Build artifacts (platform–specific)
+*.apk
+*.aab
+*.ipa
+*.app
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserstate
+*.xcassets
+*.xcuserdatad
+
+# 7. Addressables / ShaderCache (regen‑able)
+Library/com.unity.addressables/
+Library/ShaderCache/
+
+# 8. Collaborate / Plastic SCM (if not using)
+.collabignore
+PlasticSCM/
+
+# 9. Unity Cloud Build
+[Uu]serSettings/UnityConnectSettings.asset
+
+# 10. TextMeshPro auto‑generated
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - .
+
+# 11. Optional: keep version file but ignore lock
+Packages/packages-lock.json
+
+# 12. Logs
+*.log
+
+# Allow Git LFS pointer files for large assets (if using LFS)
+# (Uncomment if you’re using Git LFS)
+# *.png filter=lfs diff=lfs merge=lfs -text
+# *.psd filter=lfs diff=lfs merge=lfs -text
+# *.fbx filter=lfs diff=lfs merge=lfs -text
