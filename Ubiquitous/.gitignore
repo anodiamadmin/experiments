@@ -27,7 +27,6 @@ Assets//Plugins//.meta
 # 3. Local settings / caches
 *.csproj
 *.unityproj
-*.sln
 *.user
 *.userprefs
 *.pidb
@@ -37,7 +36,6 @@ Assets//Plugins//.meta
 .idea/
 .vscode/
 .vscode/*
-*.sln.DotSettings
 
 # 4. OS‑specific
 .DS_Store
