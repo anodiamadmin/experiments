@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\FirstUnityScript\\",
+  "WorkspaceRootPath": "D:\\experiments\\Ubiquitous\\Unity\\FirstUnityScript\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2AEC5A01-6988-A799-7BE7-03D5D22091D4}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\firstunityscript\\assets\\scripts\\printmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2AEC5A01-6988-A799-7BE7-03D5D22091D4}|Assembly-CSharp.csproj|d:\\experiments\\ubiquitous\\unity\\firstunityscript\\assets\\scripts\\printmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AEC5A01-6988-A799-7BE7-03D5D22091D4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\printmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,19 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "PrintMessage.cs",
-              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\FirstUnityScript\\Assets\\Scripts\\PrintMessage.cs",
+              "DocumentMoniker": "D:\\experiments\\Ubiquitous\\Unity\\FirstUnityScript\\Assets\\Scripts\\PrintMessage.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PrintMessage.cs",
-              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\FirstUnityScript\\Assets\\Scripts\\PrintMessage.cs*",
-              "RelativeToolTip": "Assets\\Scripts\\PrintMessage.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "ToolTip": "D:\\experiments\\Ubiquitous\\Unity\\FirstUnityScript\\Assets\\Scripts\\PrintMessage.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PrintMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T10:18:22.563Z",
+              "WhenOpened": "2025-05-20T05:27:41.476Z",
               "EditorCaption": ""
             }
           ]

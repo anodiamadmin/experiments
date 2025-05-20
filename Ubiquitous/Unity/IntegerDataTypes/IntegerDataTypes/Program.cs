@@ -12,7 +12,7 @@
         static void Main(string[] args)
         {
             const int SecondsPerMinute = 60; // seconds per minute
-            int totalSecondsPlayed = 100; // total seconds played
+            int totalSecondsPlayed = 110; // total seconds played
             // calculate minutes and seconds played
             int minutesPlayed = totalSecondsPlayed / SecondsPerMinute; // calculate minutes played
             // print minutes and seconds played
