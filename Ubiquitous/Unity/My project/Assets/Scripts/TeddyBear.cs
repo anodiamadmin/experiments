@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Mover : MonoBehaviour
+public class TeddyBear : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,5 +18,14 @@ public class Mover : MonoBehaviour
         float magnitude = Random.Range(MinImpulseForce, MaxImpulseForce);
         GetComponent<Rigidbody2D>().AddForce(direction*magnitude, ForceMode2D.Impulse);
 
+    }
+
+    /// <summary>
+    /// Called on a Collision
+    /// </summary>
+    /// <param name="collision"></param>
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collision Occured");
     }
 }
