@@ -1,11 +1,8 @@
 {
   "Version": 1,
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
-=======
->>>>>>> parent of e83cfff (cmt)
   "WorkspaceRootPath": "D:\\experiments\\Ubiquitous\\Unity\\My project\\",
   "Documents": [
     {
@@ -13,7 +10,6 @@
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\teddybear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
-<<<<<<< HEAD
 =======
 =======
 >>>>>>> Stashed changes
@@ -22,18 +18,13 @@
   "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\My project\\",
   "Documents": [],
 >>>>>>> Stashed changes
-=======
->>>>>>> parent of e83cfff (cmt)
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
-=======
->>>>>>> parent of e83cfff (cmt)
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -59,7 +50,6 @@
           ]
         }
       ]
-<<<<<<< HEAD
 =======
       "DocumentGroups": []
 >>>>>>> Stashed changes
@@ -69,8 +59,6 @@
 =======
       "DocumentGroups": []
 >>>>>>> Stashed changes
-=======
->>>>>>> parent of e83cfff (cmt)
     }
   ]
 }
