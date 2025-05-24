@@ -1,7 +1,6 @@
 {
   "Version": 1,
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   "WorkspaceRootPath": "D:\\experiments\\Ubiquitous\\Unity\\My project\\",
   "Documents": [
     {
@@ -10,8 +9,6 @@
     }
   ],
 =======
-=======
->>>>>>> Stashed changes
   "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\My project\\",
   "Documents": [],
 >>>>>>> Stashed changes
@@ -19,7 +16,6 @@
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       "DocumentGroups": [
         {
@@ -46,9 +42,6 @@
           ]
         }
       ]
-=======
-      "DocumentGroups": []
->>>>>>> Stashed changes
 =======
       "DocumentGroups": []
 >>>>>>> Stashed changes
