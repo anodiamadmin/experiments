@@ -1,12 +1,16 @@
 {
   "Version": 1,
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of e83cfff (cmt)
   "WorkspaceRootPath": "D:\\experiments\\Ubiquitous\\Unity\\My project\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|d:\\experiments\\ubiquitous\\unity\\my project\\assets\\scripts\\teddybear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> Stashed changes
@@ -23,6 +27,8 @@
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of e83cfff (cmt)
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\teddybear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -33,9 +39,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of e83cfff (cmt)
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -53,6 +62,7 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAIwBkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T12:11:12.45Z",
+<<<<<<< HEAD
 =======
           "SelectedChildIndex": 0,
           "Children": [
@@ -84,6 +94,8 @@
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of e83cfff (cmt)
               "EditorCaption": ""
             }
           ]
