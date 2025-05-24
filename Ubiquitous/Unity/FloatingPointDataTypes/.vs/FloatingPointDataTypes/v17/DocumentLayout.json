@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\experiments\\Ubiquitous\\Unity\\FloatingPointDataTypes\\",
+  "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\FloatingPointDataTypes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BED512C-7FBE-4908-A411-5860C227ED3C}|FloatingPointDataTypes\\FloatingPointDataTypes.csproj|d:\\experiments\\ubiquitous\\unity\\floatingpointdatatypes\\floatingpointdatatypes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4BED512C-7FBE-4908-A411-5860C227ED3C}|FloatingPointDataTypes\\FloatingPointDataTypes.csproj|c:\\experiments\\ubiquitous\\unity\\floatingpointdatatypes\\floatingpointdatatypes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BED512C-7FBE-4908-A411-5860C227ED3C}|FloatingPointDataTypes\\FloatingPointDataTypes.csproj|solutionrelative:floatingpointdatatypes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,19 +14,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\experiments\\Ubiquitous\\Unity\\FloatingPointDataTypes\\FloatingPointDataTypes\\Program.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\FloatingPointDataTypes\\FloatingPointDataTypes\\Program.cs",
               "RelativeDocumentMoniker": "FloatingPointDataTypes\\Program.cs",
-              "ToolTip": "D:\\experiments\\Ubiquitous\\Unity\\FloatingPointDataTypes\\FloatingPointDataTypes\\Program.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\FloatingPointDataTypes\\FloatingPointDataTypes\\Program.cs",
               "RelativeToolTip": "FloatingPointDataTypes\\Program.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
