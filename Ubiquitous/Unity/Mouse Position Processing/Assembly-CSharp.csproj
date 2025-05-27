@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{32C3BDE6-E125-3128-82C1-25D0441455A3}</ProjectGuid>
+    <ProjectGuid>{03598477-8E57-1086-4596-B8361EB42C5B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,8 +61,9 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\TeddyBear.cs" />
-    <Compile Include="Assets\Scripts\Talker.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\ScreenUtils.cs" />
+    <Compile Include="Assets\Scripts\GameInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
