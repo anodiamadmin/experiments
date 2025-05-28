@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5921455988675669683}
   - component: {fileID: 8012469593584472964}
   - component: {fileID: 6723802471554775304}
-  - component: {fileID: 8240374742120677971}
+  - component: {fileID: 1310952354624682638}
   m_Layer: 0
   m_Name: Demon Hunter
   m_TagString: Untagged
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
---- !u!114 &8240374742120677971
+--- !u!114 &1310952354624682638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Provides screen utilities
+/// The ScreenUtils class is a static utility class designed to provide screen boundary information in world coordinates for use in Unity. 
+/// It ensures efficient boundary checking and adapts to screen resolution changes
 /// </summary>
 public static class ScreenUtils
 {
     #region Fields
 
-    // saved to support resolution changes
-    static int screenWidth;
-    static int screenHeight;
+    // saved to support resolution changes when game windows are resized
+    static int screenWidth; // variable to store the width of the screen in pixels
+    static int screenHeight; // variable to store the height of the screen in pixels
 
     // cached for efficient boundary checking
-    static float screenLeft;
-    static float screenRight;
-    static float screenTop;
-    static float screenBottom;
+    static float screenLeft; // variable to store the left edge of the screen in world coordinates
+    static float screenRight; // variable to store the right edge of the screen in world coordinates
+    static float screenTop; // variable to store the top edge of the screen in world coordinates
+    static float screenBottom; // variable to store the bottom edge of the screen in world coordinates
 
-    #endregion
+    #endregion // code organizing in collapsible regions
 
     #region Properties
 
@@ -31,8 +32,8 @@ public static class ScreenUtils
     {
         get
         {
-            CheckScreenSizeChanged();
-            return screenLeft;
+            CheckScreenSizeChanged(); // check if the screen size has changed   
+            return screenLeft; // return the left edge of the screen in world coordinates
         }
     }
 
@@ -44,8 +45,8 @@ public static class ScreenUtils
     {
         get
         {
-            CheckScreenSizeChanged();
-            return screenRight;
+            CheckScreenSizeChanged(); // check if the screen size has changed
+            return screenRight; // return the right edge of the screen in world coordinates
         }
     }
 
@@ -57,8 +58,8 @@ public static class ScreenUtils
     {
         get
         {
-            CheckScreenSizeChanged();
-            return screenTop;
+            CheckScreenSizeChanged(); // check if the screen size has changed
+            return screenTop; // return the top edge of the screen in world coordinates
         }
     }
 
@@ -70,8 +71,8 @@ public static class ScreenUtils
     {
         get 
         {
-            CheckScreenSizeChanged();
-            return screenBottom; 
+            CheckScreenSizeChanged(); // check if the screen size has changed
+            return screenBottom; // return the bottom edge of the screen in world coordinates
         }
     }
 
@@ -80,27 +81,27 @@ public static class ScreenUtils
     #region Methods
 
     /// <summary>
-    /// Initializes the screen utilities
+    /// This method initializes the screen utilities, setting up the screen boundaries in world coordinates
     /// </summary>
     public static void Initialize()
     {
         // save to support resolution changes
-        screenWidth = Screen.width;
-        screenHeight = Screen.height;
+        screenWidth = Screen.width; // stores the current screen width in pixels
+        screenHeight = Screen.height; // stores the current screen height in pixels
 
         // save screen edges in world coordinates
-        float screenZ = -Camera.main.transform.position.z;
-        Vector3 lowerLeftCornerScreen = new Vector3(0, 0, screenZ);
+        float screenZ = -Camera.main.transform.position.z; // get the z position of the camera to convert screen coordinates to world coordinates
+        Vector3 lowerLeftCornerScreen = new Vector3(0, 0, screenZ); // create a vector for the lower left corner of the screen in screen coordinates
         Vector3 upperRightCornerScreen = new Vector3(
-            screenWidth, screenHeight, screenZ);
+            screenWidth, screenHeight, screenZ); // create a vector for the upper right corner of the screen in screen coordinates
         Vector3 lowerLeftCornerWorld =
-            Camera.main.ScreenToWorldPoint(lowerLeftCornerScreen);
+            Camera.main.ScreenToWorldPoint(lowerLeftCornerScreen); // convert the lower left corner from screen coordinates to world coordinates
         Vector3 upperRightCornerWorld =
-            Camera.main.ScreenToWorldPoint(upperRightCornerScreen);
-        screenLeft = lowerLeftCornerWorld.x;
-        screenRight = upperRightCornerWorld.x;
-        screenTop = upperRightCornerWorld.y;
-        screenBottom = lowerLeftCornerWorld.y;
+            Camera.main.ScreenToWorldPoint(upperRightCornerScreen); // convert the upper right corner from screen coordinates to world coordinates
+        screenLeft = lowerLeftCornerWorld.x; // set the left edge of the screen in world coordinates
+        screenRight = upperRightCornerWorld.x; // set the right edge of the screen in world coordinates
+        screenTop = upperRightCornerWorld.y; // set the top edge of the screen in world coordinates
+        screenBottom = lowerLeftCornerWorld.y; // set the bottom edge of the screen in world coordinates
     }
 
     /// <summary>
@@ -108,10 +109,10 @@ public static class ScreenUtils
     /// </summary>
     static void CheckScreenSizeChanged()
     {
-        if (screenWidth != Screen.width ||
-            screenHeight != Screen.height)
+        if (screenWidth != Screen.width || 
+            screenHeight != Screen.height) // if the screen width or height has changed from the stored/cached values
         {
-            Initialize();
+            Initialize(); // if the screen size has changed, recalculates the screen boundaries
         }
     }
 

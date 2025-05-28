@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\screenutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\screenutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ScreenUtils.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\ScreenUtils.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScreenUtils.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\ScreenUtils.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScreenUtils.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T06:45:44.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameInitializer.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\GameInitializer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameInitializer.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\GameInitializer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAACBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T06:45:20.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\Character.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Character.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\Character.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Character.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T06:32:23.85Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
