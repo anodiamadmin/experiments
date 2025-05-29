@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\characterchangerwithcustominputaxes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterchangerwithcustominputaxes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\characterchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CharacterChangerWithCustomInputAxes.cs",
-              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChangerWithCustomInputAxes.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterChangerWithCustomInputAxes.cs",
-              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChangerWithCustomInputAxes.cs*",
-              "RelativeToolTip": "Assets\\Scripts\\CharacterChangerWithCustomInputAxes.cs*",
-              "ViewState": "AgIAADsAAAAAAAAAAAAmwC4AAACkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T12:10:54.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CharacterChanger.cs",
-              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChanger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterChanger.cs",
-              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChanger.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CharacterChanger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T12:12:29.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Character.cs",
-              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\Character.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character.cs",
-              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\Character.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T12:12:23.071Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
