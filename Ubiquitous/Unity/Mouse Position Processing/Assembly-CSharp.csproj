@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\ScreenUtils.cs" />
+    <Compile Include="Assets\Scripts\CharacterChanger.cs" />
     <Compile Include="Assets\Scripts\GameInitializer.cs" />
   </ItemGroup>
   <ItemGroup>

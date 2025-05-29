@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\characterchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\screenutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\screenutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\assets\\scripts\\screenutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\screenutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +26,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "CharacterChanger.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChanger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterChanger.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChanger.cs*",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterChanger.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T05:17:01.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ScreenUtils.cs",
               "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\ScreenUtils.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScreenUtils.cs",
               "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\ScreenUtils.cs",
               "RelativeToolTip": "Assets\\Scripts\\ScreenUtils.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAB1AAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwAYAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T06:45:44.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T06:45:44.157Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GameInitializer.cs",
               "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\GameInitializer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameInitializer.cs",
@@ -58,7 +74,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Character.cs",
               "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\Character.cs",
               "RelativeToolTip": "Assets\\Scripts\\Character.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-28T06:32:23.85Z",
               "EditorCaption": ""
