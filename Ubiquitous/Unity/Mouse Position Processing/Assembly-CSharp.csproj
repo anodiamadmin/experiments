@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\ScreenUtils.cs" />
     <Compile Include="Assets\Scripts\CharacterChanger.cs" />
     <Compile Include="Assets\Scripts\GameInitializer.cs" />
+    <Compile Include="Assets\Scripts\CharacterChangerWithCustomInputAxes.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
