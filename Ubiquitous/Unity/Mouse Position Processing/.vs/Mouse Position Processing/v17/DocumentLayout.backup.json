@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\characterwithkeyboardinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterwithkeyboardinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CharacterWithKeyboardInput.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterWithKeyboardInput.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterWithKeyboardInput.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterWithKeyboardInput.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterWithKeyboardInput.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwCwAAACfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T17:51:42.909Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

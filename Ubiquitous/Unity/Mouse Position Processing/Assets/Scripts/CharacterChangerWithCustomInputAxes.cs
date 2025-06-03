@@ -82,7 +82,7 @@ public class CharacterChangerWithCustomInputAxes : MonoBehaviour
                 }
                     // Update the last prefab index
                     // lastPrefabNumber = prefabNumber;
-                    // Note: Commented out lines 79, 50-54, 31 and 21 implements a logic to ensure that the same character does not popup twice in a row on mouse click. To implement it, uncommented those linnes and comment out the line no. 48 before building the solution.
+                    // Note: Commented out lines 84, 56-60, 34 and 21 implements a logic to ensure that the same character does not popup twice in a row on mouse click. To implement it, uncomment those lines and comment out the line no. 54 before building the solution.
             }
         }
         else
