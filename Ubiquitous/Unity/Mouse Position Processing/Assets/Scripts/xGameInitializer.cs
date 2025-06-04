@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Initializes the game
 /// </summary>
-public class GameInitializer : MonoBehaviour 
+public class xGameInitializer : MonoBehaviour 
 {
     /// <summary>
     /// Awake is called before Start
@@ -13,6 +13,6 @@ public class GameInitializer : MonoBehaviour
 	void Awake() // This is called before Start, so we can initialize things here
     {
         // initialize screen utils
-        ScreenUtils.Initialize(); // This initializes the screen utilities, which is necessary for the game to function correctly
+        //ScreenUtils.Initialize(); // This initializes the screen utilities, which is necessary for the game to function correctly
     }
 }

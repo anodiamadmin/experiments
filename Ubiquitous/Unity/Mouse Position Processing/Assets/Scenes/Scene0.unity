@@ -266,13 +266,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5981356c44e5e584397fe09335364408, type: 3}
+  m_Script: {fileID: 11500000, guid: de9729d4b38a0f14192dfc72a8b3e075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabCharacter0: {fileID: 8036337402979971604, guid: 5ca2ca1462a40a349ad9f4235aeea834, type: 3}
-  prefabCharacter1: {fileID: 6929993419114465442, guid: cd10b9cea4b126149862279653364f18, type: 3}
+  prefabCharacter0: {fileID: 3618426492677794504, guid: 2b0b404771d1eab48b398aa5cfdd6534, type: 3}
+  prefabCharacter1: {fileID: 8036337402979971604, guid: 5ca2ca1462a40a349ad9f4235aeea834, type: 3}
   prefabCharacter2: {fileID: 7998512740120408992, guid: 3e65451ceaf1e1f45a8dd09d19f4d89b, type: 3}
-  prefabCharacter3: {fileID: 3618426492677794504, guid: 2b0b404771d1eab48b398aa5cfdd6534, type: 3}
+  prefabCharacter3: {fileID: 6929993419114465442, guid: cd10b9cea4b126149862279653364f18, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

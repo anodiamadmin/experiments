@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8121614840213471740}
   - component: {fileID: 4871592661237028543}
   - component: {fileID: -6775664243460661535}
-  - component: {fileID: 1424238175952362552}
+  - component: {fileID: 4638039011058980725}
   m_Layer: 0
   m_Name: Madam Skunky
   m_TagString: Untagged
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.62, y: 2.56}
   m_EdgeRadius: 0
---- !u!114 &1424238175952362552
+--- !u!114 &4638039011058980725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,6 +144,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6929993419114465442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2e80a443757cf447b186f2acd6af813, type: 3}
+  m_Script: {fileID: 11500000, guid: a60de8866449c85488b4917f2e8b574d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

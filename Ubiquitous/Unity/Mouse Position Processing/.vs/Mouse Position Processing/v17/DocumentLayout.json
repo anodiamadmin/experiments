@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterchangerwithcustominputaxes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\characterwithkeyboardinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterwithkeyboardinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\characterchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse position processing\\assets\\scripts\\characterchangerwithcustominputaxeswhileloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03598477-8E57-1086-4596-B8361EB42C5B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterchangerwithcustominputaxeswhileloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CharacterChanger.cs",
-              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChanger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterChanger.cs",
-              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChanger.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CharacterChanger.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwE8AAADEAAAAAAAAAA==",
+              "Title": "CharacterChangerWithCustomInputAxesWhileLoop.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChangerWithCustomInputAxesWhileLoop.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterChangerWithCustomInputAxesWhileLoop.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChangerWithCustomInputAxesWhileLoop.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterChangerWithCustomInputAxesWhileLoop.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwFIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T06:20:13.024Z",
+              "WhenOpened": "2025-06-04T13:35:10.866Z",
               "EditorCaption": ""
             },
             {
@@ -45,22 +45,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterChangerWithCustomInputAxes.cs",
               "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChangerWithCustomInputAxes.cs",
               "RelativeToolTip": "Assets\\Scripts\\CharacterChangerWithCustomInputAxes.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAYwFQAAADvAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwEoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T06:18:38.761Z",
+              "WhenOpened": "2025-06-04T13:33:45.703Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CharacterWithKeyboardInput.cs",
-              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterWithKeyboardInput.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterWithKeyboardInput.cs",
-              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterWithKeyboardInput.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CharacterWithKeyboardInput.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwCwAAAAvAAAAAAAAAA==",
+              "Title": "CharacterChanger.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChanger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterChanger.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Position Processing\\Assets\\Scripts\\CharacterChanger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterChanger.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwEMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T17:51:42.909Z",
+              "WhenOpened": "2025-06-04T13:32:11.902Z",
               "EditorCaption": ""
             }
           ]

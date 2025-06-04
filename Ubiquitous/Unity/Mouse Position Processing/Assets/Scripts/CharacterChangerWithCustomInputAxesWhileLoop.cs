@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// The CharacterChanger class is a Unity script that allows the player to change the character in the game by clicking the left mouse button
 /// </summary>
-public class CharacterChangerWithCustomInputAxes : MonoBehaviour
+public class CharacterChangerWithCustomInputAxesWhileLoop : MonoBehaviour
 {
     [SerializeField] // This attribute allows us to assign these GameObjects in the Unity Inspector
     GameObject prefabCharacter0; // Prefab for the first character
@@ -18,6 +18,7 @@ public class CharacterChangerWithCustomInputAxes : MonoBehaviour
 
     // need for location of new character
     GameObject currentCharacter; // Variable to hold the current character GameObject
+    int lastPrefabNumber = -1; // Variable to hold the last prefab index, initialized to -1 so it doesn't match any prefab index (between 0-3) at the start
 
     // First frame input support
     bool previousChangeCharacterInput = false; // Variable to track the previous state of the "ChangeCharacter" input, set to false initially because no input has been received yet
@@ -30,6 +31,7 @@ public class CharacterChangerWithCustomInputAxes : MonoBehaviour
         currentCharacter = Instantiate<GameObject>(
             prefabCharacter0, Vector3.zero,
             Quaternion.identity); // Instantiate the first character at the origin (Vector3.zero = 0,0,0) with no rotation (Quaternion.identity)
+        lastPrefabNumber = 0; // Initialize the last prefab index to 0, since we just instantiated the first character
     }
 
     /// <summary>
@@ -49,8 +51,12 @@ public class CharacterChangerWithCustomInputAxes : MonoBehaviour
 
                 // Generate a random prefab index that is not the same as the last one
 
-                int prefabNumber = Random.Range(0, 4); // Generate a random number between 0 and 3 (upper bound inclusive for Range()) to select a character prefab and store in the variable prefabNumber
-            
+                int prefabNumber;
+                do
+                {
+                    prefabNumber = Random.Range(0, 4); // Generate a random number between 0 and 3 (upper bound inclusive for Range()) to select a character prefab and store in the variable prefabNumber       
+                } while (prefabNumber == lastPrefabNumber);
+
                 // instantiate new character
                 if (prefabNumber == 0)
                 {
@@ -72,6 +78,9 @@ public class CharacterChangerWithCustomInputAxes : MonoBehaviour
                     currentCharacter = Instantiate<GameObject>(
                         prefabCharacter3, position, Quaternion.identity);
                 }
+
+                // Update the last prefab index
+                lastPrefabNumber = prefabNumber;
             }
         }
         else
