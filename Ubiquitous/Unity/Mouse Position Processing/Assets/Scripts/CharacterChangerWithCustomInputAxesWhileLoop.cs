@@ -4,6 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// The CharacterChanger class is a Unity script that allows the player to change the character in the game by clicking the left mouse button
+/// WHILE LOOP IS USED HERE TO ENSURE THAT THE NEW CHARACTER IS DIFFERENT FROM THE LAST ONE
 /// </summary>
 public class CharacterChangerWithCustomInputAxesWhileLoop : MonoBehaviour
 {
