@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{174F3694-3B9D-C5F5-B359-D49CDE0CC1F4}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\collision free spawning\\assets\\scripts\\madamskunky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{174F3694-3B9D-C5F5-B359-D49CDE0CC1F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\madamskunky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MadamSkunky.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\Assets\\Scripts\\MadamSkunky.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MadamSkunky.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\Assets\\Scripts\\MadamSkunky.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MadamSkunky.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T06:06:08.839Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
