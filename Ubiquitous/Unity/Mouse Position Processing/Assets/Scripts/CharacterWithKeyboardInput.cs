@@ -42,7 +42,7 @@ public class CharacterWithKeyboardInput : MonoBehaviour
         if (verticalInput != 0)
         {
             position.y += verticalInput * MoveUnitsPerSecond *
-                Time.deltaTime; // if loops is used instead of else because both horizontal and vertical input can be used at the same time (diagonal movement)
+                Time.deltaTime; // if statement is used instead of else because both horizontal and vertical input can be used at the same time (diagonal movement)
         }
 
         // move character

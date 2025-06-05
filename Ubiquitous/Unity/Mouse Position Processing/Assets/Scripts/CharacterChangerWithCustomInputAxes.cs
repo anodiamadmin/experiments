@@ -18,7 +18,6 @@ public class CharacterChangerWithCustomInputAxes : MonoBehaviour
 
     // need for location of new character
     GameObject currentCharacter; // Variable to hold the current character GameObject
-    // int lastPrefabNumber = -1; // Variable to hold the last prefab index, initialized to -1 so it doesn't match any prefab index (between 0-3) at the start
 
     // First frame input support
     bool previousChangeCharacterInput = false; // Variable to track the previous state of the "ChangeCharacter" input, set to false initially because no input has been received yet
@@ -31,7 +30,6 @@ public class CharacterChangerWithCustomInputAxes : MonoBehaviour
         currentCharacter = Instantiate<GameObject>(
             prefabCharacter0, Vector3.zero,
             Quaternion.identity); // Instantiate the first character at the origin (Vector3.zero = 0,0,0) with no rotation (Quaternion.identity)
-        // int lastPrefabNumber = 0; // Initialize the last prefab index to 0, since we just instantiated the first character
     }
 
     /// <summary>
@@ -53,12 +51,6 @@ public class CharacterChangerWithCustomInputAxes : MonoBehaviour
 
                 int prefabNumber = Random.Range(0, 4); // Generate a random number between 0 and 3 (upper bound inclusive for Range()) to select a character prefab and store in the variable prefabNumber
             
-                // int prefabNumber;
-                // do
-                // {
-                //     prefabNumber = Random.Range(0, 4); // Generate a random number between 0 and 3 (upper bound inclusive for Range()) to select a character prefab and store in the variable prefabNumber       
-                // } while (prefabNumber == lastPrefabNumber);
-
                 // instantiate new character
                 if (prefabNumber == 0)
                 {
@@ -80,9 +72,6 @@ public class CharacterChangerWithCustomInputAxes : MonoBehaviour
                     currentCharacter = Instantiate<GameObject>(
                         prefabCharacter3, position, Quaternion.identity);
                 }
-                    // Update the last prefab index
-                    // lastPrefabNumber = prefabNumber;
-                    // Note: Commented out lines 79, 50-54, 31 and 21 implements a logic to ensure that the same character does not popup twice in a row on mouse click. To implement it, uncommented those linnes and comment out the line no. 48 before building the solution.
             }
         }
         else
