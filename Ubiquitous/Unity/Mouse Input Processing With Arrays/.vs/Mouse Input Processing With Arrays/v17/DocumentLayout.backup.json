@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Input Processing With Arrays\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8646A86B-3A88-D7E4-4D0A-C3FE2B3DF0F2}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse input processing with arrays\\assets\\scripts\\characterchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8646A86B-3A88-D7E4-4D0A-C3FE2B3DF0F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8646A86B-3A88-D7E4-4D0A-C3FE2B3DF0F2}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse input processing with arrays\\assets\\scripts\\characterchangerwithfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8646A86B-3A88-D7E4-4D0A-C3FE2B3DF0F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterchangerwithfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8646A86B-3A88-D7E4-4D0A-C3FE2B3DF0F2}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse input processing with arrays\\assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8646A86B-3A88-D7E4-4D0A-C3FE2B3DF0F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8646A86B-3A88-D7E4-4D0A-C3FE2B3DF0F2}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\mouse input processing with arrays\\assets\\scripts\\characterchangerwithlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8646A86B-3A88-D7E4-4D0A-C3FE2B3DF0F2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterchangerwithlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CharacterChanger.cs",
-              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Input Processing With Arrays\\Assets\\Scripts\\CharacterChanger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterChanger.cs",
-              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Input Processing With Arrays\\Assets\\Scripts\\CharacterChanger.cs*",
-              "RelativeToolTip": "Assets\\Scripts\\CharacterChanger.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAaAAAAAAAAAA==",
+              "Title": "CharacterChangerWithList.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Input Processing With Arrays\\Assets\\Scripts\\CharacterChangerWithList.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterChangerWithList.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Input Processing With Arrays\\Assets\\Scripts\\CharacterChangerWithList.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterChangerWithList.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwBgAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:57:39.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CharacterChangerWithField.cs",
-              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Input Processing With Arrays\\Assets\\Scripts\\CharacterChangerWithField.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterChangerWithField.cs",
-              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Input Processing With Arrays\\Assets\\Scripts\\CharacterChangerWithField.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CharacterChangerWithField.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAACKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:53:08.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Character.cs",
-              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Input Processing With Arrays\\Assets\\Scripts\\Character.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Character.cs",
-              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Mouse Input Processing With Arrays\\Assets\\Scripts\\Character.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Character.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:50:43.002Z",
+              "WhenOpened": "2025-06-10T15:02:49.364Z",
               "EditorCaption": ""
             }
           ]
