@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{174F3694-3B9D-C5F5-B359-D49CDE0CC1F4}|Assembly-CSharp.csproj|C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\assets\\scripts\\characterspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{174F3694-3B9D-C5F5-B359-D49CDE0CC1F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characterspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{174F3694-3B9D-C5F5-B359-D49CDE0CC1F4}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\collision free spawning\\assets\\scripts\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{174F3694-3B9D-C5F5-B359-D49CDE0CC1F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{174F3694-3B9D-C5F5-B359-D49CDE0CC1F4}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\collision free spawning\\assets\\scripts\\madamskunky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{174F3694-3B9D-C5F5-B359-D49CDE0CC1F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\madamskunky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,17 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Timer.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\Assets\\Scripts\\Timer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Timer.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\Assets\\Scripts\\Timer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Timer.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwF4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T05:48:11.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CharacterSpawner.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\Assets\\Scripts\\CharacterSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CharacterSpawner.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\Assets\\Scripts\\CharacterSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CharacterSpawner.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAQwIoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T13:38:40.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MadamSkunky.cs",
               "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\Assets\\Scripts\\MadamSkunky.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MadamSkunky.cs",
               "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Collision Free Spawning\\Assets\\Scripts\\MadamSkunky.cs",
               "RelativeToolTip": "Assets\\Scripts\\MadamSkunky.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCsAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T06:06:08.839Z",
               "EditorCaption": ""

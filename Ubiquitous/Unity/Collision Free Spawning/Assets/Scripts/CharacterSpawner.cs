@@ -25,34 +25,34 @@ public class CharacterSpawner : MonoBehaviour
     Timer spawnTimer;
 
     // spawn location support
-    const int SpawnBorderSize = 100;
-    int minSpawnX;
-    int maxSpawnX;
-    int minSpawnY;
-    int maxSpawnY;
+    const int SpawnBorderSize = 100; // ensures characters spawn within a safe margin from the screen edges (with a margin of 100 pixels from each edge)
+    int minSpawnX; // minimum x coordinate for spawning
+    int maxSpawnX; // maximum x coordinate for spawning
+    int minSpawnY; // minimum y coordinate for spawning
+    int maxSpawnY; // maximum y coordinate for spawning
 
     // collision-free spawn support
     const int MaxSpawnTries = 20;
-    float madamSkunkyColliderHalfWidth;
-    float madamSkunkyColliderHalfHeight;
-    Vector2 min = new Vector2();
-    Vector2 max = new Vector2();
+    float madamSkunkyColliderHalfWidth; // half width of the madam skunky's box collider
+    float madamSkunkyColliderHalfHeight; // half height of the madam skunky's box collider
+    Vector2 min = new Vector2(); // stores minimum x and y coordinates of collision rectangle
+    Vector2 max = new Vector2(); // stores maximum x and y coordinates of collision rectangle
 
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
     void Start()
     {
-        // save spawn boundaries for efficiency
-        minSpawnX = SpawnBorderSize;
-        maxSpawnX = Screen.width - SpawnBorderSize;
-        minSpawnY = SpawnBorderSize;
-        maxSpawnY = Screen.height - SpawnBorderSize;
+        // save screen boundaries for efficiency of spawning
+        minSpawnX = SpawnBorderSize; // minimum x coordinate for spawning
+        maxSpawnX = Screen.width - SpawnBorderSize; // maximum x coordinate for spawning
+        minSpawnY = SpawnBorderSize; // minimum y coordinate for spawning
+        maxSpawnY = Screen.height - SpawnBorderSize; // maximum y coordinate for spawning
 
         // create and start timer
         spawnTimer = gameObject.AddComponent<Timer>();
-        spawnTimer.Duration = Random.Range(MinSpawnDelay, MaxSpawnDelay);
-        spawnTimer.Run();
+        spawnTimer.Duration = Random.Range(MinSpawnDelay, MaxSpawnDelay); // set random spawn delay between 1 and 2 seconds
+        spawnTimer.Run(); // start the timer
 
         // spawn and destroy a skunky woman to cache collider values
         GameObject tempMadamSkunky = Instantiate<GameObject>(
@@ -69,7 +69,7 @@ public class CharacterSpawner : MonoBehaviour
     void Update()
     {
         // check for time to spawn a new skunky woman
-        if (spawnTimer.Finished)
+        if (spawnTimer.Finished) // check if the timer has finished
         {
             SpawnMadamSkunky();
 
@@ -88,29 +88,29 @@ public class CharacterSpawner : MonoBehaviour
         Vector3 location = new Vector3(Random.Range(minSpawnX, maxSpawnX),
             Random.Range(minSpawnY, maxSpawnY),
             -Camera.main.transform.position.z);
-        Vector3 worldLocation = Camera.main.ScreenToWorldPoint(location);
-        SetMinAndMax(worldLocation);
+        Vector3 worldLocation = Camera.main.ScreenToWorldPoint(location); // convert screen coordinates to world coordinates
+        SetMinAndMax(worldLocation); // set min and max for collision rectangle
 
         // make sure we don't spawn into a collision
-        int spawnTries = 1;
+        int spawnTries = 1; // number of tries to find a collision-free location
         while (Physics2D.OverlapArea(min, max) != null &&
-            spawnTries <= MaxSpawnTries)
+            spawnTries <= MaxSpawnTries) // while we found a collision and haven't exceeded the maximum number of tries
         {
             // change location and calculate new rectangle points
             location.x = Random.Range(minSpawnX, maxSpawnX);
             location.y = Random.Range(minSpawnY, maxSpawnY);
             worldLocation = Camera.main.ScreenToWorldPoint(location);
-            SetMinAndMax(worldLocation);
+            SetMinAndMax(worldLocation); // recalculate min and max for collision rectangle
 
             spawnTries++;
         }
 
         // create new skunky woman if found collision-free location
-        if (Physics2D.OverlapArea(min, max) == null)
+        if (Physics2D.OverlapArea(min, max) == null) // if we found a collision-free location
         {
             GameObject madamSkunky = Instantiate<GameObject>(
                 prefabMadamSkunky, Vector3.zero, Quaternion.identity);
-            madamSkunky.transform.position = worldLocation;
+            madamSkunky.transform.position = worldLocation; // create a new skunky woman at the origin with no rotation and move it to the random location (worldLocation)
 
             // set random sprite for new skunky woman
             SpriteRenderer spriteRenderer = madamSkunky.GetComponent<SpriteRenderer>();
@@ -136,9 +136,9 @@ public class CharacterSpawner : MonoBehaviour
     /// <param name="location">location of the skunky woman</param>
     void SetMinAndMax(Vector3 location)
     {
-        min.x = location.x - madamSkunkyColliderHalfWidth;
-        min.y = location.y - madamSkunkyColliderHalfHeight;
-        max.x = location.x + madamSkunkyColliderHalfWidth;
-        max.y = location.y + madamSkunkyColliderHalfHeight;
+        min.x = location.x - madamSkunkyColliderHalfWidth; // calculate min x coordinate for collision rectangle
+        min.y = location.y - madamSkunkyColliderHalfHeight; // calculate min y coordinate for collision rectangle
+        max.x = location.x + madamSkunkyColliderHalfWidth; // calculate max x coordinate for collision rectangle
+        max.y = location.y + madamSkunkyColliderHalfHeight; // calculate max y coordinate for collision rectangle
     }
 }
