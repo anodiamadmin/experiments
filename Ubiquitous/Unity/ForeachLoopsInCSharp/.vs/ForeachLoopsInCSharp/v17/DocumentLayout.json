@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\ForeachLoopsInCSharp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A29DEE4-8081-4B47-A7C1-5A37AE9171F0}|ForeachLoopsInCSharp\\ForeachLoopsInCSharp.csproj|c:\\experiments\\ubiquitous\\unity\\foreachloopsincsharp\\foreachloopsincsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A29DEE4-8081-4B47-A7C1-5A37AE9171F0}|ForeachLoopsInCSharp\\ForeachLoopsInCSharp.csproj|solutionrelative:foreachloopsincsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\ForeachLoopsInCSharp\\ForeachLoopsInCSharp\\Program.cs",
+              "RelativeDocumentMoniker": "ForeachLoopsInCSharp\\Program.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\ForeachLoopsInCSharp\\ForeachLoopsInCSharp\\Program.cs",
+              "RelativeToolTip": "ForeachLoopsInCSharp\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T11:34:25.194Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
