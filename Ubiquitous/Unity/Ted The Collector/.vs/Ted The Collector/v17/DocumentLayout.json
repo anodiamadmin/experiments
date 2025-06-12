@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{B59A79E5-2621-E62B-ED7B-D1F910921C65}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\teddybear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B59A79E5-2621-E62B-ED7B-D1F910921C65}|Assembly-CSharp.csproj|C:\\experiments\\Ubiquitous\\Unity\\Ted The Collector\\assets\\scripts\\tedthecollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B59A79E5-2621-E62B-ED7B-D1F910921C65}|Assembly-CSharp.csproj|c:\\experiments\\ubiquitous\\unity\\ted the collector\\assets\\scripts\\tedthecollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B59A79E5-2621-E62B-ED7B-D1F910921C65}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tedthecollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,22 +28,22 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\TeddyBear.cs",
               "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Ted The Collector\\Assets\\Scripts\\TeddyBear.cs",
               "RelativeToolTip": "Assets\\Scripts\\TeddyBear.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAgwD4AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwFEAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T14:16:48.95Z",
+              "WhenOpened": "2025-06-12T13:02:33.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TedtheCollector.cs",
+              "Title": "TedTheCollector.cs",
               "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\Ted The Collector\\Assets\\Scripts\\TedTheCollector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TedTheCollector.cs",
               "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\Ted The Collector\\Assets\\Scripts\\TedTheCollector.cs",
               "RelativeToolTip": "Assets\\Scripts\\TedTheCollector.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwDoAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T14:16:28.843Z",
+              "WhenOpened": "2025-06-12T12:48:16.311Z",
               "EditorCaption": ""
             }
           ]
