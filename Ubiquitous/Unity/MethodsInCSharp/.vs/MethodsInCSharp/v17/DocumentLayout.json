@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB24618-CD84-43E3-8564-7514192C3D33}|MethodsInCSharp\\MethodsInCSharp.csproj|c:\\experiments\\ubiquitous\\unity\\methodsincsharp\\methodsincsharp\\suit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BB24618-CD84-43E3-8564-7514192C3D33}|MethodsInCSharp\\MethodsInCSharp.csproj|solutionrelative:methodsincsharp\\suit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB24618-CD84-43E3-8564-7514192C3D33}|MethodsInCSharp\\MethodsInCSharp.csproj|c:\\experiments\\ubiquitous\\unity\\methodsincsharp\\methodsincsharp\\rank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BB24618-CD84-43E3-8564-7514192C3D33}|MethodsInCSharp\\MethodsInCSharp.csproj|solutionrelative:methodsincsharp\\rank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB24618-CD84-43E3-8564-7514192C3D33}|MethodsInCSharp\\MethodsInCSharp.csproj|c:\\experiments\\ubiquitous\\unity\\methodsincsharp\\methodsincsharp\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BB24618-CD84-43E3-8564-7514192C3D33}|MethodsInCSharp\\MethodsInCSharp.csproj|solutionrelative:methodsincsharp\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB24618-CD84-43E3-8564-7514192C3D33}|MethodsInCSharp\\MethodsInCSharp.csproj|c:\\experiments\\ubiquitous\\unity\\methodsincsharp\\methodsincsharp\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BB24618-CD84-43E3-8564-7514192C3D33}|MethodsInCSharp\\MethodsInCSharp.csproj|solutionrelative:methodsincsharp\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB24618-CD84-43E3-8564-7514192C3D33}|MethodsInCSharp\\MethodsInCSharp.csproj|c:\\experiments\\ubiquitous\\unity\\methodsincsharp\\methodsincsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BB24618-CD84-43E3-8564-7514192C3D33}|MethodsInCSharp\\MethodsInCSharp.csproj|solutionrelative:methodsincsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Suit.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\MethodsInCSharp\\Suit.cs",
+              "RelativeDocumentMoniker": "MethodsInCSharp\\Suit.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\MethodsInCSharp\\Suit.cs",
+              "RelativeToolTip": "MethodsInCSharp\\Suit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:08:29.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Rank.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\MethodsInCSharp\\Rank.cs",
+              "RelativeDocumentMoniker": "MethodsInCSharp\\Rank.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\MethodsInCSharp\\Rank.cs",
+              "RelativeToolTip": "MethodsInCSharp\\Rank.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:08:24.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Deck.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\MethodsInCSharp\\Deck.cs",
+              "RelativeDocumentMoniker": "MethodsInCSharp\\Deck.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\MethodsInCSharp\\Deck.cs",
+              "RelativeToolTip": "MethodsInCSharp\\Deck.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:08:16.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\MethodsInCSharp\\Card.cs",
+              "RelativeDocumentMoniker": "MethodsInCSharp\\Card.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\MethodsInCSharp\\Card.cs",
+              "RelativeToolTip": "MethodsInCSharp\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:08:05.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\MethodsInCSharp\\Program.cs",
+              "RelativeDocumentMoniker": "MethodsInCSharp\\Program.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\MethodsInCSharp\\MethodsInCSharp\\Program.cs",
+              "RelativeToolTip": "MethodsInCSharp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T13:18:56.457Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

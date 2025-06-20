@@ -17,6 +17,7 @@ namespace CustomDie
         // public int numSides; // public ACCESS MODIFIER allows access from outside the class
         int numSides; // Number of sides on the die. Integer data type (by default private)
         int topSide; // The side currently facing up. integer data type (by default private)
+        Random rand = new Random(); // Create a new instance of the Random class to generate
 
         #endregion
 
@@ -27,7 +28,7 @@ namespace CustomDie
         /// </summary>
         //public Die()
         //{ 
-        
+
         //    numSides = 6; // Default number of sides is set to 6 (for six-sided die)
         //    topSide = 1; // Default top side is set to 1 (the side facing up, could be any side from 1 to 6)
         //}
@@ -80,8 +81,7 @@ namespace CustomDie
         /// </summary>
         public void Roll() // Method to roll the die and get a new top side
         {
-            Random random = new Random(); // Create a new instance of the Random class to generate
-            topSide = random.Next(1, numSides + 1); // Generate a random number between 1 and numSides (inclusive) and assign it to topSide
+            topSide = rand.Next(1, numSides + 1); // Generate a random number between 1 and numSides (inclusive) and assign it to topSide
         }
 
             #endregion

@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16923B77-18A0-41C2-916C-0F22C60F21AC}|ObjectsAsParams\\ObjectsAsParams.csproj|c:\\experiments\\ubiquitous\\unity\\objectsasparams\\objectsasparams\\rank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16923B77-18A0-41C2-916C-0F22C60F21AC}|ObjectsAsParams\\ObjectsAsParams.csproj|solutionrelative:objectsasparams\\rank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16923B77-18A0-41C2-916C-0F22C60F21AC}|ObjectsAsParams\\ObjectsAsParams.csproj|c:\\experiments\\ubiquitous\\unity\\objectsasparams\\objectsasparams\\suit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16923B77-18A0-41C2-916C-0F22C60F21AC}|ObjectsAsParams\\ObjectsAsParams.csproj|solutionrelative:objectsasparams\\suit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16923B77-18A0-41C2-916C-0F22C60F21AC}|ObjectsAsParams\\ObjectsAsParams.csproj|c:\\experiments\\ubiquitous\\unity\\objectsasparams\\objectsasparams\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16923B77-18A0-41C2-916C-0F22C60F21AC}|ObjectsAsParams\\ObjectsAsParams.csproj|solutionrelative:objectsasparams\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16923B77-18A0-41C2-916C-0F22C60F21AC}|ObjectsAsParams\\ObjectsAsParams.csproj|c:\\experiments\\ubiquitous\\unity\\objectsasparams\\objectsasparams\\cardchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16923B77-18A0-41C2-916C-0F22C60F21AC}|ObjectsAsParams\\ObjectsAsParams.csproj|solutionrelative:objectsasparams\\cardchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16923B77-18A0-41C2-916C-0F22C60F21AC}|ObjectsAsParams\\ObjectsAsParams.csproj|c:\\experiments\\ubiquitous\\unity\\objectsasparams\\objectsasparams\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16923B77-18A0-41C2-916C-0F22C60F21AC}|ObjectsAsParams\\ObjectsAsParams.csproj|solutionrelative:objectsasparams\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Suit.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\ObjectsAsParams\\Suit.cs",
+              "RelativeDocumentMoniker": "ObjectsAsParams\\Suit.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\ObjectsAsParams\\Suit.cs",
+              "RelativeToolTip": "ObjectsAsParams\\Suit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:11:44.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Rank.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\ObjectsAsParams\\Rank.cs",
+              "RelativeDocumentMoniker": "ObjectsAsParams\\Rank.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\ObjectsAsParams\\Rank.cs*",
+              "RelativeToolTip": "ObjectsAsParams\\Rank.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:11:36.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CardChanger.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\ObjectsAsParams\\CardChanger.cs",
+              "RelativeDocumentMoniker": "ObjectsAsParams\\CardChanger.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\ObjectsAsParams\\CardChanger.cs",
+              "RelativeToolTip": "ObjectsAsParams\\CardChanger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:11:22.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\ObjectsAsParams\\Card.cs",
+              "RelativeDocumentMoniker": "ObjectsAsParams\\Card.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\ObjectsAsParams\\Card.cs",
+              "RelativeToolTip": "ObjectsAsParams\\Card.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:11:08.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\ObjectsAsParams\\Program.cs",
+              "RelativeDocumentMoniker": "ObjectsAsParams\\Program.cs",
+              "ToolTip": "C:\\experiments\\Ubiquitous\\Unity\\ObjectsAsParams\\ObjectsAsParams\\Program.cs",
+              "RelativeToolTip": "ObjectsAsParams\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T14:09:46.176Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

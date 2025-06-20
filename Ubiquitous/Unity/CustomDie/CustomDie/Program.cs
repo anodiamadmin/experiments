@@ -19,11 +19,14 @@
             Console.WriteLine("Top Side: " + standardDie.TopSide); // Access the TopSide property to get the current top side
             Console.WriteLine(); // Print a blank line for better readability
 
-            // roll the standard die
-            Console.WriteLine("Rolling the standard die..."); // Print a message indicating that the die is being rolled
-            standardDie.Roll(); // Call the Roll method to simulate rolling the die
-            Console.WriteLine("Top Side: " + standardDie.TopSide);
-            Console.WriteLine();
+            // roll the standard die 5 times
+            for (int i = 0; i < 5; i++) // Loop to roll the standard die 5 times
+            {
+                Console.WriteLine("Rolling the standard die..."); // Print a message indicating that the die is being rolled
+                standardDie.Roll(); // Call the Roll method to simulate rolling the die
+                Console.WriteLine("Top Side: " + standardDie.TopSide);
+                Console.WriteLine();
+            }
 
             // test D20 die
             Die d20Die = new Die(20); // Create an instance of the Die class using the parameterized constructor that takes an integer parameter for the number of sides
@@ -33,11 +36,14 @@
             Console.WriteLine("Top Side: " + d20Die.TopSide); // Access the TopSide property to get the current top side
             Console.WriteLine(); // Print a blank line for better readability
 
-            // roll the D20 die
-            Console.WriteLine("Rolling the d20 die..."); // Print a message indicating that the die is being rolled
-            d20Die.Roll(); // Call the Roll method to simulate rolling the die
-            Console.WriteLine("Top Side: " + d20Die.TopSide);
-            Console.WriteLine();
+            // roll the D20 die 5 times
+            for (int i = 0; i < 5; i++) // Loop to roll the D20 die 5 times
+            {
+                Console.WriteLine("Rolling the d20 die..."); // Print a message indicating that the die is being rolled
+                d20Die.Roll(); // Call the Roll method to simulate rolling the die
+                Console.WriteLine("Top Side: " + d20Die.TopSide);
+                Console.WriteLine();
+            }
         }
     }
 }
